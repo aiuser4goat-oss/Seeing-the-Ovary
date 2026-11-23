@@ -1,0 +1,19 @@
+{
+  "best_selection_balanced_accuracy": 0.8705196380615234,
+  "stages": [
+    {
+      "stage": "head",
+      "score": 0.8594200015068054
+    },
+    {
+      "stage": "fine",
+      "score": 0.8670278191566467
+    },
+    {
+      "stage": "full",
+      "score": 0.8705196380615234
+    }
+  ],
+  "smoke_only": false,
+  "checkpoint_sha256": "37dfef9f4367019ba3b4f5248fbf28a89cf4744f067aeaa74533e9cacfa7743e"
+}

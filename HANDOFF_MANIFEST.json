@@ -293,8 +293,8 @@
     },
     {
       "path": "docs/CLAUDE_HANDOFF.md",
-      "bytes": 12173,
-      "sha256": "03ef5933bc4d7c1df55fc4256b06806c1ddc75fa1f8c58b7ba9c9d53bb814a1f"
+      "bytes": 12321,
+      "sha256": "d2ac950bb561de94b21b9fd8f622e0610a35c8c3b3b3ab4b2fe9069ab303d842"
     },
     {
       "path": "docs/CLAUDE_PROMPT.txt",
@@ -308,8 +308,8 @@
     },
     {
       "path": "docs/MODEL_CARD.md",
-      "bytes": 5826,
-      "sha256": "083815c7e78481f70078d6396ff820c749749d0461d1bcd1d72b02b8fd629b7d"
+      "bytes": 5942,
+      "sha256": "15dbed30ef963d38efae5b9fcbda127534ab81bc666c3910fed7bc86fbc1205a"
     },
     {
       "path": "docs/NEXT_EXPERIMENTS.md",
@@ -1008,8 +1008,8 @@
     },
     {
       "path": "results/development/matched_selection_probabilities.csv",
-      "bytes": 403036,
-      "sha256": "fede234c07d691f5a94be913a5bc56e5c011e32ef279439c6c5ac975b2a9c7f5"
+      "bytes": 400923,
+      "sha256": "425116db819bb54875c8232ceeae9a2f89ef87686f529e1801dc496cf46daf46"
     },
     {
       "path": "results/development/tinyusfm_pilot/declaration.json",
@@ -1052,9 +1052,19 @@
       "sha256": "860872d61510917a24fc7f4f2f4108a769c65f5a0dd45a42b29ddbfacbb29c22"
     },
     {
+      "path": "results/frozen_completed/ensemble_anatomy/evaluation/evaluation_receipt.json",
+      "bytes": 397,
+      "sha256": "3cc3c97350581ad1807fc43ed6bed9ef74da8f20125270b028c39a3c74f8ee34"
+    },
+    {
       "path": "results/frozen_completed/ensemble_anatomy/evaluation/test_metrics.json",
       "bytes": 8249,
       "sha256": "db7436168156b75d18da37e53b69094d9febf5f54349c7d71922208bf32c0066"
+    },
+    {
+      "path": "results/frozen_completed/ensemble_control/evaluation/evaluation_receipt.json",
+      "bytes": 397,
+      "sha256": "c154245dda3a4ad3dc316ce783b5e656f0e1dc9becc635780334151bf02ccc9a"
     },
     {
       "path": "results/frozen_completed/ensemble_control/evaluation/test_metrics.json",
@@ -1082,9 +1092,24 @@
       "sha256": "4d58fc8284248fe922a77efbfded0be9e6fc8899d7b53f9c435759c083405108"
     },
     {
+      "path": "results/frozen_completed/fusion/config.json",
+      "bytes": 879,
+      "sha256": "665d986e1e00d6056bbc1be1c56ac22022cb1919cab3ba41a78bf146cd2b7efd"
+    },
+    {
       "path": "results/frozen_completed/fusion/evaluation/test_metrics.json",
       "bytes": 8123,
       "sha256": "f206ceb76587a12f43efc4d252f1088ff3e82b17a9119f93e6b1336ce916185a"
+    },
+    {
+      "path": "results/frozen_completed/fusion_refined/calibration/calibration.json",
+      "bytes": 2320,
+      "sha256": "2aee3386a52f11272dc96faabff49254811147ec3d7aaf6a32ef83c82cdd359e"
+    },
+    {
+      "path": "results/frozen_completed/fusion_refined/config.json",
+      "bytes": 879,
+      "sha256": "665d986e1e00d6056bbc1be1c56ac22022cb1919cab3ba41a78bf146cd2b7efd"
     },
     {
       "path": "results/frozen_completed/fusion_refined/evaluation/test_metrics.json",
@@ -1092,9 +1117,49 @@
       "sha256": "6a543f25b95d4183b8b24bc03bf0412667aedcfc9c523281d299e1aba99ef6f4"
     },
     {
+      "path": "results/frozen_completed/fusion_refined/normalizer.json",
+      "bytes": 1009,
+      "sha256": "704f2ee7abdb0c8852563eed710456e57bf92e3c16645ff51c0e75092bd9c3bd"
+    },
+    {
+      "path": "results/frozen_completed/fusion_refined/selection.json",
+      "bytes": 402,
+      "sha256": "29fe432034ddcb2e879243267cd732258d62fea82aacd2693ca5dfffdbd4723e"
+    },
+    {
+      "path": "results/frozen_completed/fusion_zero_morphology/calibration/calibration.json",
+      "bytes": 2311,
+      "sha256": "272b670f39f6a77ad58d1740ab89c1d4174f43c7eb67781b8085e1a4decb2ab4"
+    },
+    {
+      "path": "results/frozen_completed/fusion_zero_morphology/config.json",
+      "bytes": 876,
+      "sha256": "f7fe0b386a39f5abb7f38cc5ab334eb77e6ec5334f4a6477326ad45cf9715383"
+    },
+    {
       "path": "results/frozen_completed/fusion_zero_morphology/evaluation/test_metrics.json",
       "bytes": 8156,
       "sha256": "75a8ecf07fc5299e5ca8ba58422b87e446ff5e9ef2353988a71be24cd76c96d3"
+    },
+    {
+      "path": "results/frozen_completed/fusion_zero_morphology/normalizer.json",
+      "bytes": 1022,
+      "sha256": "161e05b8038f82d90ef54f82f1b1733258d39470d18a95775551ac7d83e1c06c"
+    },
+    {
+      "path": "results/frozen_completed/fusion_zero_morphology/selection.json",
+      "bytes": 402,
+      "sha256": "3f1d06f5bc3305453f933fe560c33e8b368218af11daa8797f55317d58efe6c1"
+    },
+    {
+      "path": "results/frozen_completed/image_only/calibration/calibration.json",
+      "bytes": 2274,
+      "sha256": "7e358635539ab40e03e3435b590798ccd544ec22174549976859cf27c5f897aa"
+    },
+    {
+      "path": "results/frozen_completed/image_only/config.json",
+      "bytes": 878,
+      "sha256": "e82c661beb96e3b3113360a1c710a1ff26e2aa080299b3b70d7338b618163a27"
     },
     {
       "path": "results/frozen_completed/image_only/evaluation/test_metrics.json",
@@ -1102,14 +1167,39 @@
       "sha256": "705aa0d13e4f7ccb9f7e03175c99c604bb6d4524f474f9590178294029fff374"
     },
     {
+      "path": "results/frozen_completed/image_only/selection.json",
+      "bytes": 401,
+      "sha256": "403da6233735be0bbea23ebd3ded1f62c43f80c0505b537ddb14c626e773ece8"
+    },
+    {
+      "path": "results/frozen_completed/localized_no_morphology/config.json",
+      "bytes": 882,
+      "sha256": "b075d552e04f941718ad7107ac422811ade03a5cbc9006757dc965c153c39313"
+    },
+    {
       "path": "results/frozen_completed/localized_no_morphology/evaluation/test_metrics.json",
       "bytes": 8122,
       "sha256": "84b5e946ce4b5e0bb64c99419982f94c85bcb875d0dee6cda78cdcb0b67b6367"
     },
     {
+      "path": "results/frozen_completed/original_baseline/calibration/calibration.json",
+      "bytes": 2271,
+      "sha256": "5fa5820226ee2222c4346c2b511e18a8d1569e7226d1c0953758d4e65722f032"
+    },
+    {
+      "path": "results/frozen_completed/original_baseline/config.json",
+      "bytes": 877,
+      "sha256": "9c7bd891a40a2724ce91449f91108eed64e6681d719ebd5d9543f7b432d6a297"
+    },
+    {
       "path": "results/frozen_completed/original_baseline/evaluation/test_metrics.json",
       "bytes": 8207,
       "sha256": "d537ccae5d04c71e4b10e26d2ac26d2bccd9bc61632d5805477271239c958485"
+    },
+    {
+      "path": "results/frozen_completed/original_baseline/selection.json",
+      "bytes": 402,
+      "sha256": "942bb4f3e4c992bfb0c61a806c15c9c3dad5012201857593f6118bf4cd39bbd6"
     },
     {
       "path": "run_continuation.py",

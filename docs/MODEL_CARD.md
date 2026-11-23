@@ -6,7 +6,7 @@ Research comparison of four supplied ovarian-ultrasound image classes, ordered B
 
 ## Original architecture
 
-`model/hybrid_model.py` concatenates three learned image-feature branches. FuzzyConv branch:32/64/128 filters, BatchNorm, max pooling after first two, global average pooling and Dense128. FollicleNet is a small image-feature CNN, not a supervised follicle detector. EfficientNet-B0 is the third pretrained branch. Concatenated features pass Dense512/256/128 with ReLU and BatchNorm, Dropout.35/.3, then4-way softmax. See the actual branch files for operations. The current rerun uses its new saved training/evaluation protocol; it does not literally reproduce the historical91.25% experiment.
+`model/hybrid_model.py` concatenates three learned image-feature branches. FuzzyConv branch:32/64/128 filters, BatchNorm, max pooling after first two, global average pooling and Dense128. FollicleNet is a small image-feature CNN, not a supervised follicle detector. EfficientNet-B0 is the third pretrained branch. Concatenated features pass Dense512/256/128 with ReLU and BatchNorm, Dropout.35/.3, then4-way softmax. See the actual branch files for operations. The current rerun uses its new saved training/evaluation protocol; it does not literally reproduce the historical91.25% experiment. Its saved configuration uses label_smoothing0 and mixed_precision=false; newer default classifiers use.03 and true.
 
 ## New classifier and controls
 

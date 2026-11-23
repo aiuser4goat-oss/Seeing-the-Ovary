@@ -1,0 +1,88 @@
+{
+  "temperature": 1.0853185198777884,
+  "referral_confidence_threshold": 0.6820805369127516,
+  "target_calibration_accuracy": 0.95,
+  "calibration_cases": 1079,
+  "checkpoints": [
+    "37dfef9f4367019ba3b4f5248fbf28a89cf4744f067aeaa74533e9cacfa7743e"
+  ],
+  "inference_signatures": [
+    {
+      "recipe": "continuation-v3-tensorflow-letterbox",
+      "classes": [
+        "Benign",
+        "Malignant",
+        "Normal",
+        "PCOS"
+      ],
+      "checkpoint_sha256": "37dfef9f4367019ba3b4f5248fbf28a89cf4744f067aeaa74533e9cacfa7743e",
+      "config_sha256": "342192c439cb29b7619ebe3217dbca1e63fb8ee6e59b2438b208bde4688e483b",
+      "data_sha256": "0b65c717565f2d620aabf1e2c0e1a3298f8dd18c50039457c043b553c01f5402",
+      "normalizer_sha256": "161e05b8038f82d90ef54f82f1b1733258d39470d18a95775551ac7d83e1c06c"
+    }
+  ],
+  "tta": false,
+  "manifest_sha256": "d0112fb807fe61accdd0fac1a2a606ff74f51558a650e5767e35d22bde62c190",
+  "calibration_metrics": {
+    "accuracy": 0.8600556070435589,
+    "balanced_accuracy": 0.8561120181049324,
+    "macro_f1": 0.8219291207771999,
+    "nll": 0.3352449834346771,
+    "brier": 0.1828906661248821,
+    "confusion_matrix": [
+      [
+        149,
+        6,
+        17,
+        5
+      ],
+      [
+        5,
+        29,
+        0,
+        0
+      ],
+      [
+        42,
+        4,
+        372,
+        1
+      ],
+      [
+        63,
+        1,
+        7,
+        378
+      ]
+    ],
+    "ece_10_bins": 0.030063784293713,
+    "macro_roc_auc_ovr": 0.9720786802210402,
+    "per_class": {
+      "Benign": {
+        "sensitivity": 0.8418079096045198,
+        "specificity": 0.8780487804878049,
+        "precision": 0.5752895752895753,
+        "support": 177
+      },
+      "Malignant": {
+        "sensitivity": 0.8529411764705882,
+        "specificity": 0.9894736842105263,
+        "precision": 0.725,
+        "support": 34
+      },
+      "Normal": {
+        "sensitivity": 0.8878281622911695,
+        "specificity": 0.9636363636363636,
+        "precision": 0.9393939393939394,
+        "support": 419
+      },
+      "PCOS": {
+        "sensitivity": 0.8418708240534521,
+        "specificity": 0.9904761904761905,
+        "precision": 0.984375,
+        "support": 449
+      }
+    }
+  },
+  "scope": "Validation-derived research referral rule; no clinical reliability guarantee."
+}

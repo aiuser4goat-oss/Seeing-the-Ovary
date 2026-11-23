@@ -1,0 +1,8 @@
+{
+  "ensemble_freeze_sha256": "0de31c803d5d84ac79790619eac78fa3d334e1bf7ae471466b63ef04078ae65f",
+  "files": {
+    "test_metrics.json": "1eedbba3e791699f6834b2cb78a69a8a951edbb12abf9bdce42181e4fa26c96c",
+    "test_predictions.csv": "b8df8249247af0612c09305e860f3c5175ef92438807aa064141b60281049aea",
+    "risk_coverage.csv": "d159e5ff8ede4482ecc10902e321a6d2273d947e6190e11a74ce214eee86fcf4"
+  }
+}
