@@ -1,3 +1,5 @@
+> Update: the warm run has completed and five new checks were rejected. Read [latest improvement round](LATEST_IMPROVEMENT_ROUND.md) before the earlier snapshot below.
+
 # Seeing the Ovary: technical handoff for Claude
 
 Snapshot: November 23, 2026. Read this before proposing a model change. The student's science-fair deadline is December 2. The objective is to improve **full-set four-class balanced accuracy above 93%** while investigating whether measured ovarian/follicular anatomy helps classification. That target has **not** been reached. The best preserved completed ensemble has **89.5458% test balanced accuracy**. Its raw accuracy is 89.2427%; these are different metrics.

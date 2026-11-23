@@ -1,0 +1,448 @@
+{
+  "target_balanced_accuracy": 0.93,
+  "historical_best_test_preserved": 0.8954576875376714,
+  "no_new_test_inference": true,
+  "selection_screens": {
+    "flip_tta": {
+      "status": "complete",
+      "elapsed_seconds": 157.463393666083,
+      "test_evaluated": false,
+      "results": {
+        "identity": {
+          "balanced_accuracy": 0.8742020624328978,
+          "macro_f1": 0.8497551848449256,
+          "confusion_matrix": [
+            [
+              260,
+              6,
+              26,
+              27
+            ],
+            [
+              5,
+              78,
+              1,
+              0
+            ],
+            [
+              88,
+              6,
+              752,
+              3
+            ],
+            [
+              97,
+              0,
+              17,
+              746
+            ]
+          ]
+        },
+        "four_flip_average": {
+          "balanced_accuracy": 0.8727970364767936,
+          "macro_f1": 0.8489975997094119,
+          "confusion_matrix": [
+            [
+              262,
+              8,
+              23,
+              26
+            ],
+            [
+              6,
+              77,
+              1,
+              0
+            ],
+            [
+              85,
+              4,
+              753,
+              7
+            ],
+            [
+              101,
+              0,
+              14,
+              745
+            ]
+          ]
+        }
+      },
+      "balanced_accuracy_difference": -0.0014050259561041445
+    },
+    "source_balance_frozen_readout": {
+      "control": {
+        "balanced_accuracy": 0.8702706421067945,
+        "macro_f1": 0.7945098693825478,
+        "confusion_matrix": [
+          [
+            257,
+            31,
+            9,
+            22
+          ],
+          [
+            2,
+            82,
+            0,
+            0
+          ],
+          [
+            93,
+            28,
+            722,
+            6
+          ],
+          [
+            113,
+            5,
+            12,
+            730
+          ]
+        ],
+        "by_source": {
+          "2526_Data_ALL": {
+            "records": 1737,
+            "correct": 1483,
+            "class_recall": {
+              "Benign": 0.8253968253968254,
+              "Malignant": 0.9876543209876543,
+              "Normal": 0.8742236024844721,
+              "PCOS": 0.8315789473684211
+            }
+          },
+          "Additional_Five_Class": {
+            "records": 89,
+            "correct": 87,
+            "class_recall": {
+              "Benign": null,
+              "Malignant": null,
+              "Normal": 0.98,
+              "PCOS": 0.9743589743589743
+            }
+          },
+          "Recovered_MMOTU_2D": {
+            "records": 121,
+            "correct": 60,
+            "class_recall": {
+              "Benign": 0.7313432835820896,
+              "Malignant": 0.6666666666666666,
+              "Normal": 0.17647058823529413,
+              "PCOS": null
+            }
+          },
+          "Recovered_PCOSGen": {
+            "records": 42,
+            "correct": 39,
+            "class_recall": {
+              "Benign": null,
+              "Malignant": null,
+              "Normal": 0.8571428571428571,
+              "PCOS": 1.0
+            }
+          },
+          "data": {
+            "records": 123,
+            "correct": 122,
+            "class_recall": {
+              "Benign": null,
+              "Malignant": null,
+              "Normal": 1.0,
+              "PCOS": 0.975
+            }
+          }
+        }
+      },
+      "source_balanced": {
+        "balanced_accuracy": 0.8672484861438704,
+        "macro_f1": 0.8091182904591586,
+        "confusion_matrix": [
+          [
+            263,
+            21,
+            13,
+            22
+          ],
+          [
+            4,
+            79,
+            1,
+            0
+          ],
+          [
+            96,
+            17,
+            733,
+            3
+          ],
+          [
+            122,
+            4,
+            11,
+            723
+          ]
+        ],
+        "by_source": {
+          "2526_Data_ALL": {
+            "records": 1737,
+            "correct": 1478,
+            "class_recall": {
+              "Benign": 0.8333333333333334,
+              "Malignant": 0.9629629629629629,
+              "Normal": 0.8788819875776398,
+              "PCOS": 0.8210526315789474
+            }
+          },
+          "Additional_Five_Class": {
+            "records": 89,
+            "correct": 89,
+            "class_recall": {
+              "Benign": null,
+              "Malignant": null,
+              "Normal": 1.0,
+              "PCOS": 1.0
+            }
+          },
+          "Recovered_MMOTU_2D": {
+            "records": 121,
+            "correct": 70,
+            "class_recall": {
+              "Benign": 0.7910447761194029,
+              "Malignant": 0.3333333333333333,
+              "Normal": 0.3137254901960784,
+              "PCOS": null
+            }
+          },
+          "Recovered_PCOSGen": {
+            "records": 42,
+            "correct": 39,
+            "class_recall": {
+              "Benign": null,
+              "Malignant": null,
+              "Normal": 0.8571428571428571,
+              "PCOS": 1.0
+            }
+          },
+          "data": {
+            "records": 123,
+            "correct": 122,
+            "class_recall": {
+              "Benign": null,
+              "Malignant": null,
+              "Normal": 1.0,
+              "PCOS": 0.975
+            }
+          }
+        }
+      }
+    },
+    "generalized_ce_frozen_readout": {
+      "cross_entropy": {
+        "balanced_accuracy": 0.8702706421067945,
+        "macro_f1": 0.7945098693825478,
+        "confusion_matrix": [
+          [
+            257,
+            31,
+            9,
+            22
+          ],
+          [
+            2,
+            82,
+            0,
+            0
+          ],
+          [
+            93,
+            28,
+            722,
+            6
+          ],
+          [
+            113,
+            5,
+            12,
+            730
+          ]
+        ],
+        "converged": true,
+        "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+        "iterations": 52
+      },
+      "gce_q0.7": {
+        "balanced_accuracy": 0.8638332130194932,
+        "macro_f1": 0.7760281583988761,
+        "confusion_matrix": [
+          [
+            251,
+            37,
+            5,
+            26
+          ],
+          [
+            1,
+            83,
+            0,
+            0
+          ],
+          [
+            98,
+            39,
+            706,
+            6
+          ],
+          [
+            110,
+            8,
+            12,
+            730
+          ]
+        ],
+        "converged": true,
+        "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+        "iterations": 34
+      }
+    },
+    "equal_five_exploratory_ensemble": {
+      "equal_four_control": {
+        "balanced_accuracy": 0.8805817982554518,
+        "macro_f1": 0.8509602578063603,
+        "confusion_matrix": [
+          [
+            270,
+            8,
+            17,
+            24
+          ],
+          [
+            5,
+            78,
+            1,
+            0
+          ],
+          [
+            90,
+            6,
+            751,
+            2
+          ],
+          [
+            103,
+            0,
+            15,
+            742
+          ]
+        ]
+      },
+      "equal_five": {
+        "balanced_accuracy": 0.8783105140311906,
+        "macro_f1": 0.8521689377603832,
+        "confusion_matrix": [
+          [
+            278,
+            5,
+            14,
+            22
+          ],
+          [
+            6,
+            77,
+            1,
+            0
+          ],
+          [
+            103,
+            4,
+            740,
+            2
+          ],
+          [
+            108,
+            0,
+            18,
+            734
+          ]
+        ]
+      }
+    }
+  },
+  "bn_statistics_trial": {
+    "status": "complete",
+    "initial_max_difference": 0.0,
+    "bn_layers": 59,
+    "bn_means_changed": 59,
+    "learned_parameters_unchanged": true,
+    "fit_records_seen": 12763,
+    "elapsed_seconds": 394.58149112504907,
+    "test_evaluated": false,
+    "results": {
+      "identity": {
+        "balanced_accuracy": 0.8742020624328978,
+        "macro_f1": 0.8497551848449256,
+        "confusion_matrix": [
+          [
+            260,
+            6,
+            26,
+            27
+          ],
+          [
+            5,
+            78,
+            1,
+            0
+          ],
+          [
+            88,
+            6,
+            752,
+            3
+          ],
+          [
+            97,
+            0,
+            17,
+            746
+          ]
+        ]
+      },
+      "bn_reestimated": {
+        "balanced_accuracy": 0.3687913614859132,
+        "macro_f1": 0.22389540812194644,
+        "confusion_matrix": [
+          [
+            58,
+            244,
+            6,
+            11
+          ],
+          [
+            3,
+            81,
+            0,
+            0
+          ],
+          [
+            36,
+            567,
+            231,
+            15
+          ],
+          [
+            4,
+            802,
+            5,
+            49
+          ]
+        ]
+      }
+    },
+    "checkpoint_sha256": "527ac208bb4a61530bb31256615600fd6bfcec8171a702cc04738ed8e5c9927d"
+  },
+  "decisions": "All five completed treatments failed their matched SELECT balanced-accuracy reference. Reject TTA, one-pass BN adaptation, source-balanced frozen readout, GCE frozen readout, equal-five recipe. Original models preserved; no new classification TEST or calibration inference. This does not rule out all end-to-end alternatives.",
+  "visual_review": "All204distinct decoded-pixel shared-error thumbnails inspected; not clinical verification. Original records, labels and splits unchanged.",
+  "completed_utc": "2026-11-23T19:50:10.341487+00:00",
+  "next_scientific_priority": "Controlled original versus guarded ROI comparison; not yet implemented or executed. No claim of classification benefit."
+}

@@ -1,0 +1,40 @@
+{
+  "stage": "complete",
+  "termination": "early_stopping",
+  "completed_epochs": 12,
+  "epochs_started": 12,
+  "partial_epoch_logged": false,
+  "selected_validation": {
+    "balanced_accuracy": 0.8538989879996636,
+    "macro_f1": 0.8197440843868244,
+    "confusion_matrix": [
+      [
+        272,
+        10,
+        14,
+        23
+      ],
+      [
+        8,
+        75,
+        1,
+        0
+      ],
+      [
+        120,
+        7,
+        715,
+        7
+      ],
+      [
+        122,
+        0,
+        26,
+        712
+      ]
+    ]
+  },
+  "test_evaluated": false,
+  "weights_sha256": "be0c13ddcc220cdb0a5fa0c8359b1247b8c280042024e4557899e59f51c99f54",
+  "elapsed_seconds": 2518.292809899
+}

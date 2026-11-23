@@ -1,0 +1,779 @@
+{
+  "scope": "Descriptive cached predictions only. Historical TEST not used to select new settings. Collection IDs are not verified scanners.",
+  "test_preserved_ensemble": {
+    "overall": {
+      "records": 3988,
+      "confusion_matrix": [
+        [
+          537,
+          26,
+          51,
+          6
+        ],
+        [
+          10,
+          136,
+          1,
+          0
+        ],
+        [
+          211,
+          12,
+          1346,
+          16
+        ],
+        [
+          80,
+          1,
+          15,
+          1540
+        ]
+      ],
+      "recall": {
+        "Benign": 0.8661290322580645,
+        "Malignant": 0.9251700680272109,
+        "Normal": 0.849211356466877,
+        "PCOS": 0.941320293398533
+      },
+      "support": {
+        "Benign": 620,
+        "Malignant": 147,
+        "Normal": 1585,
+        "PCOS": 1636
+      },
+      "errors": 429
+    },
+    "by_source": {
+      "2526_Data_ALL": {
+        "records": 2953,
+        "confusion_matrix": [
+          [
+            401,
+            15,
+            22,
+            6
+          ],
+          [
+            9,
+            134,
+            1,
+            0
+          ],
+          [
+            115,
+            8,
+            858,
+            10
+          ],
+          [
+            78,
+            1,
+            11,
+            1284
+          ]
+        ],
+        "recall": {
+          "Benign": 0.9031531531531531,
+          "Malignant": 0.9305555555555556,
+          "Normal": 0.8657921291624622,
+          "PCOS": 0.9344978165938864
+        },
+        "support": {
+          "Benign": 444,
+          "Malignant": 144,
+          "Normal": 991,
+          "PCOS": 1374
+        },
+        "errors": 276
+      },
+      "Recovered_MMOTU_2D": {
+        "records": 301,
+        "confusion_matrix": [
+          [
+            136,
+            11,
+            29,
+            0
+          ],
+          [
+            1,
+            2,
+            0,
+            0
+          ],
+          [
+            76,
+            4,
+            42,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "recall": {
+          "Benign": 0.7727272727272727,
+          "Malignant": 0.6666666666666666,
+          "Normal": 0.3442622950819672,
+          "PCOS": null
+        },
+        "support": {
+          "Benign": 176,
+          "Malignant": 3,
+          "Normal": 122,
+          "PCOS": 0
+        },
+        "errors": 121
+      },
+      "Recovered_PCOSGen": {
+        "records": 132,
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            8,
+            0,
+            77,
+            6
+          ],
+          [
+            2,
+            0,
+            1,
+            38
+          ]
+        ],
+        "recall": {
+          "Benign": null,
+          "Malignant": null,
+          "Normal": 0.8461538461538461,
+          "PCOS": 0.926829268292683
+        },
+        "support": {
+          "Benign": 0,
+          "Malignant": 0,
+          "Normal": 91,
+          "PCOS": 41
+        },
+        "errors": 17
+      },
+      "Additional_Five_Class": {
+        "records": 311,
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            12,
+            0,
+            171,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            126
+          ]
+        ],
+        "recall": {
+          "Benign": null,
+          "Malignant": null,
+          "Normal": 0.9344262295081968,
+          "PCOS": 0.984375
+        },
+        "support": {
+          "Benign": 0,
+          "Malignant": 0,
+          "Normal": 183,
+          "PCOS": 128
+        },
+        "errors": 14
+      },
+      "data": {
+        "records": 291,
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            198,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            92
+          ]
+        ],
+        "recall": {
+          "Benign": null,
+          "Malignant": null,
+          "Normal": 1.0,
+          "PCOS": 0.989247311827957
+        },
+        "support": {
+          "Benign": 0,
+          "Malignant": 0,
+          "Normal": 198,
+          "PCOS": 93
+        },
+        "errors": 1
+      }
+    }
+  },
+  "old_image_selection": {
+    "overall": {
+      "records": 2112,
+      "confusion_matrix": [
+        [
+          261,
+          6,
+          26,
+          26
+        ],
+        [
+          5,
+          78,
+          1,
+          0
+        ],
+        [
+          89,
+          6,
+          751,
+          3
+        ],
+        [
+          98,
+          0,
+          17,
+          745
+        ]
+      ],
+      "recall": {
+        "Benign": 0.8181818181818182,
+        "Malignant": 0.9285714285714286,
+        "Normal": 0.8845700824499411,
+        "PCOS": 0.8662790697674418
+      },
+      "support": {
+        "Benign": 319,
+        "Malignant": 84,
+        "Normal": 849,
+        "PCOS": 860
+      },
+      "errors": 277
+    },
+    "by_source": {
+      "2526_Data_ALL": {
+        "records": 1737,
+        "confusion_matrix": [
+          [
+            212,
+            2,
+            12,
+            26
+          ],
+          [
+            3,
+            78,
+            0,
+            0
+          ],
+          [
+            59,
+            2,
+            581,
+            2
+          ],
+          [
+            98,
+            0,
+            16,
+            646
+          ]
+        ],
+        "recall": {
+          "Benign": 0.8412698412698413,
+          "Malignant": 0.9629629629629629,
+          "Normal": 0.9021739130434783,
+          "PCOS": 0.85
+        },
+        "support": {
+          "Benign": 252,
+          "Malignant": 81,
+          "Normal": 644,
+          "PCOS": 760
+        },
+        "errors": 220
+      },
+      "Additional_Five_Class": {
+        "records": 89,
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            47,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            39
+          ]
+        ],
+        "recall": {
+          "Benign": null,
+          "Malignant": null,
+          "Normal": 0.94,
+          "PCOS": 1.0
+        },
+        "support": {
+          "Benign": 0,
+          "Malignant": 0,
+          "Normal": 50,
+          "PCOS": 39
+        },
+        "errors": 3
+      },
+      "data": {
+        "records": 123,
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            83,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            39
+          ]
+        ],
+        "recall": {
+          "Benign": null,
+          "Malignant": null,
+          "Normal": 1.0,
+          "PCOS": 0.975
+        },
+        "support": {
+          "Benign": 0,
+          "Malignant": 0,
+          "Normal": 83,
+          "PCOS": 40
+        },
+        "errors": 1
+      },
+      "Recovered_MMOTU_2D": {
+        "records": 121,
+        "confusion_matrix": [
+          [
+            49,
+            4,
+            14,
+            0
+          ],
+          [
+            2,
+            0,
+            1,
+            0
+          ],
+          [
+            25,
+            4,
+            22,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "recall": {
+          "Benign": 0.7313432835820896,
+          "Malignant": 0.0,
+          "Normal": 0.43137254901960786,
+          "PCOS": null
+        },
+        "support": {
+          "Benign": 67,
+          "Malignant": 3,
+          "Normal": 51,
+          "PCOS": 0
+        },
+        "errors": 50
+      },
+      "Recovered_PCOSGen": {
+        "records": 42,
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            18,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            21
+          ]
+        ],
+        "recall": {
+          "Benign": null,
+          "Malignant": null,
+          "Normal": 0.8571428571428571,
+          "PCOS": 1.0
+        },
+        "support": {
+          "Benign": 0,
+          "Malignant": 0,
+          "Normal": 21,
+          "PCOS": 21
+        },
+        "errors": 3
+      }
+    }
+  },
+  "tiny_pilot_selection": {
+    "overall": {
+      "records": 2112,
+      "confusion_matrix": [
+        [
+          241,
+          23,
+          23,
+          32
+        ],
+        [
+          7,
+          76,
+          1,
+          0
+        ],
+        [
+          104,
+          10,
+          713,
+          22
+        ],
+        [
+          100,
+          1,
+          55,
+          704
+        ]
+      ],
+      "recall": {
+        "Benign": 0.7554858934169278,
+        "Malignant": 0.9047619047619048,
+        "Normal": 0.839811542991755,
+        "PCOS": 0.8186046511627907
+      },
+      "support": {
+        "Benign": 319,
+        "Malignant": 84,
+        "Normal": 849,
+        "PCOS": 860
+      },
+      "errors": 378
+    },
+    "by_source": {
+      "2526_Data_ALL": {
+        "records": 1737,
+        "confusion_matrix": [
+          [
+            187,
+            16,
+            18,
+            31
+          ],
+          [
+            5,
+            75,
+            1,
+            0
+          ],
+          [
+            62,
+            5,
+            559,
+            18
+          ],
+          [
+            100,
+            1,
+            53,
+            606
+          ]
+        ],
+        "recall": {
+          "Benign": 0.7420634920634921,
+          "Malignant": 0.9259259259259259,
+          "Normal": 0.8680124223602484,
+          "PCOS": 0.7973684210526316
+        },
+        "support": {
+          "Benign": 252,
+          "Malignant": 81,
+          "Normal": 644,
+          "PCOS": 760
+        },
+        "errors": 310
+      },
+      "Additional_Five_Class": {
+        "records": 89,
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            50,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            38
+          ]
+        ],
+        "recall": {
+          "Benign": null,
+          "Malignant": null,
+          "Normal": 1.0,
+          "PCOS": 0.9743589743589743
+        },
+        "support": {
+          "Benign": 0,
+          "Malignant": 0,
+          "Normal": 50,
+          "PCOS": 39
+        },
+        "errors": 1
+      },
+      "data": {
+        "records": 123,
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            83,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            40
+          ]
+        ],
+        "recall": {
+          "Benign": null,
+          "Malignant": null,
+          "Normal": 1.0,
+          "PCOS": 1.0
+        },
+        "support": {
+          "Benign": 0,
+          "Malignant": 0,
+          "Normal": 83,
+          "PCOS": 40
+        },
+        "errors": 0
+      },
+      "Recovered_MMOTU_2D": {
+        "records": 121,
+        "confusion_matrix": [
+          [
+            54,
+            7,
+            5,
+            1
+          ],
+          [
+            2,
+            1,
+            0,
+            0
+          ],
+          [
+            40,
+            5,
+            6,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "recall": {
+          "Benign": 0.8059701492537313,
+          "Malignant": 0.3333333333333333,
+          "Normal": 0.11764705882352941,
+          "PCOS": null
+        },
+        "support": {
+          "Benign": 67,
+          "Malignant": 3,
+          "Normal": 51,
+          "PCOS": 0
+        },
+        "errors": 60
+      },
+      "Recovered_PCOSGen": {
+        "records": 42,
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            15,
+            4
+          ],
+          [
+            0,
+            0,
+            1,
+            20
+          ]
+        ],
+        "recall": {
+          "Benign": null,
+          "Malignant": null,
+          "Normal": 0.7142857142857143,
+          "PCOS": 0.9523809523809523
+        },
+        "support": {
+          "Benign": 0,
+          "Malignant": 0,
+          "Normal": 21,
+          "PCOS": 21
+        },
+        "errors": 7
+      }
+    }
+  },
+  "shared_error_pool": {
+    "records": 225,
+    "unique_pixel_hashes": 204,
+    "detected_similarity_groups": 163,
+    "records_with_multiple_supplied_classes_in_exact_pixel_group": 119,
+    "records_with_multiple_supplied_classes_in_detected_similarity_group": 144,
+    "meaning": "Wrong in BOTH old image-only and TinyUSFM pilot; not established always-wrong across all models. Exact/similarity metadata associations do not adjudicate true diagnoses. No labels changed; near-duplicate detection not exhaustive."
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "before_fitting": "2026-11-23T19:45:09.821049+00:00",
+  "source_sha256": "5895ee0da5f279873f617d00473081b5bdfb033cead067876e3a8e230cc0f39f",
+  "features_sha256": "4c516c2831268648104d4f065ad0f6374b6dd8b7b537e34182136c8123825e9a",
+  "preprocessing_control_sha256": "62df3d9f49b9010f5498d75c80ee49244b4655e8325742ff5fc21249449e31ad",
+  "roles": [
+    "fit",
+    "select"
+  ],
+  "fit_records": 12763,
+  "selection_records": 2112,
+  "objectives": [
+    "cross_entropy",
+    "generalized_cross_entropy_q0.7"
+  ],
+  "source": "https://proceedings.neurips.cc/paper/2018/hash/f2925f97bc13ad2852a7a551802feea0-Abstract.html",
+  "optimizer": "L-BFGS-B,maxiter300,zero initialization,identical L2 for both; GCE nonconvex, one fixed start.",
+  "preprocessing": "Same FIT-only pool+head/PCA128/L2 as previous control.",
+  "labels_changed": false,
+  "original_positive_weights_retained": true,
+  "test_calibration_access": false,
+  "gradient_tests": "32 finite-difference coordinates passed",
+  "scope": "Frozen-representation hypothesis screen, not end-to-end CNN replication. GCE changes loss scale and implicit regularization as well as hard-sample influence. No assertion that high-loss source labels are wrong."
+}

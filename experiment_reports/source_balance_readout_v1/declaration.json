@@ -1,0 +1,62 @@
+{
+  "before_fitting": "2026-11-23T19:43:15.141918+00:00",
+  "worker_sha256": "7700ed56ad3641ec6e9c6a0cdbaaaa80fbdf32542cdd1171acfa25385dbdc9e6",
+  "features_sha256": "4c516c2831268648104d4f065ad0f6374b6dd8b7b537e34182136c8123825e9a",
+  "fit_records": 12763,
+  "selection_records": 2112,
+  "test_calibration_used": false,
+  "recipe": "Fixed pool+head StandardScaler/PCA128 on uniqueFIT/L2; logisticC.1,lbfgs,maxiter2000. Original weighting control versus within-class source balancing. Raw source cell factor capped4, then class mass restored exactly. All FIT records retain positive influence. No source input at inference.",
+  "scope": "Exploratory frozen-representation screen, not end-to-end source-balanced sampling. Cannot establish source-invariant generalization. Source IDs are collection folders. No hyperparameter search.",
+  "mass": {
+    "Benign": {
+      "original_cells": {
+        "2526_Data_ALL": 3031.007080078125,
+        "Recovered_MMOTU_2D": 208.53614807128906
+      },
+      "balanced_cells": {
+        "2526_Data_ALL": 2138.3454389299245,
+        "Recovered_MMOTU_2D": 1101.1977739606991
+      }
+    },
+    "Malignant": {
+      "original_cells": {
+        "2526_Data_ALL": 2986.3203125,
+        "Recovered_MMOTU_2D": 58.04941940307617
+      },
+      "balanced_cells": {
+        "2526_Data_ALL": 2641.438354088185,
+        "Recovered_MMOTU_2D": 402.93127481806454
+      }
+    },
+    "Normal": {
+      "original_cells": {
+        "2526_Data_ALL": 2257.09228515625,
+        "Additional_Five_Class": 250.909912109375,
+        "Recovered_MMOTU_2D": 80.29116821289062,
+        "Recovered_PCOSGen": 308.8979797363281,
+        "data": 342.3526306152344
+      },
+      "balanced_cells": {
+        "2526_Data_ALL": 720.5880022402383,
+        "Additional_Five_Class": 720.5880950081287,
+        "Recovered_MMOTU_2D": 357.1914011295472,
+        "Recovered_PCOSGen": 720.5880972229443,
+        "data": 720.5881055710169
+      }
+    },
+    "PCOS": {
+      "original_cells": {
+        "2526_Data_ALL": 2613.68896484375,
+        "Additional_Five_Class": 55.42994689941406,
+        "Recovered_PCOSGen": 459.564697265625,
+        "data": 110.85992431640625
+      },
+      "balanced_cells": {
+        "2526_Data_ALL": 1148.2447872811022,
+        "Additional_Five_Class": 314.3512539013777,
+        "Recovered_PCOSGen": 1148.2449080460153,
+        "data": 628.7025078027555
+      }
+    }
+  }
+}

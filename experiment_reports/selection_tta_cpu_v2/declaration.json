@@ -1,0 +1,32 @@
+{
+  "before_inference": true,
+  "worker_sha256": "d05fc7dc4899ecb0ad66b4c1823a171c58670178b559632483aebf5a943b6c1c",
+  "model_source_sha256": "52a6319ee245b796fcbfb37e8f60a69454083692c7f4180e8f43d1f2e04dd9da",
+  "checkpoint_sha256": "aa809ac1c0eadca3e7b7e0591607df9c0ed5630a355c9650915b69ec811a3364",
+  "records": 2112,
+  "unique_encoded_files": 1047,
+  "tensorflow_version": "2.20.0",
+  "numpy_version": "2.5.3",
+  "keras_version": "3.15.1",
+  "saved_config_sha256": "f28b4c1f688eba02ffff447a7a8dde8e1c16563af14a9417c11c4d5ab766a2a9",
+  "roles": [
+    "select"
+  ],
+  "test_calibration_access": false,
+  "fitting": false,
+  "class_order": [
+    "Benign",
+    "Malignant",
+    "Normal",
+    "PCOS"
+  ],
+  "views": [
+    "identity",
+    "horizontal",
+    "vertical",
+    "both"
+  ],
+  "fixed_comparison": "Identity versus equal average of all four views. No alternative subsets/weights selected.",
+  "runtime": "Local CPU float32 deterministic; separate matched runtime variant, not a replacement for historical GPU identity scores.",
+  "decision": "Descriptive matched SELECT balanced accuracy, macro F1 secondary. No classification TEST inference or automatic promotion."
+}

@@ -1,3 +1,5 @@
+> Update: the warm run has completed and five new checks were rejected. Read [latest improvement round](docs/LATEST_IMPROVEMENT_ROUND.md) before the earlier snapshot below.
+
 # Next experiments and decisions
 
 ## Already submitted

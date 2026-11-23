@@ -1,0 +1,653 @@
+{
+  "scope": "Descriptive SELECT-only oldimage model; bins fixed engineering summaries. Repeated records retained. Color proxy is not OCR/text/caliper detection or proof of a shortcut. No image modifications, test inference or hyperparameter selection.",
+  "groups": [
+    {
+      "source": "2526_Data_ALL",
+      "provided_class": "Benign",
+      "feature": "aspect_bin",
+      "bin": "landscape>1.2",
+      "records": 107,
+      "wrong": 5,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "2526_Data_ALL",
+      "provided_class": "Benign",
+      "feature": "aspect_bin",
+      "bin": "near_square0.8-1.2",
+      "records": 143,
+      "wrong": 35,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "2526_Data_ALL",
+      "provided_class": "Benign",
+      "feature": "aspect_bin",
+      "bin": "portrait<0.8",
+      "records": 2,
+      "wrong": 0,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "2526_Data_ALL",
+      "provided_class": "Benign",
+      "feature": "black_padding_bin",
+      "bin": "<=25%nearblack",
+      "records": 152,
+      "wrong": 33,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "2526_Data_ALL",
+      "provided_class": "Benign",
+      "feature": "black_padding_bin",
+      "bin": ">25%nearblack",
+      "records": 100,
+      "wrong": 7,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "2526_Data_ALL",
+      "provided_class": "Benign",
+      "feature": "color_proxy_bin",
+      "bin": "<=1%colored",
+      "records": 220,
+      "wrong": 39,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "2526_Data_ALL",
+      "provided_class": "Benign",
+      "feature": "color_proxy_bin",
+      "bin": ">1%colored",
+      "records": 32,
+      "wrong": 1,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "2526_Data_ALL",
+      "provided_class": "Malignant",
+      "feature": "aspect_bin",
+      "bin": "landscape>1.2",
+      "records": 5,
+      "wrong": 3,
+      "predicted_benign_when_not_benign": 3
+    },
+    {
+      "source": "2526_Data_ALL",
+      "provided_class": "Malignant",
+      "feature": "aspect_bin",
+      "bin": "near_square0.8-1.2",
+      "records": 76,
+      "wrong": 0,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "2526_Data_ALL",
+      "provided_class": "Malignant",
+      "feature": "black_padding_bin",
+      "bin": "<=25%nearblack",
+      "records": 36,
+      "wrong": 1,
+      "predicted_benign_when_not_benign": 1
+    },
+    {
+      "source": "2526_Data_ALL",
+      "provided_class": "Malignant",
+      "feature": "black_padding_bin",
+      "bin": ">25%nearblack",
+      "records": 45,
+      "wrong": 2,
+      "predicted_benign_when_not_benign": 2
+    },
+    {
+      "source": "2526_Data_ALL",
+      "provided_class": "Malignant",
+      "feature": "color_proxy_bin",
+      "bin": "<=1%colored",
+      "records": 69,
+      "wrong": 1,
+      "predicted_benign_when_not_benign": 1
+    },
+    {
+      "source": "2526_Data_ALL",
+      "provided_class": "Malignant",
+      "feature": "color_proxy_bin",
+      "bin": ">1%colored",
+      "records": 12,
+      "wrong": 2,
+      "predicted_benign_when_not_benign": 2
+    },
+    {
+      "source": "2526_Data_ALL",
+      "provided_class": "Normal",
+      "feature": "aspect_bin",
+      "bin": "landscape>1.2",
+      "records": 325,
+      "wrong": 19,
+      "predicted_benign_when_not_benign": 18
+    },
+    {
+      "source": "2526_Data_ALL",
+      "provided_class": "Normal",
+      "feature": "aspect_bin",
+      "bin": "near_square0.8-1.2",
+      "records": 257,
+      "wrong": 44,
+      "predicted_benign_when_not_benign": 41
+    },
+    {
+      "source": "2526_Data_ALL",
+      "provided_class": "Normal",
+      "feature": "aspect_bin",
+      "bin": "portrait<0.8",
+      "records": 62,
+      "wrong": 0,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "2526_Data_ALL",
+      "provided_class": "Normal",
+      "feature": "black_padding_bin",
+      "bin": "<=25%nearblack",
+      "records": 243,
+      "wrong": 45,
+      "predicted_benign_when_not_benign": 42
+    },
+    {
+      "source": "2526_Data_ALL",
+      "provided_class": "Normal",
+      "feature": "black_padding_bin",
+      "bin": ">25%nearblack",
+      "records": 401,
+      "wrong": 18,
+      "predicted_benign_when_not_benign": 17
+    },
+    {
+      "source": "2526_Data_ALL",
+      "provided_class": "Normal",
+      "feature": "color_proxy_bin",
+      "bin": "<=1%colored",
+      "records": 632,
+      "wrong": 52,
+      "predicted_benign_when_not_benign": 48
+    },
+    {
+      "source": "2526_Data_ALL",
+      "provided_class": "Normal",
+      "feature": "color_proxy_bin",
+      "bin": ">1%colored",
+      "records": 12,
+      "wrong": 11,
+      "predicted_benign_when_not_benign": 11
+    },
+    {
+      "source": "2526_Data_ALL",
+      "provided_class": "PCOS",
+      "feature": "aspect_bin",
+      "bin": "landscape>1.2",
+      "records": 10,
+      "wrong": 7,
+      "predicted_benign_when_not_benign": 7
+    },
+    {
+      "source": "2526_Data_ALL",
+      "provided_class": "PCOS",
+      "feature": "aspect_bin",
+      "bin": "near_square0.8-1.2",
+      "records": 749,
+      "wrong": 106,
+      "predicted_benign_when_not_benign": 90
+    },
+    {
+      "source": "2526_Data_ALL",
+      "provided_class": "PCOS",
+      "feature": "aspect_bin",
+      "bin": "portrait<0.8",
+      "records": 1,
+      "wrong": 1,
+      "predicted_benign_when_not_benign": 1
+    },
+    {
+      "source": "2526_Data_ALL",
+      "provided_class": "PCOS",
+      "feature": "black_padding_bin",
+      "bin": "<=25%nearblack",
+      "records": 699,
+      "wrong": 94,
+      "predicted_benign_when_not_benign": 86
+    },
+    {
+      "source": "2526_Data_ALL",
+      "provided_class": "PCOS",
+      "feature": "black_padding_bin",
+      "bin": ">25%nearblack",
+      "records": 61,
+      "wrong": 20,
+      "predicted_benign_when_not_benign": 12
+    },
+    {
+      "source": "2526_Data_ALL",
+      "provided_class": "PCOS",
+      "feature": "color_proxy_bin",
+      "bin": "<=1%colored",
+      "records": 740,
+      "wrong": 113,
+      "predicted_benign_when_not_benign": 97
+    },
+    {
+      "source": "2526_Data_ALL",
+      "provided_class": "PCOS",
+      "feature": "color_proxy_bin",
+      "bin": ">1%colored",
+      "records": 20,
+      "wrong": 1,
+      "predicted_benign_when_not_benign": 1
+    },
+    {
+      "source": "Additional_Five_Class",
+      "provided_class": "Normal",
+      "feature": "aspect_bin",
+      "bin": "near_square0.8-1.2",
+      "records": 50,
+      "wrong": 3,
+      "predicted_benign_when_not_benign": 3
+    },
+    {
+      "source": "Additional_Five_Class",
+      "provided_class": "Normal",
+      "feature": "black_padding_bin",
+      "bin": "<=25%nearblack",
+      "records": 21,
+      "wrong": 1,
+      "predicted_benign_when_not_benign": 1
+    },
+    {
+      "source": "Additional_Five_Class",
+      "provided_class": "Normal",
+      "feature": "black_padding_bin",
+      "bin": ">25%nearblack",
+      "records": 29,
+      "wrong": 2,
+      "predicted_benign_when_not_benign": 2
+    },
+    {
+      "source": "Additional_Five_Class",
+      "provided_class": "Normal",
+      "feature": "color_proxy_bin",
+      "bin": "<=1%colored",
+      "records": 50,
+      "wrong": 3,
+      "predicted_benign_when_not_benign": 3
+    },
+    {
+      "source": "Additional_Five_Class",
+      "provided_class": "PCOS",
+      "feature": "aspect_bin",
+      "bin": "near_square0.8-1.2",
+      "records": 39,
+      "wrong": 0,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "Additional_Five_Class",
+      "provided_class": "PCOS",
+      "feature": "black_padding_bin",
+      "bin": "<=25%nearblack",
+      "records": 32,
+      "wrong": 0,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "Additional_Five_Class",
+      "provided_class": "PCOS",
+      "feature": "black_padding_bin",
+      "bin": ">25%nearblack",
+      "records": 7,
+      "wrong": 0,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "Additional_Five_Class",
+      "provided_class": "PCOS",
+      "feature": "color_proxy_bin",
+      "bin": "<=1%colored",
+      "records": 39,
+      "wrong": 0,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "Recovered_MMOTU_2D",
+      "provided_class": "Benign",
+      "feature": "aspect_bin",
+      "bin": "landscape>1.2",
+      "records": 40,
+      "wrong": 10,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "Recovered_MMOTU_2D",
+      "provided_class": "Benign",
+      "feature": "aspect_bin",
+      "bin": "near_square0.8-1.2",
+      "records": 26,
+      "wrong": 7,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "Recovered_MMOTU_2D",
+      "provided_class": "Benign",
+      "feature": "aspect_bin",
+      "bin": "portrait<0.8",
+      "records": 1,
+      "wrong": 1,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "Recovered_MMOTU_2D",
+      "provided_class": "Benign",
+      "feature": "black_padding_bin",
+      "bin": "<=25%nearblack",
+      "records": 39,
+      "wrong": 13,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "Recovered_MMOTU_2D",
+      "provided_class": "Benign",
+      "feature": "black_padding_bin",
+      "bin": ">25%nearblack",
+      "records": 28,
+      "wrong": 5,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "Recovered_MMOTU_2D",
+      "provided_class": "Benign",
+      "feature": "color_proxy_bin",
+      "bin": "<=1%colored",
+      "records": 52,
+      "wrong": 15,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "Recovered_MMOTU_2D",
+      "provided_class": "Benign",
+      "feature": "color_proxy_bin",
+      "bin": ">1%colored",
+      "records": 15,
+      "wrong": 3,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "Recovered_MMOTU_2D",
+      "provided_class": "Malignant",
+      "feature": "aspect_bin",
+      "bin": "landscape>1.2",
+      "records": 2,
+      "wrong": 2,
+      "predicted_benign_when_not_benign": 1
+    },
+    {
+      "source": "Recovered_MMOTU_2D",
+      "provided_class": "Malignant",
+      "feature": "aspect_bin",
+      "bin": "near_square0.8-1.2",
+      "records": 1,
+      "wrong": 1,
+      "predicted_benign_when_not_benign": 1
+    },
+    {
+      "source": "Recovered_MMOTU_2D",
+      "provided_class": "Malignant",
+      "feature": "black_padding_bin",
+      "bin": "<=25%nearblack",
+      "records": 2,
+      "wrong": 2,
+      "predicted_benign_when_not_benign": 2
+    },
+    {
+      "source": "Recovered_MMOTU_2D",
+      "provided_class": "Malignant",
+      "feature": "black_padding_bin",
+      "bin": ">25%nearblack",
+      "records": 1,
+      "wrong": 1,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "Recovered_MMOTU_2D",
+      "provided_class": "Malignant",
+      "feature": "color_proxy_bin",
+      "bin": "<=1%colored",
+      "records": 2,
+      "wrong": 2,
+      "predicted_benign_when_not_benign": 1
+    },
+    {
+      "source": "Recovered_MMOTU_2D",
+      "provided_class": "Malignant",
+      "feature": "color_proxy_bin",
+      "bin": ">1%colored",
+      "records": 1,
+      "wrong": 1,
+      "predicted_benign_when_not_benign": 1
+    },
+    {
+      "source": "Recovered_MMOTU_2D",
+      "provided_class": "Normal",
+      "feature": "aspect_bin",
+      "bin": "landscape>1.2",
+      "records": 19,
+      "wrong": 9,
+      "predicted_benign_when_not_benign": 9
+    },
+    {
+      "source": "Recovered_MMOTU_2D",
+      "provided_class": "Normal",
+      "feature": "aspect_bin",
+      "bin": "near_square0.8-1.2",
+      "records": 30,
+      "wrong": 20,
+      "predicted_benign_when_not_benign": 16
+    },
+    {
+      "source": "Recovered_MMOTU_2D",
+      "provided_class": "Normal",
+      "feature": "aspect_bin",
+      "bin": "portrait<0.8",
+      "records": 2,
+      "wrong": 0,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "Recovered_MMOTU_2D",
+      "provided_class": "Normal",
+      "feature": "black_padding_bin",
+      "bin": "<=25%nearblack",
+      "records": 40,
+      "wrong": 23,
+      "predicted_benign_when_not_benign": 19
+    },
+    {
+      "source": "Recovered_MMOTU_2D",
+      "provided_class": "Normal",
+      "feature": "black_padding_bin",
+      "bin": ">25%nearblack",
+      "records": 11,
+      "wrong": 6,
+      "predicted_benign_when_not_benign": 6
+    },
+    {
+      "source": "Recovered_MMOTU_2D",
+      "provided_class": "Normal",
+      "feature": "color_proxy_bin",
+      "bin": "<=1%colored",
+      "records": 44,
+      "wrong": 24,
+      "predicted_benign_when_not_benign": 22
+    },
+    {
+      "source": "Recovered_MMOTU_2D",
+      "provided_class": "Normal",
+      "feature": "color_proxy_bin",
+      "bin": ">1%colored",
+      "records": 7,
+      "wrong": 5,
+      "predicted_benign_when_not_benign": 3
+    },
+    {
+      "source": "Recovered_PCOSGen",
+      "provided_class": "Normal",
+      "feature": "aspect_bin",
+      "bin": "near_square0.8-1.2",
+      "records": 21,
+      "wrong": 3,
+      "predicted_benign_when_not_benign": 2
+    },
+    {
+      "source": "Recovered_PCOSGen",
+      "provided_class": "Normal",
+      "feature": "black_padding_bin",
+      "bin": "<=25%nearblack",
+      "records": 17,
+      "wrong": 2,
+      "predicted_benign_when_not_benign": 1
+    },
+    {
+      "source": "Recovered_PCOSGen",
+      "provided_class": "Normal",
+      "feature": "black_padding_bin",
+      "bin": ">25%nearblack",
+      "records": 4,
+      "wrong": 1,
+      "predicted_benign_when_not_benign": 1
+    },
+    {
+      "source": "Recovered_PCOSGen",
+      "provided_class": "Normal",
+      "feature": "color_proxy_bin",
+      "bin": "<=1%colored",
+      "records": 21,
+      "wrong": 3,
+      "predicted_benign_when_not_benign": 2
+    },
+    {
+      "source": "Recovered_PCOSGen",
+      "provided_class": "PCOS",
+      "feature": "aspect_bin",
+      "bin": "near_square0.8-1.2",
+      "records": 21,
+      "wrong": 0,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "Recovered_PCOSGen",
+      "provided_class": "PCOS",
+      "feature": "black_padding_bin",
+      "bin": "<=25%nearblack",
+      "records": 21,
+      "wrong": 0,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "Recovered_PCOSGen",
+      "provided_class": "PCOS",
+      "feature": "color_proxy_bin",
+      "bin": "<=1%colored",
+      "records": 20,
+      "wrong": 0,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "Recovered_PCOSGen",
+      "provided_class": "PCOS",
+      "feature": "color_proxy_bin",
+      "bin": ">1%colored",
+      "records": 1,
+      "wrong": 0,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "data",
+      "provided_class": "Normal",
+      "feature": "aspect_bin",
+      "bin": "landscape>1.2",
+      "records": 61,
+      "wrong": 0,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "data",
+      "provided_class": "Normal",
+      "feature": "aspect_bin",
+      "bin": "near_square0.8-1.2",
+      "records": 22,
+      "wrong": 0,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "data",
+      "provided_class": "Normal",
+      "feature": "black_padding_bin",
+      "bin": "<=25%nearblack",
+      "records": 32,
+      "wrong": 0,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "data",
+      "provided_class": "Normal",
+      "feature": "black_padding_bin",
+      "bin": ">25%nearblack",
+      "records": 51,
+      "wrong": 0,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "data",
+      "provided_class": "Normal",
+      "feature": "color_proxy_bin",
+      "bin": "<=1%colored",
+      "records": 83,
+      "wrong": 0,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "data",
+      "provided_class": "PCOS",
+      "feature": "aspect_bin",
+      "bin": "near_square0.8-1.2",
+      "records": 40,
+      "wrong": 1,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "data",
+      "provided_class": "PCOS",
+      "feature": "black_padding_bin",
+      "bin": "<=25%nearblack",
+      "records": 38,
+      "wrong": 1,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "data",
+      "provided_class": "PCOS",
+      "feature": "black_padding_bin",
+      "bin": ">25%nearblack",
+      "records": 2,
+      "wrong": 0,
+      "predicted_benign_when_not_benign": 0
+    },
+    {
+      "source": "data",
+      "provided_class": "PCOS",
+      "feature": "color_proxy_bin",
+      "bin": "<=1%colored",
+      "records": 40,
+      "wrong": 1,
+      "predicted_benign_when_not_benign": 0
+    }
+  ]
+}

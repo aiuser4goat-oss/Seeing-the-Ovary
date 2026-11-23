@@ -1,0 +1,68 @@
+{
+  "cross_entropy": {
+    "balanced_accuracy": 0.8702706421067945,
+    "macro_f1": 0.7945098693825478,
+    "confusion_matrix": [
+      [
+        257,
+        31,
+        9,
+        22
+      ],
+      [
+        2,
+        82,
+        0,
+        0
+      ],
+      [
+        93,
+        28,
+        722,
+        6
+      ],
+      [
+        113,
+        5,
+        12,
+        730
+      ]
+    ],
+    "converged": true,
+    "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+    "iterations": 52
+  },
+  "gce_q0.7": {
+    "balanced_accuracy": 0.8638332130194932,
+    "macro_f1": 0.7760281583988761,
+    "confusion_matrix": [
+      [
+        251,
+        37,
+        5,
+        26
+      ],
+      [
+        1,
+        83,
+        0,
+        0
+      ],
+      [
+        98,
+        39,
+        706,
+        6
+      ],
+      [
+        110,
+        8,
+        12,
+        730
+      ]
+    ],
+    "converged": true,
+    "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+    "iterations": 34
+  }
+}

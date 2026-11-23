@@ -1,0 +1,73 @@
+{
+  "status": "complete",
+  "initial_max_difference": 0.0,
+  "bn_layers": 59,
+  "bn_means_changed": 59,
+  "learned_parameters_unchanged": true,
+  "fit_records_seen": 12763,
+  "elapsed_seconds": 394.58149112504907,
+  "test_evaluated": false,
+  "results": {
+    "identity": {
+      "balanced_accuracy": 0.8742020624328978,
+      "macro_f1": 0.8497551848449256,
+      "confusion_matrix": [
+        [
+          260,
+          6,
+          26,
+          27
+        ],
+        [
+          5,
+          78,
+          1,
+          0
+        ],
+        [
+          88,
+          6,
+          752,
+          3
+        ],
+        [
+          97,
+          0,
+          17,
+          746
+        ]
+      ]
+    },
+    "bn_reestimated": {
+      "balanced_accuracy": 0.3687913614859132,
+      "macro_f1": 0.22389540812194644,
+      "confusion_matrix": [
+        [
+          58,
+          244,
+          6,
+          11
+        ],
+        [
+          3,
+          81,
+          0,
+          0
+        ],
+        [
+          36,
+          567,
+          231,
+          15
+        ],
+        [
+          4,
+          802,
+          5,
+          49
+        ]
+      ]
+    }
+  },
+  "checkpoint_sha256": "527ac208bb4a61530bb31256615600fd6bfcec8171a702cc04738ed8e5c9927d"
+}

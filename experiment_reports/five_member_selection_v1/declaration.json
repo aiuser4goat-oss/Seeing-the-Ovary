@@ -1,0 +1,78 @@
+{
+  "before_comparison": "2026-11-23T19:47:37.429049+00:00",
+  "recipe": "Exactly80% of prior equal-four ensemble probabilities plus20% warmTinyUSFM, making equal-five members. No weight/grid/subset search.",
+  "previous_recipe": {
+    "members": [
+      "old_baseline",
+      "old_image",
+      "warm_image",
+      "convnext_image"
+    ],
+    "metrics": {
+      "accuracy": 0.8716856060606061,
+      "balanced_accuracy": 0.8805817982554518,
+      "macro_f1": 0.8509602578063603,
+      "nll": 0.29408466815948486,
+      "brier": 0.16843735535875096,
+      "confusion_matrix": [
+        [
+          270,
+          8,
+          17,
+          24
+        ],
+        [
+          5,
+          78,
+          1,
+          0
+        ],
+        [
+          90,
+          6,
+          751,
+          2
+        ],
+        [
+          103,
+          0,
+          15,
+          742
+        ]
+      ],
+      "ece_10_bins": 0.02321516050759591,
+      "macro_roc_auc_ovr": 0.9801680687434138,
+      "per_class": {
+        "Benign": {
+          "sensitivity": 0.8463949843260188,
+          "specificity": 0.8895705521472392,
+          "precision": 0.5769230769230769,
+          "support": 319
+        },
+        "Malignant": {
+          "sensitivity": 0.9285714285714286,
+          "specificity": 0.9930966469428008,
+          "precision": 0.8478260869565217,
+          "support": 84
+        },
+        "Normal": {
+          "sensitivity": 0.8845700824499411,
+          "specificity": 0.9738717339667459,
+          "precision": 0.9579081632653061,
+          "support": 849
+        },
+        "PCOS": {
+          "sensitivity": 0.8627906976744186,
+          "specificity": 0.9792332268370607,
+          "precision": 0.9661458333333334,
+          "support": 860
+        }
+      }
+    }
+  },
+  "input_hashes": [
+    "824cd64992e50875c17c36ba7be4ab76d00288612788cea6b6cae9500689e5fa",
+    "d65a5d15f870310c01b577b848913aa99cff632ef07842c0b604d3d4393e133e"
+  ],
+  "scope": "New exploratory fixed comparison declared AFTER review of warm results. Not a predeclared original endpoint, not independent confirmation. SELECT only; no calibration/TEST."
+}

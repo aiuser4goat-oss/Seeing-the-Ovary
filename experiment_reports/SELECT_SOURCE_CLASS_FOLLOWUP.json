@@ -1,0 +1,213 @@
+{
+  "fit_source_class_counts": {
+    "2526_Data_ALL": {
+      "Normal": 4189,
+      "PCOS": 4616,
+      "Benign": 1891,
+      "Malignant": 463
+    },
+    "data": {
+      "Normal": 307,
+      "PCOS": 110
+    },
+    "Additional_Five_Class": {
+      "PCOS": 55,
+      "Normal": 225
+    },
+    "Recovered_PCOSGen": {
+      "PCOS": 456,
+      "Normal": 277
+    },
+    "Recovered_MMOTU_2D": {
+      "Normal": 72,
+      "Benign": 93,
+      "Malignant": 9
+    }
+  },
+  "selection_error_patterns": {
+    "old_image_selection": {
+      "2526_Data_ALL": {
+        "records": 1737,
+        "errors": 220,
+        "normal_to_benign": 59,
+        "pcos_to_benign": 98,
+        "recall": {
+          "Benign": 0.8412698412698413,
+          "Malignant": 0.9629629629629629,
+          "Normal": 0.9021739130434783,
+          "PCOS": 0.85
+        },
+        "support": {
+          "Benign": 252,
+          "Malignant": 81,
+          "Normal": 644,
+          "PCOS": 760
+        }
+      },
+      "Additional_Five_Class": {
+        "records": 89,
+        "errors": 3,
+        "normal_to_benign": 3,
+        "pcos_to_benign": 0,
+        "recall": {
+          "Benign": null,
+          "Malignant": null,
+          "Normal": 0.94,
+          "PCOS": 1.0
+        },
+        "support": {
+          "Benign": 0,
+          "Malignant": 0,
+          "Normal": 50,
+          "PCOS": 39
+        }
+      },
+      "data": {
+        "records": 123,
+        "errors": 1,
+        "normal_to_benign": 0,
+        "pcos_to_benign": 0,
+        "recall": {
+          "Benign": null,
+          "Malignant": null,
+          "Normal": 1.0,
+          "PCOS": 0.975
+        },
+        "support": {
+          "Benign": 0,
+          "Malignant": 0,
+          "Normal": 83,
+          "PCOS": 40
+        }
+      },
+      "Recovered_MMOTU_2D": {
+        "records": 121,
+        "errors": 50,
+        "normal_to_benign": 25,
+        "pcos_to_benign": 0,
+        "recall": {
+          "Benign": 0.7313432835820896,
+          "Malignant": 0.0,
+          "Normal": 0.43137254901960786,
+          "PCOS": null
+        },
+        "support": {
+          "Benign": 67,
+          "Malignant": 3,
+          "Normal": 51,
+          "PCOS": 0
+        }
+      },
+      "Recovered_PCOSGen": {
+        "records": 42,
+        "errors": 3,
+        "normal_to_benign": 2,
+        "pcos_to_benign": 0,
+        "recall": {
+          "Benign": null,
+          "Malignant": null,
+          "Normal": 0.8571428571428571,
+          "PCOS": 1.0
+        },
+        "support": {
+          "Benign": 0,
+          "Malignant": 0,
+          "Normal": 21,
+          "PCOS": 21
+        }
+      }
+    },
+    "tiny_pilot_selection": {
+      "2526_Data_ALL": {
+        "records": 1737,
+        "errors": 310,
+        "normal_to_benign": 62,
+        "pcos_to_benign": 100,
+        "recall": {
+          "Benign": 0.7420634920634921,
+          "Malignant": 0.9259259259259259,
+          "Normal": 0.8680124223602484,
+          "PCOS": 0.7973684210526316
+        },
+        "support": {
+          "Benign": 252,
+          "Malignant": 81,
+          "Normal": 644,
+          "PCOS": 760
+        }
+      },
+      "Additional_Five_Class": {
+        "records": 89,
+        "errors": 1,
+        "normal_to_benign": 0,
+        "pcos_to_benign": 0,
+        "recall": {
+          "Benign": null,
+          "Malignant": null,
+          "Normal": 1.0,
+          "PCOS": 0.9743589743589743
+        },
+        "support": {
+          "Benign": 0,
+          "Malignant": 0,
+          "Normal": 50,
+          "PCOS": 39
+        }
+      },
+      "data": {
+        "records": 123,
+        "errors": 0,
+        "normal_to_benign": 0,
+        "pcos_to_benign": 0,
+        "recall": {
+          "Benign": null,
+          "Malignant": null,
+          "Normal": 1.0,
+          "PCOS": 1.0
+        },
+        "support": {
+          "Benign": 0,
+          "Malignant": 0,
+          "Normal": 83,
+          "PCOS": 40
+        }
+      },
+      "Recovered_MMOTU_2D": {
+        "records": 121,
+        "errors": 60,
+        "normal_to_benign": 40,
+        "pcos_to_benign": 0,
+        "recall": {
+          "Benign": 0.8059701492537313,
+          "Malignant": 0.3333333333333333,
+          "Normal": 0.11764705882352941,
+          "PCOS": null
+        },
+        "support": {
+          "Benign": 67,
+          "Malignant": 3,
+          "Normal": 51,
+          "PCOS": 0
+        }
+      },
+      "Recovered_PCOSGen": {
+        "records": 42,
+        "errors": 7,
+        "normal_to_benign": 2,
+        "pcos_to_benign": 0,
+        "recall": {
+          "Benign": null,
+          "Malignant": null,
+          "Normal": 0.7142857142857143,
+          "PCOS": 0.9523809523809523
+        },
+        "support": {
+          "Benign": 0,
+          "Malignant": 0,
+          "Normal": 21,
+          "PCOS": 21
+        }
+      }
+    }
+  }
+}

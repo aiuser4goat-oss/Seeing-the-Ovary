@@ -1,0 +1,6 @@
+{
+  "maximum_probability_difference": 0.0,
+  "identical_top_classes": true,
+  "fixed_tolerance": 1e-05,
+  "device": "cuda:0"
+}

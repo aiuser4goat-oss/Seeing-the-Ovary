@@ -1,0 +1,143 @@
+{
+  "scope": "Selection only, two recipes fixed before new full fitting results; no test evaluation",
+  "plan_sha256": "8d27fcc415bdc29992408c77a18adca2c7ce8a0c396a5d90a99d7c1c0d8936f2",
+  "new_checkpoint_sha256": "be0c13ddcc220cdb0a5fa0c8359b1247b8c280042024e4557899e59f51c99f54",
+  "results": {
+    "tinyusfm_alone": {
+      "members": [
+        "tinyusfm"
+      ],
+      "balanced_accuracy": 0.8538989879996636,
+      "macro_f1": 0.8197440843868244,
+      "confusion_matrix": [
+        [
+          272,
+          10,
+          14,
+          23
+        ],
+        [
+          8,
+          75,
+          1,
+          0
+        ],
+        [
+          120,
+          7,
+          715,
+          7
+        ],
+        [
+          122,
+          0,
+          26,
+          712
+        ]
+      ]
+    },
+    "old_image_alone": {
+      "members": [
+        "image_only"
+      ],
+      "balanced_accuracy": 0.8744005997426574,
+      "macro_f1": 0.849553884100338,
+      "confusion_matrix": [
+        [
+          261,
+          6,
+          26,
+          26
+        ],
+        [
+          5,
+          78,
+          1,
+          0
+        ],
+        [
+          89,
+          6,
+          751,
+          3
+        ],
+        [
+          98,
+          0,
+          17,
+          745
+        ]
+      ]
+    },
+    "tiny_plus_old_image": {
+      "members": [
+        "tinyusfm",
+        "image_only"
+      ],
+      "balanced_accuracy": 0.8761834699456016,
+      "macro_f1": 0.8515545256672561,
+      "confusion_matrix": [
+        [
+          279,
+          4,
+          16,
+          20
+        ],
+        [
+          7,
+          77,
+          0,
+          0
+        ],
+        [
+          103,
+          3,
+          739,
+          4
+        ],
+        [
+          114,
+          0,
+          21,
+          725
+        ]
+      ]
+    },
+    "tiny_plus_old_anatomy_three": {
+      "members": [
+        "tinyusfm",
+        "image_only",
+        "original_baseline",
+        "fusion_refined"
+      ],
+      "balanced_accuracy": 0.8741857494377677,
+      "macro_f1": 0.8522808950240834,
+      "confusion_matrix": [
+        [
+          281,
+          3,
+          15,
+          20
+        ],
+        [
+          8,
+          76,
+          0,
+          0
+        ],
+        [
+          107,
+          2,
+          737,
+          3
+        ],
+        [
+          116,
+          0,
+          19,
+          725
+        ]
+      ]
+    }
+  }
+}

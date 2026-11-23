@@ -1,0 +1,166 @@
+{
+  "control": {
+    "balanced_accuracy": 0.8702706421067945,
+    "macro_f1": 0.7945098693825478,
+    "confusion_matrix": [
+      [
+        257,
+        31,
+        9,
+        22
+      ],
+      [
+        2,
+        82,
+        0,
+        0
+      ],
+      [
+        93,
+        28,
+        722,
+        6
+      ],
+      [
+        113,
+        5,
+        12,
+        730
+      ]
+    ],
+    "by_source": {
+      "2526_Data_ALL": {
+        "records": 1737,
+        "correct": 1483,
+        "class_recall": {
+          "Benign": 0.8253968253968254,
+          "Malignant": 0.9876543209876543,
+          "Normal": 0.8742236024844721,
+          "PCOS": 0.8315789473684211
+        }
+      },
+      "Additional_Five_Class": {
+        "records": 89,
+        "correct": 87,
+        "class_recall": {
+          "Benign": null,
+          "Malignant": null,
+          "Normal": 0.98,
+          "PCOS": 0.9743589743589743
+        }
+      },
+      "Recovered_MMOTU_2D": {
+        "records": 121,
+        "correct": 60,
+        "class_recall": {
+          "Benign": 0.7313432835820896,
+          "Malignant": 0.6666666666666666,
+          "Normal": 0.17647058823529413,
+          "PCOS": null
+        }
+      },
+      "Recovered_PCOSGen": {
+        "records": 42,
+        "correct": 39,
+        "class_recall": {
+          "Benign": null,
+          "Malignant": null,
+          "Normal": 0.8571428571428571,
+          "PCOS": 1.0
+        }
+      },
+      "data": {
+        "records": 123,
+        "correct": 122,
+        "class_recall": {
+          "Benign": null,
+          "Malignant": null,
+          "Normal": 1.0,
+          "PCOS": 0.975
+        }
+      }
+    }
+  },
+  "source_balanced": {
+    "balanced_accuracy": 0.8672484861438704,
+    "macro_f1": 0.8091182904591586,
+    "confusion_matrix": [
+      [
+        263,
+        21,
+        13,
+        22
+      ],
+      [
+        4,
+        79,
+        1,
+        0
+      ],
+      [
+        96,
+        17,
+        733,
+        3
+      ],
+      [
+        122,
+        4,
+        11,
+        723
+      ]
+    ],
+    "by_source": {
+      "2526_Data_ALL": {
+        "records": 1737,
+        "correct": 1478,
+        "class_recall": {
+          "Benign": 0.8333333333333334,
+          "Malignant": 0.9629629629629629,
+          "Normal": 0.8788819875776398,
+          "PCOS": 0.8210526315789474
+        }
+      },
+      "Additional_Five_Class": {
+        "records": 89,
+        "correct": 89,
+        "class_recall": {
+          "Benign": null,
+          "Malignant": null,
+          "Normal": 1.0,
+          "PCOS": 1.0
+        }
+      },
+      "Recovered_MMOTU_2D": {
+        "records": 121,
+        "correct": 70,
+        "class_recall": {
+          "Benign": 0.7910447761194029,
+          "Malignant": 0.3333333333333333,
+          "Normal": 0.3137254901960784,
+          "PCOS": null
+        }
+      },
+      "Recovered_PCOSGen": {
+        "records": 42,
+        "correct": 39,
+        "class_recall": {
+          "Benign": null,
+          "Malignant": null,
+          "Normal": 0.8571428571428571,
+          "PCOS": 1.0
+        }
+      },
+      "data": {
+        "records": 123,
+        "correct": 122,
+        "class_recall": {
+          "Benign": null,
+          "Malignant": null,
+          "Normal": 1.0,
+          "PCOS": 0.975
+        }
+      }
+    }
+  }
+}

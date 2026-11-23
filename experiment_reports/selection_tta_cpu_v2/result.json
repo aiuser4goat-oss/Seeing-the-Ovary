@@ -1,0 +1,68 @@
+{
+  "status": "complete",
+  "elapsed_seconds": 157.463393666083,
+  "test_evaluated": false,
+  "results": {
+    "identity": {
+      "balanced_accuracy": 0.8742020624328978,
+      "macro_f1": 0.8497551848449256,
+      "confusion_matrix": [
+        [
+          260,
+          6,
+          26,
+          27
+        ],
+        [
+          5,
+          78,
+          1,
+          0
+        ],
+        [
+          88,
+          6,
+          752,
+          3
+        ],
+        [
+          97,
+          0,
+          17,
+          746
+        ]
+      ]
+    },
+    "four_flip_average": {
+      "balanced_accuracy": 0.8727970364767936,
+      "macro_f1": 0.8489975997094119,
+      "confusion_matrix": [
+        [
+          262,
+          8,
+          23,
+          26
+        ],
+        [
+          6,
+          77,
+          1,
+          0
+        ],
+        [
+          85,
+          4,
+          753,
+          7
+        ],
+        [
+          101,
+          0,
+          14,
+          745
+        ]
+      ]
+    }
+  },
+  "balanced_accuracy_difference": -0.0014050259561041445
+}

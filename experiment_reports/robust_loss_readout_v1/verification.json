@@ -1,0 +1,8 @@
+{
+  "verified_utc": "2026-11-23T19:46:13.801499+00:00",
+  "predictions_sha256": "f9a42d24583393b95ddf6b033ea0787a7fcd293eb4c7e42d6db03216792758d7",
+  "record_count": 2112,
+  "labels_match_manifest": true,
+  "manifest_sha256": "d0112fb807fe61accdd0fac1a2a606ff74f51558a650e5767e35d22bde62c190",
+  "test_inference": false
+}
