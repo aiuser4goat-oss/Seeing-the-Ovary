@@ -1,0 +1,34 @@
+{
+  "declared_before_fitting_utc": "2026-11-23T20:33:41.523028+00:00",
+  "worker_sha256": "96c50790d78fcf34d7292adbe4d8500bb1b268a07f53efb6e66cee54c5a58659",
+  "features_sha256": "4c516c2831268648104d4f065ad0f6374b6dd8b7b537e34182136c8123825e9a",
+  "main_selection_cache_sha256": "87b39fcf2ba9966b8ef31aa954bf92b4ec46e1b03664ea9fd2afbd2fc18ed7d1",
+  "global_checkpoint_sha256": "aa809ac1c0eadca3e7b7e0591607df9c0ed5630a355c9650915b69ec811a3364",
+  "class_order": [
+    "Benign",
+    "Malignant",
+    "Normal",
+    "PCOS"
+  ],
+  "main_runtime": "Deterministic CPU float32 image-only identity; historical GPU scores unchanged",
+  "fit_records_full_main": 12763,
+  "specialist_fit_records": 7054,
+  "selection_records": 2112,
+  "specialist_classes": [
+    "Benign",
+    "Normal"
+  ],
+  "threshold": 0.5,
+  "routing": "Only main-predicted Benign may switch to Normal. All other predicted classes unchanged. No calibrated four-class probabilities claimed.",
+  "controls": [
+    "unchanged_main",
+    "plain_specialist",
+    "mined_specialist"
+  ],
+  "specialist": "Pool1280+pre-LNhead256; StandardScaler/PCA128 fit on unique training-fold features, then L2. LogisticRegressionC.1 lbfgs maxiter2000. Final preprocessing identical for plain/mined.",
+  "mining": "5-fold StratifiedGroupKFold seed2627 on connected similarity/byte/pixel groups, only binaryFIT rows. Both Benign hard negatives and Normal hard positives misclassified out-of-fold receive2x original positive base weight once; normalize mean1. No rows removed/relabelled. Base weights inherited from fullFIT original weighting protocol.",
+  "cv_limit": "Conditional frozen-feature head mining only; backbone learned from allFIT. Not independent whole-neural-networkCV or an unbiased generalization estimate.",
+  "test_calibration_access": false,
+  "statistics_plan": "2500 paired group bootstrap draws;5000 paired group label-swap permutations; Holm adjustment over main-vs-plain,main-vs-mined,plain-vs-mined. Exploratory after earlier SELECT review; no correction for all earlier research attempts.",
+  "selection_decision": "Primary balanced accuracy on all2112SELECTrows, macroF1 secondary; no threshold orCsearch."
+}

@@ -1,0 +1,22 @@
+SPECIALIST STATISTICAL REPORT
+
+Primary comparison uses all2112SELECTrecords, with connectedimagegroup resampling. This is exploratory after repeated selection reuse, not independent verification of a clinical claim. No calibrated routed-model probabilities exist.
+
+unchanged_main: balanced accuracy87.4202%, group-bootstrap95%CI[85.2238,89.3507]%.
+plain_specialist: balanced accuracy87.1951%, group-bootstrap95%CI[85.0246,89.1003]%.
+mined_specialist: balanced accuracy86.1767%, group-bootstrap95%CI[83.9430,88.2010]%.
+unchanged_main__to__plain_specialist: delta-0.2251pp, paired95%CI[-0.6006,0.0638]pp, group-swapP=0.18216, Holm3P=0.18216.
+unchanged_main__to__mined_specialist: delta-1.2435pp, paired95%CI[-1.9456,-0.5791]pp, group-swapP=0.00040, Holm3P=0.00120.
+plain_specialist__to__mined_specialist: delta-1.0183pp, paired95%CI[-1.6536,-0.4165]pp, group-swapP=0.00120, Holm3P=0.00240.
+
+Decision: neither specialist improves balanced accuracy; no promotion or threshold tuning. Only Benign→Normal changes are allowed, so Malignant/PCOS recall is algebraically unchanged. Wholepipelinekfold was NOT performed. Fivefolds are FIT-only conditional head mining; frozen backbone saw allFIT, and inherited base weights were calculated onFIT.
+
+Frozen historical TEST reanalysis is descriptive. Its probabilities/images did not train this specialist or select gates. Global AUC/ECE are not evidence that every class/source calibrates well. Source n=0 cells are NA; tiny supports require caution. NewbootstrapCIs use2500draws and do not overwrite original archivedCIs. No ordinary independent-record McNemar/DeLong significance claim is made because repeated/groupedimages violate that simple independence assumption. Holm3 covers only the current three contrasts, not earlier selection search. Bootstrap/permutation intervals are not clinical validation.
+
+Methods: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedGroupKFold.html ; https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html . Custom bootstrap draws whole connected imagegroups jointly across models; custom cluster-swap test exchanges paired predictions bygroup.
+
+Artifacts:11figures each inPNG/PDF; CSVmetrics,perclass,per-source,confusionmatrices; JSONstatistics; bootstrapdraws. No source ultrasound images included in figure exports.
+
+ADDITIONAL HISTORICAL COMPARISONS: see historical_project/historical_project_statistics.json andfigures12–14. IndividualbootstrapCIs are unadjusted; Holm4p-values coverfourhistoricalcontrasts only. Rawmeasured−zero morphologyP=.04899 becomesHolmP=.19596, so not significantafteradjustment. Cluster-swap assumes exchangeability/symmetry. The56.9%Malignantallocation concernsbootstrapBAvariance, not mistakes or causal attribution.
+
+TOTALFIGURES:16uniquegraphs, eachPNGandPDF, includingrisk–coverageandvarianceallocation. Existingbackbonefine-tuning wasalreadycompleted. No independently retrained full-networkkfoldvalidationwasperformed; fivefoldspecialistminingisconditionalonfrozenfeatures.

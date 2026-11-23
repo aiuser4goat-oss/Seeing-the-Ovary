@@ -1,0 +1,301 @@
+{
+  "scope": "Exploratory SELECT specialist comparison; repeated SELECT experimentation is not corrected by these tests. Representation learned from allFIT; folds were head-mining only. Bootstrap/permutation clusters join declared similarity and matching byte/pixel groups, not patients. No new TEST or calibration inference.",
+  "selection_records": 2112,
+  "selection_groups": 869,
+  "bootstrap_repetitions": 2500,
+  "permutation_repetitions": 5000,
+  "bootstrap_method": "Paired percentile cluster bootstrap: sample whole connected image groups with replacement, preserving their record multiplicities.",
+  "seed": 2627,
+  "class_order": [
+    "Benign",
+    "Malignant",
+    "Normal",
+    "PCOS"
+  ],
+  "models": {
+    "unchanged_main": {
+      "balanced_accuracy": 0.8742020624328978,
+      "macro_f1": 0.8497551848449256,
+      "accuracy": 0.8693181818181818,
+      "recall": [
+        0.8150470219435737,
+        0.9285714285714286,
+        0.8857479387514723,
+        0.8674418604651163
+      ],
+      "precision": [
+        0.5777777777777777,
+        0.8666666666666667,
+        0.9447236180904522,
+        0.961340206185567
+      ],
+      "specificity": [
+        0.894032348020078,
+        0.9940828402366864,
+        0.9651623119556612,
+        0.9760383386581469
+      ],
+      "group_bootstrap_95_ci": {
+        "balanced_accuracy": [
+          0.8522381633040225,
+          0.8935073552635036
+        ],
+        "macro_f1": [
+          0.829626821990243,
+          0.8679359541149406
+        ],
+        "accuracy": [
+          0.8481916178024154,
+          0.8888135846179308
+        ],
+        "recall": [
+          [
+            0.7696707013463492,
+            0.868718671679198,
+            0.8560710186714442,
+            0.8288440096431186
+          ],
+          [
+            0.8594286151960785,
+            0.9782608695652174,
+            0.9105022578075821,
+            0.8998968633898063
+          ]
+        ],
+        "precision": [
+          [
+            0.5383801178660049,
+            0.7894736842105263,
+            0.9172053746274832,
+            0.9448282887801817
+          ],
+          [
+            0.6199309927360775,
+            0.9325842696629213,
+            0.9665807965643095,
+            0.9750905172413793
+          ]
+        ],
+        "specificity": [
+          [
+            0.8727261194034831,
+            0.9903052232561038,
+            0.9491696577005102,
+            0.9651063689217759
+          ],
+          [
+            0.9134255754088432,
+            0.9971196747551503,
+            0.9790650496064417,
+            0.9850045287823743
+          ]
+        ]
+      }
+    },
+    "plain_specialist": {
+      "balanced_accuracy": 0.8719506584208017,
+      "macro_f1": 0.8487054340242177,
+      "accuracy": 0.868844696969697,
+      "recall": [
+        0.8025078369905956,
+        0.9285714285714286,
+        0.889281507656066,
+        0.8674418604651163
+      ],
+      "precision": [
+        0.579185520361991,
+        0.8666666666666667,
+        0.9390547263681592,
+        0.961340206185567
+      ],
+      "specificity": [
+        0.8962632459564975,
+        0.9940828402366864,
+        0.9612034837688044,
+        0.9760383386581469
+      ],
+      "group_bootstrap_95_ci": {
+        "balanced_accuracy": [
+          0.8502457091063996,
+          0.8910026785601092
+        ],
+        "macro_f1": [
+          0.8280637177542176,
+          0.8669369904907512
+        ],
+        "accuracy": [
+          0.8480116501799809,
+          0.8881898862024503
+        ],
+        "recall": [
+          [
+            0.7560589920658243,
+            0.868718671679198,
+            0.8602090361528061,
+            0.8288440096431186
+          ],
+          [
+            0.8491215589236004,
+            0.9782608695652174,
+            0.9144841970867394,
+            0.8998968633898063
+          ]
+        ],
+        "precision": [
+          [
+            0.5400400843881856,
+            0.7894736842105263,
+            0.910105229005046,
+            0.9448282887801817
+          ],
+          [
+            0.6220823169219531,
+            0.9325842696629213,
+            0.9620407697352582,
+            0.9750905172413793
+          ]
+        ],
+        "specificity": [
+          [
+            0.8752155077557642,
+            0.9903052232561038,
+            0.9446593119113473,
+            0.9651063689217759
+          ],
+          [
+            0.9156264696365009,
+            0.9971196747551503,
+            0.9755707063706578,
+            0.9850045287823743
+          ]
+        ]
+      }
+    },
+    "mined_specialist": {
+      "balanced_accuracy": 0.861767186070886,
+      "macro_f1": 0.8434294062620191,
+      "accuracy": 0.8650568181818182,
+      "recall": [
+        0.7523510971786834,
+        0.9285714285714286,
+        0.8987043580683156,
+        0.8674418604651163
+      ],
+      "precision": [
+        0.5896805896805897,
+        0.8666666666666667,
+        0.9094159713945172,
+        0.961340206185567
+      ],
+      "specificity": [
+        0.9068600111544897,
+        0.9940828402366864,
+        0.9398258115597783,
+        0.9760383386581469
+      ],
+      "group_bootstrap_95_ci": {
+        "balanced_accuracy": [
+          0.8394300244258376,
+          0.882009513155353
+        ],
+        "macro_f1": [
+          0.8228260148165644,
+          0.8625569142109182
+        ],
+        "accuracy": [
+          0.8427665341360209,
+          0.8846960287071489
+        ],
+        "recall": [
+          [
+            0.6998267326732673,
+            0.868718671679198,
+            0.8717948717948718,
+            0.8288440096431186
+          ],
+          [
+            0.8036040695896227,
+            0.9782608695652174,
+            0.9209134756414017,
+            0.8998968633898063
+          ]
+        ],
+        "precision": [
+          [
+            0.5481398336511973,
+            0.7894736842105263,
+            0.8764358889623265,
+            0.9448282887801817
+          ],
+          [
+            0.6343981481481481,
+            0.9325842696629213,
+            0.937276009379529,
+            0.9750905172413793
+          ]
+        ],
+        "specificity": [
+          [
+            0.8876691011404612,
+            0.9903052232561038,
+            0.919432274573671,
+            0.9651063689217759
+          ],
+          [
+            0.9237431632839641,
+            0.9971196747551503,
+            0.9583333333333334,
+            0.9850045287823743
+          ]
+        ]
+      }
+    }
+  },
+  "contrasts": {
+    "unchanged_main__to__plain_specialist": {
+      "balanced_accuracy_difference": -0.0022514040120961143,
+      "paired_group_bootstrap_95_ci": [
+        -0.006005894059550087,
+        0.0006378178840916136
+      ],
+      "macro_f1_difference": -0.0010497508207079065,
+      "macro_f1_paired_group_bootstrap_95_ci": [
+        -0.003922991601148054,
+        0.0014571845263619382
+      ],
+      "group_swap_two_sided_p": 0.1821635672865427,
+      "interpretation": "Exploratory cluster-swap symmetry test; not independent confirmatory evidence.",
+      "holm_adjusted_p_three_contrasts": 0.1821635672865427
+    },
+    "unchanged_main__to__mined_specialist": {
+      "balanced_accuracy_difference": -0.012434876362011793,
+      "paired_group_bootstrap_95_ci": [
+        -0.01945649522349751,
+        -0.0057911102890769815
+      ],
+      "macro_f1_difference": -0.006325778582906505,
+      "macro_f1_paired_group_bootstrap_95_ci": [
+        -0.01173677195224083,
+        -0.0013115126806692255
+      ],
+      "group_swap_two_sided_p": 0.0003999200159968006,
+      "interpretation": "Exploratory cluster-swap symmetry test; not independent confirmatory evidence.",
+      "holm_adjusted_p_three_contrasts": 0.0011997600479904018
+    },
+    "plain_specialist__to__mined_specialist": {
+      "balanced_accuracy_difference": -0.010183472349915679,
+      "paired_group_bootstrap_95_ci": [
+        -0.016536094273336268,
+        -0.004164656770114841
+      ],
+      "macro_f1_difference": -0.0052760277621985985,
+      "macro_f1_paired_group_bootstrap_95_ci": [
+        -0.009934385502679912,
+        -0.0008987073682330005
+      ],
+      "group_swap_two_sided_p": 0.0011997600479904018,
+      "interpretation": "Exploratory cluster-swap symmetry test; not independent confirmatory evidence.",
+      "holm_adjusted_p_three_contrasts": 0.0023995200959808036
+    }
+  }
+}

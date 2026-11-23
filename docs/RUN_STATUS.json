@@ -13,5 +13,16 @@
   "warm_selection_balanced_accuracy": 0.8538989879996636,
   "new_controlled_treatments": 5,
   "new_treatments_promoted": 0,
-  "latest_report": "docs/LATEST_IMPROVEMENT_ROUND.md"
+  "latest_report": "docs/LATEST_IMPROVEMENT_ROUND.md",
+  "specialist_study": {
+    "complete": true,
+    "baseline_select_ba": 0.8742020624328978,
+    "plain_select_ba": 0.8719506584208017,
+    "mined_select_ba": 0.861767186070886,
+    "promoted": false,
+    "head_level_mining_folds": 5,
+    "whole_network_cv": false,
+    "graphs": 16,
+    "test_inference": false
+  }
 }

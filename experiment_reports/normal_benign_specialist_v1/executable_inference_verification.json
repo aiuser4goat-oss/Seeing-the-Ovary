@@ -1,0 +1,17 @@
+{
+  "scope": "Two computational-path smoke examples, not a performance estimate or exhaustive end-to-end parity guarantee. All2112cached feature scores separately checked against portable parameters.",
+  "examples": [
+    {
+      "selection_index": 0,
+      "final_prediction_matches": true,
+      "max_score_difference": 3.521262303962658e-08,
+      "routed": false
+    },
+    {
+      "selection_index": 71,
+      "final_prediction_matches": true,
+      "max_score_difference": 1.237226970873806e-07,
+      "routed": true
+    }
+  ]
+}

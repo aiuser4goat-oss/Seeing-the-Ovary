@@ -1,0 +1,10 @@
+{
+  "plain_specialist": {
+    "max_probability_difference": 5.049079254693112e-08,
+    "threshold_decisions_identical_all_2112": true
+  },
+  "mined_specialist": {
+    "max_probability_difference": 4.52963944685969e-08,
+    "threshold_decisions_identical_all_2112": true
+  }
+}

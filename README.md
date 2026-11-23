@@ -33,3 +33,7 @@ Full-set test balanced accuracy: **89.5458%** across 3,988 records. These are fr
 
 - [Full test metrics](test_metrics.json)
 - [Next experiments](NEXT_EXPERIMENTS.md)
+
+## Specialist and verification update
+
+[Specialist experiment and statistical report](docs/SPECIALIST_AND_STATISTICAL_VERIFICATION.md): plain andhard-minedNormal-vs-Benignheads didnotimproveSELECTbalancedaccuracy. FivegroupedFITfolds wereusedonlyforheadmining,notwhole-networkCV. [16verificationgraphs,PNG/PDF](verification_graphs/) and [CSV/JSON statistics](experiment_reports/normal_benign_specialist_v1/statistics/) areavailable. No93%result; original89.5458%testbestunchanged.

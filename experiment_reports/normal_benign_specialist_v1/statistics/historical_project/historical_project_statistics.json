@@ -1,0 +1,182 @@
+{
+  "scope": "Descriptive reanalysis of historically frozen TEST predictions, not a new confirmatory study or optimization target. No new image inference or training. Multiple-comparison adjustment applies only to these four contrasts, not earlier project search.",
+  "archive_sha256": "2d3e52b871c842b28151dc0368dcce1036289d5d2b963f9dfdcd1a190bae62ae",
+  "helper_source_sha256": "c34a81115dc14622e7c740b2b43bc7b7a0774cd96a7d3c35765012a578290d48",
+  "records": 3988,
+  "connected_image_groups": 2163,
+  "bootstrap_draws": 2500,
+  "group_swap_permutations": 5000,
+  "seed": 2627,
+  "models": {
+    "original_baseline": {
+      "balanced_accuracy": 0.8657481718377735,
+      "macro_f1": 0.8084646197220111,
+      "accuracy": 0.8505516549648947,
+      "balanced_accuracy_group_95_ci": [
+        0.847519495060082,
+        0.8824390750284543
+      ],
+      "macro_f1_group_95_ci": [
+        0.787742298254299,
+        0.8271343432546064
+      ]
+    },
+    "fusion": {
+      "balanced_accuracy": 0.8744709888392511,
+      "macro_f1": 0.8364837122419284,
+      "accuracy": 0.8811434302908726,
+      "balanced_accuracy_group_95_ci": [
+        0.8580930309729773,
+        0.8888982935852671
+      ],
+      "macro_f1_group_95_ci": [
+        0.8194527984548777,
+        0.8526098580234209
+      ]
+    },
+    "fusion_refined": {
+      "balanced_accuracy": 0.8751637232527157,
+      "macro_f1": 0.8515212044725718,
+      "accuracy": 0.8884152457372116,
+      "balanced_accuracy_group_95_ci": [
+        0.8586744471535083,
+        0.8914322781086996
+      ],
+      "macro_f1_group_95_ci": [
+        0.8347219491240602,
+        0.8679578734363131
+      ]
+    },
+    "image_only": {
+      "balanced_accuracy": 0.8840321947128227,
+      "macro_f1": 0.849690208027291,
+      "accuracy": 0.8894182547642929,
+      "balanced_accuracy_group_95_ci": [
+        0.8677028503494181,
+        0.8988775836882728
+      ],
+      "macro_f1_group_95_ci": [
+        0.8323029570869324,
+        0.8659329686217431
+      ]
+    },
+    "localized_no_morphology": {
+      "balanced_accuracy": 0.883378629476782,
+      "macro_f1": 0.8407342128029482,
+      "accuracy": 0.8871614844533601,
+      "balanced_accuracy_group_95_ci": [
+        0.8676362468665385,
+        0.898276902990752
+      ],
+      "macro_f1_group_95_ci": [
+        0.8236695833889374,
+        0.8572705287285712
+      ]
+    },
+    "fusion_zero_morphology": {
+      "balanced_accuracy": 0.8844685846145588,
+      "macro_f1": 0.8458030992901531,
+      "accuracy": 0.8921765295887663,
+      "balanced_accuracy_group_95_ci": [
+        0.8695549413177192,
+        0.8987101344218246
+      ],
+      "macro_f1_group_95_ci": [
+        0.8289073170177865,
+        0.8621875732344416
+      ]
+    },
+    "ensemble_anatomy": {
+      "balanced_accuracy": 0.8942253510556741,
+      "macro_f1": 0.86378576407965,
+      "accuracy": 0.8909227683049148,
+      "balanced_accuracy_group_95_ci": [
+        0.8785058190125944,
+        0.9084201833655245
+      ],
+      "macro_f1_group_95_ci": [
+        0.848025318942552,
+        0.8776912324960865
+      ]
+    },
+    "ensemble_control": {
+      "balanced_accuracy": 0.8954576875376714,
+      "macro_f1": 0.8605949761614553,
+      "accuracy": 0.8924272818455367,
+      "balanced_accuracy_group_95_ci": [
+        0.8810009944329934,
+        0.9086082284820914
+      ],
+      "macro_f1_group_95_ci": [
+        0.844907942658325,
+        0.8752471539466968
+      ]
+    }
+  },
+  "contrasts": {
+    "Primary: refined fusion \u2212 original": {
+      "from": "original_baseline",
+      "to": "fusion_refined",
+      "balanced_accuracy_difference": 0.009415551414942214,
+      "paired_group_95_ci": [
+        -0.0068789493972696404,
+        0.026791626291672328
+      ],
+      "group_swap_two_sided_p": 0.27014597080583885,
+      "macro_f1_difference": 0.043056584750560734,
+      "macro_f1_paired_group_95_ci": [
+        0.024867756132734235,
+        0.06318656306964246
+      ],
+      "holm_adjusted_p_four_contrasts": 0.8104379124175165
+    },
+    "Global + ROI \u2212 image only": {
+      "from": "image_only",
+      "to": "localized_no_morphology",
+      "balanced_accuracy_difference": -0.0006535652360406541,
+      "paired_group_95_ci": [
+        -0.012478882694488592,
+        0.01105349889408392
+      ],
+      "group_swap_two_sided_p": 0.9070185962807439,
+      "macro_f1_difference": -0.008955995224342761,
+      "macro_f1_paired_group_95_ci": [
+        -0.023204266947829386,
+        0.005267772515478017
+      ],
+      "holm_adjusted_p_four_contrasts": 1
+    },
+    "Measured \u2212 zero morphology": {
+      "from": "fusion_zero_morphology",
+      "to": "fusion_refined",
+      "balanced_accuracy_difference": -0.009304861361843053,
+      "paired_group_95_ci": [
+        -0.018924051982044075,
+        -0.000562434704191249
+      ],
+      "group_swap_two_sided_p": 0.04899020195960808,
+      "macro_f1_difference": 0.005718105182418776,
+      "macro_f1_paired_group_95_ci": [
+        -0.004850193049956908,
+        0.016314751085264825
+      ],
+      "holm_adjusted_p_four_contrasts": 0.1959608078384323
+    },
+    "Anatomy \u2212 control ensemble": {
+      "from": "ensemble_control",
+      "to": "ensemble_anatomy",
+      "balanced_accuracy_difference": -0.001232336481997276,
+      "paired_group_95_ci": [
+        -0.0069306820740334205,
+        0.0036601520055543407
+      ],
+      "group_swap_two_sided_p": 0.6638672265546891,
+      "macro_f1_difference": 0.003190787918194715,
+      "macro_f1_paired_group_95_ci": [
+        -0.004009216994033804,
+        0.010525117547292042
+      ],
+      "holm_adjusted_p_four_contrasts": 1
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
   "python_sources_parsed": 132,
-  "files_before_manifests": 300,
-  "total_bytes_before_manifests": 1714416,
+  "files_before_manifests": 355,
+  "total_bytes_before_manifests": 3724470,
   "credential_scan_findings": 0,
   "notebook_outputs_present": false,
   "case_level_test_predictions_present": false,
@@ -15,5 +15,9 @@
   "new_worker_sources_syntax_checked": 5,
   "matched_treatments_completed": 5,
   "new_gce_finite_difference_coordinates_passed": 32,
-  "new_classification_test_inference": false
+  "new_classification_test_inference": false,
+  "specialist_study_complete": true,
+  "verification_figures": 16,
+  "whole_network_kfold_validation": false,
+  "no_new_classification_test_inference": true
 }

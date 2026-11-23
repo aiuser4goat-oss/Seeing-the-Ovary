@@ -1,0 +1,175 @@
+{
+  "results": {
+    "unchanged_main": {
+      "balanced_accuracy": 0.8742020624328978,
+      "macro_f1": 0.8497551848449256,
+      "accuracy": 0.8693181818181818,
+      "confusion_matrix": [
+        [
+          260,
+          6,
+          26,
+          27
+        ],
+        [
+          5,
+          78,
+          1,
+          0
+        ],
+        [
+          88,
+          6,
+          752,
+          3
+        ],
+        [
+          97,
+          0,
+          17,
+          746
+        ]
+      ],
+      "recall": {
+        "Benign": 0.8150470219435737,
+        "Malignant": 0.9285714285714286,
+        "Normal": 0.8857479387514723,
+        "PCOS": 0.8674418604651163
+      }
+    },
+    "plain_specialist": {
+      "balanced_accuracy": 0.8719506584208017,
+      "macro_f1": 0.8487054340242177,
+      "accuracy": 0.868844696969697,
+      "confusion_matrix": [
+        [
+          256,
+          6,
+          30,
+          27
+        ],
+        [
+          5,
+          78,
+          1,
+          0
+        ],
+        [
+          85,
+          6,
+          755,
+          3
+        ],
+        [
+          96,
+          0,
+          18,
+          746
+        ]
+      ],
+      "recall": {
+        "Benign": 0.8025078369905956,
+        "Malignant": 0.9285714285714286,
+        "Normal": 0.889281507656066,
+        "PCOS": 0.8674418604651163
+      },
+      "routed_Benign_to_Normal": 8,
+      "converged": true,
+      "changes_by_true_class": {
+        "Benign": 4,
+        "Malignant": 0,
+        "Normal": 3,
+        "PCOS": 1
+      }
+    },
+    "mined_specialist": {
+      "balanced_accuracy": 0.861767186070886,
+      "macro_f1": 0.8434294062620191,
+      "accuracy": 0.8650568181818182,
+      "confusion_matrix": [
+        [
+          240,
+          6,
+          46,
+          27
+        ],
+        [
+          5,
+          78,
+          1,
+          0
+        ],
+        [
+          77,
+          6,
+          763,
+          3
+        ],
+        [
+          85,
+          0,
+          29,
+          746
+        ]
+      ],
+      "recall": {
+        "Benign": 0.7523510971786834,
+        "Malignant": 0.9285714285714286,
+        "Normal": 0.8987043580683156,
+        "PCOS": 0.8674418604651163
+      },
+      "routed_Benign_to_Normal": 43,
+      "converged": true,
+      "changes_by_true_class": {
+        "Benign": 20,
+        "Malignant": 0,
+        "Normal": 11,
+        "PCOS": 12
+      }
+    }
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "train": 6537,
+      "held": 517,
+      "converged": true,
+      "head_only_held_balanced_accuracy": 0.9450670107760573
+    },
+    {
+      "fold": 1,
+      "train": 5689,
+      "held": 1365,
+      "converged": true,
+      "head_only_held_balanced_accuracy": 0.8394137338192545
+    },
+    {
+      "fold": 2,
+      "train": 4899,
+      "held": 2155,
+      "converged": true,
+      "head_only_held_balanced_accuracy": 0.8436978930276472
+    },
+    {
+      "fold": 3,
+      "train": 5122,
+      "held": 1932,
+      "converged": true,
+      "head_only_held_balanced_accuracy": 0.8975415070242656
+    },
+    {
+      "fold": 4,
+      "train": 5969,
+      "held": 1085,
+      "converged": true,
+      "head_only_held_balanced_accuracy": 0.9559144584821295
+    }
+  ],
+  "mining_records": 812,
+  "mining_by_class": {
+    "Benign": 228,
+    "Normal": 584
+  },
+  "elapsed_seconds": 2.412194916047156,
+  "test_evaluated": false
+}

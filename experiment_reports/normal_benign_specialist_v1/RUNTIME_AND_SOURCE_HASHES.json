@@ -1,0 +1,18 @@
+{
+  "recorded_after_run": "2026-11-23T20:44:10.346378+00:00",
+  "training_and_statistics": {
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "sklearn": "1.6.1",
+    "matplotlib": "3.9.4"
+  },
+  "native_inference": "TensorFlow2.20.0/Keras3.15.1 CPUfloat32; portableNumPy parameters avoid cross-version sklearn pickle use. Two inference smoke examples passed; all2112cached threshold decisions independently matched.",
+  "worker_hashes": {
+    "normal_benign_specialist.py": "96c50790d78fcf34d7292adbe4d8500bb1b268a07f53efb6e66cee54c5a58659",
+    "specialist_statistics.py": "c34a81115dc14622e7c740b2b43bc7b7a0774cd96a7d3c35765012a578290d48",
+    "historical_project_statistics.py": "0f7a1f0562d8ce6f4413351135aec44d2f6aec6f9ba7f6a1bdeb2c9a7671dcb9",
+    "finish_verification_figures.py": "71e95b0e71bfa6d4af16d618f4f55e74a184668e3f1b0358f3ff8793cb8374c6",
+    "predict_normal_benign_specialist.py": "29e68aa698c74b313127bd535cda91c163dd99b9c82a63c485df324453acbbd2",
+    "export_specialist_parameters.py": "13ac96c17bbdf032d71dc551ed71aed4227dad6e9a2cdbc0f96881652f3ec122"
+  }
+}
