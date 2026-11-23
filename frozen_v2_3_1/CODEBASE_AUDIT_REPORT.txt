@@ -1,0 +1,46 @@
+OVARIAN CONTINUATION CODEBASE AUDIT
+Date: 2026-11-20
+Code version: 2.2.0
+Outcome: PASSED the checks listed below after corrections. Full real-data training and GPU verification remain outstanding.
+
+SCOPE
+One audit agent reviewed the original TensorFlow/Keras workspace, continuation data loaders, anatomy preparation/segmentation, morphology features, classifier stages, fine-tuning, augmentation, calibration, evaluation, single-image prediction, notebook bootstrap and portable code packaging. Original images, labels, source folder structure and dataset memberships were preserved. No full training, external upload, clinical validation or destructive cleanup was performed.
+
+CORRECTED FINDINGS
+1. P1: Resuming an interrupted classifier stage or anatomy run could overwrite its better existing checkpoint with the first worse resumed epoch. Evidence: Keras ModelCheckpoint began with an unbounded best value even when loading an existing checkpoint. Correction: evaluate the restored checkpoint on selection/validation data and use that value as the checkpoint improvement threshold. Earlier checkpoint weights survive inferior resumed epochs; history logs append. Recovery still restarts the optimizer and interrupted epoch budget.
+
+2. P1: Calibration previously checked model-weight hashes, manifest and TTA, but accepted changed model configuration or morphology normalization with unchanged weights. Correction: bind calibration to weights, config, run metadata/feature provenance, morphology normalizer, class order and preprocessing recipe version. Validate this signature before final-test inference or single-image prediction. Older calibration files require regeneration on the reserved calibration subset.
+
+3. P2: Single-image prediction used Pillow RGB letterboxing, while fitting and held-out evaluation used TensorFlow decoding/resizing. JPEG decoders could also differ. Correction: global image inputs now share the same TensorFlow RGB decoder and float32 letterbox function across all three paths. ROI crops retain the same lossless crop-array path as cached PNGs. PNG and JPEG regression cases verify exact input equality.
+
+4. P2: Anatomy evaluation ignored saved mask thresholds and watershed settings. Correction: use the saved configuration and verify the prepared manifest against the training manifest. Missing evaluation splits are rejected. Instance metrics are null, rather than zero, when there are no genuine instance targets.
+
+5. P2: The morphology CSV had an integrity checksum, but modified crop PNGs were not detected. Correction: extracted cache version 2 includes individual ROI checksums and validates them before use. The notebook re-extracts older cache versions. Existing older classifier runs must use their original artifacts or be replaced by new runs; stale provenance is rejected.
+
+6. P2: A completed search trial could be reused without checking its anatomy provenance or whether it was only a smoke run. Correction: reject those mismatches. A non-resume training command also rejects existing partial-run artifacts instead of overwriting them silently.
+
+7. P2: The manifest guard checked fitting/validation/test membership but did not catch identical pixels assigned different group IDs across the selection/calibration subdivision. Correction: validate effective fitting, selection, calibration and test roles. The current dataset passes; no membership was changed.
+
+8. Organization: The current code folder, archive and notebooks are synchronized with a checksum inventory. The older generic starter notebook is explicitly marked as a superseded loader reference. Older archives and source inputs remain available. The main training notebook reuses an existing prepared anatomy cache instead of redoing all volume preparation on every restart.
+
+VALIDATION PERFORMED
+- 35 automated tests passed in the canonical workspace: 12 original continuation tests, 7 augmentation tests, 8 new audit regressions and 8 existing legacy-ablation tests.
+- Synthetic end-to-end integration passed: anatomy training/evaluation, predicted morphology and ROI export, classifier head/partial/full fine-tuning, stage recovery, reserved calibration, final synthetic evaluation, single-image prediction/explanation and stale-checkpoint rejection.
+- Notebook schema and all code cells passed validation/parsing. Bootstrap simulations passed for ZIP inputs, cloud-expanded folders and unsafe-path rejection. Dependency installation and real cloud/GPU execution were mocked, not performed.
+- Every one of the 19,942 classification image files was SHA256-checked against the saved manifest; all matched. All 16,729 older files remain. Physical folders: train 15,954; test 3,988. Computational roles: fitting 12,763; model selection 2,112; calibration 1,079; test 3,988.
+- Classification manifest SHA256 is unchanged: d0112fb807fe61accdd0fac1a2a606ff74f51558a650e5767e35d22bde62c190. The classification ZIP contains the same manifest and 19,942 train/test image entries.
+- Portable source inventory, ZIP CRC checks, per-file hashes and notebook-copy agreement are recorded in CODEBASE_PACKAGE_VERIFICATION.json. Data archives were not rebuilt or duplicated.
+
+CURRENT FILES
+Canonical source: /Users/ik-mac/ovarian_ai_project copy
+Portable source: /Users/ik-mac/2627 Science Fair Data/Model_Datasets/Ovarian_Continuation_Code
+Portable archive: /Users/ik-mac/2627 Science Fair Data/Model_Datasets/Ovarian_Continuation_Code.zip
+Training notebook: /Users/ik-mac/2627 Science Fair Data/Model_Datasets/Continuation_Training.ipynb
+Classification data: /Users/ik-mac/2627 Science Fair Data/Model_Datasets/Classification
+Anatomy data: /Users/ik-mac/2627 Science Fair Data/Model_Datasets/Anatomy
+
+REMAINING LIMITATIONS
+No full real-data model has been trained or evaluated by this audit; no achieved accuracy or improvement is established. GPU behavior and actual Kaggle/Colab execution remain untested. Unit and synthetic checks establish computational behavior, not clinical correctness. Source-provided labels and annotations are not independently clinically verified by this audit. Supplementary COCO sources remain separate candidates rather than automatic anatomy targets. Morphology measures visible 2D anatomy in relative units, not clinical whole-ovary follicle counts or millimetres. Cross-pipeline overlap screening catches exact grayscale images only; transformed overlap may remain. Resume is weights-based recovery, not exact optimizer-state continuation. Keras reports expected optimizer-slot mismatch and retracing warnings during stage changes and synthetic multi-model checks.
+
+NEXT ACTION
+Use Continuation_Training.ipynb with the current code ZIP and existing Classification/Anatomy ZIPs. Select a GPU, preserve experiment outputs, and run controlled training. Keep final-test evaluation disabled until model, augmentation and postprocessing choices are fixed. Regenerate old feature caches and calibration artifacts as described above.

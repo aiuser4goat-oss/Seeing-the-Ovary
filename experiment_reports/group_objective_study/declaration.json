@@ -1,0 +1,20 @@
+{
+  "source_sha256": "e00e6b357fe2d6a0364bde1544a49cf770ab3996a50ebce52255cf419056b701",
+  "helper_sha256": "c95c9bdfb1e51d9e47687c41972a28d5d892e187ecbb52c92f399ed7c4032a27",
+  "features_sha256": "4c516c2831268648104d4f065ad0f6374b6dd8b7b537e34182136c8123825e9a",
+  "roles": [
+    "fit",
+    "select"
+  ],
+  "input": "Frozen image_only encoder pool; unique FIT StandardScaler/PCA128 and L2 normalization",
+  "objectives": [
+    "soft_ce",
+    "candidate_marginal"
+  ],
+  "l2_penalty": 0.001,
+  "optimizer": "L-BFGS-B; maxiter=300; same zero initialization; candidate marginal objective is nonconvex, so this is one controlled start, not a global-optimum claim",
+  "all_fit_records_represented": 12763,
+  "selection_only_for_comparison": true,
+  "test_and_calibration_access": false,
+  "assumption": "Candidate marginal loss treats supplied FIT classes for the identical input as alternatives. This is an experimental modeling assumption, not verified clinical truth or a modification of original record labels. Marginal loss discards within-set target proportions while retaining group mass and candidate membership. Groups with every class have no marginal-loss supervision."
+}

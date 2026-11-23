@@ -1,0 +1,21 @@
+{
+  "verified_utc": "2026-11-23T09:48:26.918678+00:00",
+  "cloud_preflight_version": 3,
+  "zip_crc_passed": true,
+  "executed_worker_and_adapter_match_local_source": true,
+  "all_three_training_stages_executed": true,
+  "checkpoint_hash_and_prediction_shape_verified": true,
+  "fit_records": 8,
+  "selection_records": 8,
+  "preflight_scores_are_not_project_performance": true,
+  "weights_restored": {
+    "missing_classifier_only": [
+      "model.head.weight",
+      "model.head.bias"
+    ],
+    "unexpected_keys": [],
+    "checkpoint_sha256": "776a50eeff402802c8cd06e00fe9de73df4161504fa733284bc240904b48252c",
+    "normalization_transfer": "model.norm.{weight,bias} -> model.fc_norm.{weight,bias}; same pretrained tensors, official global-average pooling variant"
+  },
+  "result_zip_sha256": "32738f7770641ca1d04ccc59f7a6c88d2fe52dc70d52e49bb86402f873bb47ae"
+}

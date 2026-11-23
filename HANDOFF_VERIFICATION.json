@@ -1,0 +1,11 @@
+{
+  "python_sources_parsed": 132,
+  "files_before_manifests": 242,
+  "total_bytes_before_manifests": 1490990,
+  "credential_scan_findings": 0,
+  "notebook_outputs_present": false,
+  "case_level_test_predictions_present": false,
+  "local_development_tests_passed": 17,
+  "warm_worker_payload_matches_submitted_source": true,
+  "claim": "Static review package; pending warm job has no reported full-run score."
+}

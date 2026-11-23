@@ -1,0 +1,11 @@
+{
+  "manifest_sha256": "d0112fb807fe61accdd0fac1a2a606ff74f51558a650e5767e35d22bde62c190",
+  "weights_sha256": "9fcf116544efed994e1918266c79f1cb3c2d101f517d9683d54bff9b0fac8b58",
+  "validation_predictions_sha256": "1703549dd731169db86d6297daef844e3d95b81c53a9e997cddd0ca635cb784c",
+  "pilot_worker_sha256": "3830be2cefde7f73d9015ff2433552e7223035bafff02a5292f36381a3ae6686",
+  "official_model_source_sha256": "c55317744b1f1fbf0053c6d3e2a88018ef7d0df77aea7e53885cf9034a0ab766",
+  "pilot_selection_balanced_accuracy": 0.8296659980833445,
+  "pilot_kernel": "ishaankhera/ovarian-ultrasound-transfer-validation",
+  "pilot_version": 3,
+  "scope": "Warm start selected by selection data only; no test-based tuning. Full source/checkpoint frozen before the new fitting run."
+}

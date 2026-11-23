@@ -1,0 +1,20 @@
+{
+  "locked_before_test_inference": "2026-11-23T10:33:15.348529+00:00",
+  "checkpoint_sha256": "cc4286142cf2edf27a6d0d962d8c9e2772cf4f8015188c276869b84bc7980040",
+  "crop_source_sha256": "c48e6f140b5765efcbe5d6c400101b93053d1d9ad0fbe2fc565ff981148ea30f",
+  "worker_sha256": "65b77d0381fb519cc669526a9084ff7989cf027b3217a03d9ce53596cad0794c",
+  "policies": {
+    "original": {
+      "margin": 0.1,
+      "min_crop_fraction": 0,
+      "min_mask_fraction": 0
+    },
+    "fixed_guard": {
+      "margin": 0.25,
+      "min_crop_fraction": 0.15,
+      "min_mask_fraction": 0.01
+    }
+  },
+  "selection": "Fixed from prior anatomy validation; no test-based threshold selection permitted",
+  "scope": "USOVA supplied test split, r1 annotations, slice_step4, correlated slices from two volumes. No classification test/calibration inference. Not classification accuracy or patient-independent evaluation."
+}

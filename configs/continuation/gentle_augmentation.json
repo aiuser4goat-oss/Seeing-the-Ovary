@@ -1,0 +1,9 @@
+{
+  "mode": "fusion",
+  "backbone": "efficientnetv2b0",
+  "mixed_precision": true,
+  "augment_gain": 0.08,
+  "augment_contrast": 0.06,
+  "augment_gamma": 0.05,
+  "augment_speckle": 0.015
+}

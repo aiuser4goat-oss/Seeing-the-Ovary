@@ -1,0 +1,24 @@
+{
+  "version": "0.1.0",
+  "created_utc": "2026-11-23T01:41:14.571782+00:00",
+  "base": "Additional exploratory validation module; original frozen continuation sources/results are preserved.",
+  "required_core_sha256": {
+    "continuation/common.py": "535c1ebba9ad905831cc594b5d2f98b4bed0c656d220d8b4cc4d1725adb1f316",
+    "continuation/data.py": "6fe78e29aca2d3f6db5de2b7bd83bf42f202737c32c9fbf13fbf1b4b70966a3e",
+    "continuation/models.py": "52a6319ee245b796fcbfb37e8f60a69454083692c7f4180e8f43d1f2e04dd9da",
+    "continuation/features.py": "642230cd0872310c33d847913bbd5c24b9c9b79e68d2bf3db4f437b872097e88",
+    "continuation/evaluation.py": "0c9c3d8f1405acdb540c5d4ea0b783528318b48c0ca601ba18bfa7ddbd56999a",
+    "continuation/artifacts.py": "c36b0148b60138375b4e15a81b722bf0186dfab580a27a5fe594c301353541d1",
+    "continuation/morphology.py": "67bea0fd16b4261af4ffef396ad08713420b541484bb52b871ac480e00bde160"
+  },
+  "files_sha256": {
+    "runner.py": "94b38b4f726279c0c04fe63cdb341885364ade098afc0ceedf420a22ac6ebc5e",
+    "compare_validation.py": "6940c34742af22a4a4dedc0e36b25c3a6ab71cc0dbc5709d0e885f6143c8e4f8",
+    "models.py": "fc0691e37d2027bed4d3b7cff26e6d998936f64e2548f2d119428b1d6b48a9e9",
+    "test_development.py": "4ea0ecef2cf2d0afc6c4bcf30d633d0bffef8b76a6a4dc9144734f7864eee45b",
+    "__init__.py": "a0a0914b01d8c37d96e6570b97d1c1d81f91645b735bf8da57c1c14effd53253",
+    "RESEARCH_AND_PROTOCOL.txt": "ae6f966b1ece05c0c51159eca039f39f461b5bdd6ad9e486e8f3d7993b32fc98",
+    "cache_frozen_validation.py": "258fda937359a827b4b9a60f030ca896d8c07f47c12ea65249efa0adb429d169",
+    "data.py": "6c3111f0c44006a3becba160c0dfd86f46911532177577f59286f95ab7df3aee"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "seg_size": 256,
+  "seg_filters": 24,
+  "batch_size": 8,
+  "seg_epochs": 40
+}

@@ -1,0 +1,71 @@
+{
+  "exponent_0.5": {
+    "selection_balanced_accuracy": 0.8702706421067945,
+    "selection_macro_f1": 0.7945098693825478,
+    "selection_confusion_matrix": [
+      [
+        257,
+        31,
+        9,
+        22
+      ],
+      [
+        2,
+        82,
+        0,
+        0
+      ],
+      [
+        93,
+        28,
+        722,
+        6
+      ],
+      [
+        113,
+        5,
+        12,
+        730
+      ]
+    ],
+    "fit_balanced_accuracy": 0.8426229114095202,
+    "fit_records_with_positive_weight": 12763
+  },
+  "exponent_1.0": {
+    "selection_balanced_accuracy": 0.8668184130800771,
+    "selection_macro_f1": 0.8073556407779201,
+    "selection_confusion_matrix": [
+      [
+        241,
+        27,
+        20,
+        31
+      ],
+      [
+        2,
+        82,
+        0,
+        0
+      ],
+      [
+        84,
+        18,
+        742,
+        5
+      ],
+      [
+        92,
+        4,
+        23,
+        741
+      ]
+    ],
+    "fit_balanced_accuracy": 0.8353874540280005,
+    "fit_records_with_positive_weight": 12763
+  },
+  "_decision": {
+    "selected_metric": "balanced_accuracy",
+    "adopt_inverse_count": false,
+    "reason": "Selection BA declined from 87.0271% to 86.6818%; macro F1 increased but is not the chosen target. No records, labels or primary models changed."
+  }
+}

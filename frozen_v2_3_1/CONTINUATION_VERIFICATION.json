@@ -1,0 +1,130 @@
+{
+  "status": "PASS",
+  "python": "3.13.3",
+  "versions": {
+    "tensorflow": "2.20.0",
+    "keras": "3.15.1",
+    "numpy": "2.5.3",
+    "scipy": "1.16.2",
+    "scikit-learn": "1.7.2",
+    "scikit-image": "0.26.0",
+    "pydicom": "3.0.2",
+    "h5py": "3.16.0",
+    "Pillow": "11.3.0"
+  },
+  "new_unit_tests": {
+    "passed": 27,
+    "failed": 0
+  },
+  "synthetic_integration": "PASS: anatomy training/evaluation, morphology extraction, all three classifier stages, stage resume, calibration, held-out synthetic reporting, single-image attribution/prediction and stale checkpoint rejection.",
+  "real_classification_smoke": "PASS: 8 fitting and 8 selection examples, 2 short stages, random initial weights. Smoke artifacts are blocked from final test reporting.",
+  "original_hybrid_offline_forward": "PASS",
+  "convnext_tiny_offline_forward": "PASS",
+  "fine_tuning_checks": "Backbone trainable weights changed, frozen BatchNorm moving statistics did not; weights reload reproduced predictions.",
+  "real_anatomy_samples": "PASS: one USOVA volume sampled, one FollicleFinder semantic volume and one manual HDF5 volume sampled, mask/target preparation successful.",
+  "dicom_header_audit": {
+    "pairs": 533,
+    "problems": 0,
+    "scope": "Headers/shapes/label map/shared grid metadata only; not all-volume pixel decoding."
+  },
+  "notebook_schema_and_syntax": "PASS",
+  "gpu_training_tested": false,
+  "full_real_data_training_completed": false,
+  "accuracy_claim": "No achieved medical or final-test accuracy is claimed. Full validation-based GPU experiments remain to be run.",
+  "known_framework_warnings": "Keras/Numpy and Python 3.13 AST deprecations, retracing during multiple small smoke model builds, and intentionally ignored optimizer-slot state during cross-stage weights-only restores.",
+  "augmentation_update": {
+    "status": "PASS",
+    "augmentation_unit_tests_passed": 7,
+    "original_continuation_tests_passed": 12,
+    "synthetic_pipeline_with_augmentation": "PASS: segmentation, feature cache, all fine-tuning stages, checkpoint resume, calibration and prediction.",
+    "real_image_audit": {
+      "real_fitting_images_processed": 500,
+      "per_class": {
+        "Benign": 125,
+        "Malignant": 125,
+        "Normal": 125,
+        "PCOS": 125
+      },
+      "validation_identity_check": "PASS",
+      "original_file_checksums": "PASS",
+      "brightness_gain_range": [
+        0.85,
+        1.15
+      ],
+      "contrast_factor_range": [
+        0.9,
+        1.1
+      ],
+      "gamma_range": [
+        0.9,
+        1.1
+      ],
+      "maximum_relative_speckle_std": 0.025,
+      "strategy": "On-the-fly fitting augmentation. Preview PNGs are demonstrations, not extra training cases.",
+      "scope": "Engineering perturbations, not a validated simulation of scanner physics. Bright/dark preview columns show the extremes of 24 random draws for illustration."
+    },
+    "preview_visual_review": "PASS: original/darker/brighter examples inspected; visible structures remain in frame.",
+    "all_training_views": "Generated on the fly. No fixed copies added to classification train/test.",
+    "accuracy_improvement_measured": false
+  },
+  "bulk_augmentation_audit": {
+    "status": "PASS",
+    "fitting_image_files_processed": 12763,
+    "views_per_file": 4,
+    "augmented_views_generated": 51052,
+    "views_with_changed_pixels": 51052,
+    "per_class_original_files": {
+      "PCOS": 5237,
+      "Benign": 1984,
+      "Normal": 5070,
+      "Malignant": 472
+    },
+    "source_file_checksums": "PASS",
+    "validation_identity_and_rng_checks": "PASS",
+    "dataset_manifest_unchanged": true,
+    "stored_augmented_training_copies": 0,
+    "training_uses": "Fresh random fitting views on the fly; the streamed audit arrays are discarded after checking.",
+    "configured_training_epoch_ceiling": 36,
+    "maximum_fitting_views_at_epoch_ceiling": 459468,
+    "scope": "This command generated/checks image variants. It does not train model weights or create new independent ultrasound cases. Actual training may stop early."
+  },
+  "code_version": "2.2.0",
+  "audit_2026_11_20": {
+    "status": "PASS",
+    "canonical_tests_passed": 35,
+    "portable_tests_available": 27,
+    "new_audit_regressions_passed": 8,
+    "legacy_ablation_tests_passed": 8,
+    "synthetic_integration": "PASS",
+    "dataset_checks": {
+      "images": 19942,
+      "manifest_sha256": "d0112fb807fe61accdd0fac1a2a606ff74f51558a650e5767e35d22bde62c190",
+      "all_image_file_checksums": "PASS",
+      "images_hashed": 19942,
+      "old_images_retained": 16729,
+      "role_counts": {
+        "select": 2112,
+        "fit": 12763,
+        "test": 3988,
+        "calibrate": 1079
+      },
+      "folder_counts": {
+        "train": 15954,
+        "test": 3988
+      }
+    },
+    "notebook_checks": {
+      "notebook_schema": "PASS",
+      "all_code_cells_parse": "PASS",
+      "bootstrap_cases": [
+        "archives",
+        "expanded-cloud-folders",
+        "unsafe-archive-rejected"
+      ],
+      "pip_or_training_executed": false
+    },
+    "full_real_data_training_completed": false,
+    "gpu_training_tested": false,
+    "report": "CODEBASE_AUDIT_REPORT.txt"
+  }
+}

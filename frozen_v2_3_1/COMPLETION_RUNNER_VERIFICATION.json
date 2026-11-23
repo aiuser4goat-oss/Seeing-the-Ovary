@@ -1,0 +1,10 @@
+{
+  "verified_utc": "2026-11-21T20:49:24.986352+00:00",
+  "controller_sha256": "0008eb34c81a1fa181bcf44ac9b4d55c529045af8f4de8bd7ad56f26eb45e7f6",
+  "reporting_tests_passed": 2,
+  "morphology_tests_passed": 9,
+  "default_postprocessing_compatibility": "Exact ovary and instance arrays match 2.2.1 on 20 deterministic randomized fixtures.",
+  "anatomy_validation_scope": "100 annotated USOVA3D validation slices; 36 postprocessing candidates. Rule frozen before anatomy-test evaluation.",
+  "classification_dataset_unchanged": true,
+  "classification_test_unused_at_update": true
+}

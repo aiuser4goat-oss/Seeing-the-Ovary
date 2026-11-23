@@ -1,0 +1,30 @@
+{
+  "scope": "Descriptive all-slice diagnostic predictions; guards do not alter these masks/counts, and fallback morphology remains unavailable. Only two volumes, with correlated slices. No retuning on this test.",
+  "metrics_sha256": "d355879670a5b5ed38120545566b433795a1e7905da03a2ff5be9c16563124bd",
+  "results": {
+    "all": {
+      "slices": 108,
+      "always_zero_count_mae": 1.5555555555555556,
+      "model_count_mae_all_slices": 0.8796296296296297,
+      "instance_precision_iou50": 0.5287356321839081,
+      "instance_recall_iou50": 0.8214285714285714,
+      "instance_f1_iou50": 0.6433566433566433
+    },
+    "Vol1": {
+      "slices": 62,
+      "always_zero_count_mae": 1.1612903225806452,
+      "model_count_mae_all_slices": 1.1612903225806452,
+      "instance_precision_iou50": 0.3732394366197183,
+      "instance_recall_iou50": 0.7361111111111112,
+      "instance_f1_iou50": 0.4953271028037383
+    },
+    "Vol106": {
+      "slices": 46,
+      "always_zero_count_mae": 2.0869565217391304,
+      "model_count_mae_all_slices": 0.5,
+      "instance_precision_iou50": 0.7142857142857143,
+      "instance_recall_iou50": 0.8854166666666666,
+      "instance_f1_iou50": 0.7906976744186046
+    }
+  }
+}

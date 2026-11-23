@@ -1,0 +1,7 @@
+ADDITIONAL METHODS SOURCES
+
+Sundararajan, M., Taly, A., & Yan, Q. (2017). Axiomatic attribution for deep networks. Proceedings of the 34th International Conference on Machine Learning, 70, 3319-3328. https://proceedings.mlr.press/v70/sundararajan17a.html
+
+Lakshminarayanan, B., Pritzel, A., & Blundell, C. (2017). Simple and scalable predictive uncertainty estimation using deep ensembles. Advances in Neural Information Processing Systems, 30. https://arxiv.org/abs/1612.01474
+
+These are method background references. The project uses a 24-step global-image attribution approximation with other inputs held fixed, and two predeclared equal-weight combinations of existing classifiers. It does not claim an exact reproduction or independent validation of every method in these papers.

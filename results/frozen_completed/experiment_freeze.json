@@ -1,0 +1,111 @@
+{
+  "frozen_utc": "2026-11-22T03:39:34.348577+00:00",
+  "freeze": {
+    "plan_sha256": "7d5bbe48355e755579926f9161806f4c71f81569bb463628a578c17f95e8a203",
+    "manifest_sha256": "d0112fb807fe61accdd0fac1a2a606ff74f51558a650e5767e35d22bde62c190",
+    "models": {
+      "original_baseline": {
+        "signature": {
+          "recipe": "continuation-v3-tensorflow-letterbox",
+          "classes": [
+            "Benign",
+            "Malignant",
+            "Normal",
+            "PCOS"
+          ],
+          "checkpoint_sha256": "58eec1ec015f4a93d940e681916a88ab03e1de59611b32c8f3c13f976666dcab",
+          "config_sha256": "b8d6cdb4b8cd0814ace2f62acac8e32ff255a5df70198776814d98d502afa6a1",
+          "data_sha256": "425ed52d3fc64c1e230a1a22400fee2ef87d9fe8b17d2368699ef8bd531eea7a",
+          "normalizer_sha256": null
+        },
+        "selection_sha256": "942bb4f3e4c992bfb0c61a806c15c9c3dad5012201857593f6118bf4cd39bbd6",
+        "calibration_sha256": "5fa5820226ee2222c4346c2b511e18a8d1569e7226d1c0953758d4e65722f032"
+      },
+      "fusion": {
+        "signature": {
+          "recipe": "continuation-v3-tensorflow-letterbox",
+          "classes": [
+            "Benign",
+            "Malignant",
+            "Normal",
+            "PCOS"
+          ],
+          "checkpoint_sha256": "df288e28fc56ccf161ec4076571725c781e302959b6c9b890ee2cc688b005ec0",
+          "config_sha256": "b9f442dec00691588dfda60c04f377c713f7f4c62ca176a46f3e9b3fd4e87f77",
+          "data_sha256": "0b65c717565f2d620aabf1e2c0e1a3298f8dd18c50039457c043b553c01f5402",
+          "normalizer_sha256": "161e05b8038f82d90ef54f82f1b1733258d39470d18a95775551ac7d83e1c06c"
+        },
+        "selection_sha256": "a6736771bf8682260f4353636d4719f423bae7cdf8763e36acd028bacd76765d",
+        "calibration_sha256": "337eea38fd088f26b4defe65c6b6162ea80e33dd961b7bfd288dc1a7b10a7a12"
+      },
+      "fusion_refined": {
+        "signature": {
+          "recipe": "continuation-v3-tensorflow-letterbox",
+          "classes": [
+            "Benign",
+            "Malignant",
+            "Normal",
+            "PCOS"
+          ],
+          "checkpoint_sha256": "145b2291e57d4226764f293b0253cf590c29e2a331816b7168a9e11688fbb52c",
+          "config_sha256": "b9f442dec00691588dfda60c04f377c713f7f4c62ca176a46f3e9b3fd4e87f77",
+          "data_sha256": "7499cb04ed48645dbb634f1d06b640426d3fd64a250cb773de09b6a3dbcaf6e3",
+          "normalizer_sha256": "704f2ee7abdb0c8852563eed710456e57bf92e3c16645ff51c0e75092bd9c3bd"
+        },
+        "selection_sha256": "29fe432034ddcb2e879243267cd732258d62fea82aacd2693ca5dfffdbd4723e",
+        "calibration_sha256": "2aee3386a52f11272dc96faabff49254811147ec3d7aaf6a32ef83c82cdd359e"
+      },
+      "image_only": {
+        "signature": {
+          "recipe": "continuation-v3-tensorflow-letterbox",
+          "classes": [
+            "Benign",
+            "Malignant",
+            "Normal",
+            "PCOS"
+          ],
+          "checkpoint_sha256": "aa809ac1c0eadca3e7b7e0591607df9c0ed5630a355c9650915b69ec811a3364",
+          "config_sha256": "f28b4c1f688eba02ffff447a7a8dde8e1c16563af14a9417c11c4d5ab766a2a9",
+          "data_sha256": "be74f58e91640937abdf487fb024361c6b23d4ab2d4eb4d1f24c0d24d6efc89f",
+          "normalizer_sha256": null
+        },
+        "selection_sha256": "403da6233735be0bbea23ebd3ded1f62c43f80c0505b537ddb14c626e773ece8",
+        "calibration_sha256": "7e358635539ab40e03e3435b590798ccd544ec22174549976859cf27c5f897aa"
+      },
+      "localized_no_morphology": {
+        "signature": {
+          "recipe": "continuation-v3-tensorflow-letterbox",
+          "classes": [
+            "Benign",
+            "Malignant",
+            "Normal",
+            "PCOS"
+          ],
+          "checkpoint_sha256": "2618e720d08ffb168b6c70173902d2bdfa38278e19f0a7555291e0886a15508d",
+          "config_sha256": "a3eb92518e1d023926ed3430a7e84bd45bb0833ab0eaff520d381ad30daba7c0",
+          "data_sha256": "0b65c717565f2d620aabf1e2c0e1a3298f8dd18c50039457c043b553c01f5402",
+          "normalizer_sha256": null
+        },
+        "selection_sha256": "44b00c689841933b754d8561dc2241d137a65c1110f8df64c96a7c56ea7e42c9",
+        "calibration_sha256": "4b28fdc9bcda1759cf5a48996282e9bc3d7c42c4e2dd3b7fa18862cf5e4ab77b"
+      },
+      "fusion_zero_morphology": {
+        "signature": {
+          "recipe": "continuation-v3-tensorflow-letterbox",
+          "classes": [
+            "Benign",
+            "Malignant",
+            "Normal",
+            "PCOS"
+          ],
+          "checkpoint_sha256": "37dfef9f4367019ba3b4f5248fbf28a89cf4744f067aeaa74533e9cacfa7743e",
+          "config_sha256": "342192c439cb29b7619ebe3217dbca1e63fb8ee6e59b2438b208bde4688e483b",
+          "data_sha256": "0b65c717565f2d620aabf1e2c0e1a3298f8dd18c50039457c043b553c01f5402",
+          "normalizer_sha256": "161e05b8038f82d90ef54f82f1b1733258d39470d18a95775551ac7d83e1c06c"
+        },
+        "selection_sha256": "3f1d06f5bc3305453f933fe560c33e8b368218af11daa8797f55317d58efe6c1",
+        "calibration_sha256": "272b670f39f6a77ad58d1740ab89c1d4174f43c7eb67781b8085e1a4decb2ab4"
+      }
+    }
+  }
+}

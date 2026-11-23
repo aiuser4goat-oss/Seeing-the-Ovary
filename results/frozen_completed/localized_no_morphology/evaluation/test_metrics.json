@@ -1,0 +1,381 @@
+{
+  "accuracy": 0.8871614844533601,
+  "balanced_accuracy": 0.883378629476782,
+  "macro_f1": 0.8407342128029482,
+  "nll": 0.29664915800094604,
+  "brier": 0.15681947403243854,
+  "confusion_matrix": [
+    [
+      514,
+      35,
+      62,
+      9
+    ],
+    [
+      11,
+      134,
+      2,
+      0
+    ],
+    [
+      181,
+      30,
+      1343,
+      31
+    ],
+    [
+      62,
+      1,
+      26,
+      1547
+    ]
+  ],
+  "ece_10_bins": 0.01813065395162719,
+  "macro_roc_auc_ovr": 0.9817409989101278,
+  "per_class": {
+    "Benign": {
+      "sensitivity": 0.8290322580645161,
+      "specificity": 0.9245843230403801,
+      "precision": 0.6692708333333334,
+      "support": 620
+    },
+    "Malignant": {
+      "sensitivity": 0.9115646258503401,
+      "specificity": 0.9828169747461598,
+      "precision": 0.67,
+      "support": 147
+    },
+    "Normal": {
+      "sensitivity": 0.8473186119873817,
+      "specificity": 0.9625468164794008,
+      "precision": 0.9371946964410328,
+      "support": 1585
+    },
+    "PCOS": {
+      "sensitivity": 0.94559902200489,
+      "specificity": 0.9829931972789115,
+      "precision": 0.9747952110901071,
+      "support": 1636
+    }
+  },
+  "retained_coverage": 0.8462888665997994,
+  "retained_accuracy": 0.9546666666666667,
+  "test_manifest_sha256": "d0112fb807fe61accdd0fac1a2a606ff74f51558a650e5767e35d22bde62c190",
+  "group_bootstrap_95_ci": {
+    "balanced_accuracy": [
+      0.8663553205807598,
+      0.8985006159477433
+    ],
+    "macro_f1": [
+      0.8210892760181738,
+      0.8583812042308454
+    ]
+  },
+  "source_metrics": {
+    "2526_Data_ALL": {
+      "accuracy": 0.900101591601761,
+      "balanced_accuracy": 0.8959955380500246,
+      "macro_f1": 0.8688408026583546,
+      "nll": 0.2600118815898895,
+      "brier": 0.1361621192085487,
+      "confusion_matrix": [
+        [
+          383,
+          21,
+          31,
+          9
+        ],
+        [
+          9,
+          133,
+          2,
+          0
+        ],
+        [
+          104,
+          12,
+          849,
+          26
+        ],
+        [
+          60,
+          1,
+          20,
+          1293
+        ]
+      ],
+      "ece_10_bins": 0.02501945811693764,
+      "macro_roc_auc_ovr": 0.9858053154249492,
+      "per_class": {
+        "Benign": {
+          "sensitivity": 0.8626126126126126,
+          "specificity": 0.9310482263850139,
+          "precision": 0.6888489208633094,
+          "support": 444
+        },
+        "Malignant": {
+          "sensitivity": 0.9236111111111112,
+          "specificity": 0.9878960484158064,
+          "precision": 0.7964071856287425,
+          "support": 144
+        },
+        "Normal": {
+          "sensitivity": 0.856710393541877,
+          "specificity": 0.972986748216106,
+          "precision": 0.9412416851441242,
+          "support": 991
+        },
+        "PCOS": {
+          "sensitivity": 0.9410480349344978,
+          "specificity": 0.9778340721975934,
+          "precision": 0.973644578313253,
+          "support": 1374
+        }
+      }
+    },
+    "Additional_Five_Class": {
+      "accuracy": 0.977491961414791,
+      "balanced_accuracy": 0.9785262978142076,
+      "macro_f1": 0.4932105594238737,
+      "nll": 0.11699645966291428,
+      "brier": 0.04769933414366168,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          178,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          126
+        ]
+      ],
+      "ece_10_bins": 0.06024432996844935,
+      "macro_roc_auc_ovr": null,
+      "per_class": {
+        "Benign": {
+          "sensitivity": 0.0,
+          "specificity": 0.9839228295819936,
+          "precision": 0.0,
+          "support": 0
+        },
+        "Malignant": {
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "precision": 0.0,
+          "support": 0
+        },
+        "Normal": {
+          "sensitivity": 0.9726775956284153,
+          "specificity": 0.984375,
+          "precision": 0.9888888888888889,
+          "support": 183
+        },
+        "PCOS": {
+          "sensitivity": 0.984375,
+          "specificity": 1.0,
+          "precision": 1.0,
+          "support": 128
+        }
+      }
+    },
+    "Recovered_MMOTU_2D": {
+      "accuracy": 0.5780730897009967,
+      "balanced_accuracy": 0.4739712700778274,
+      "macro_f1": 0.29813106181030713,
+      "nll": 1.0480178594589233,
+      "brier": 0.5968582891230988,
+      "confusion_matrix": [
+        [
+          131,
+          14,
+          31,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0
+        ],
+        [
+          62,
+          18,
+          42,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "ece_10_bins": 0.14418635910927655,
+      "macro_roc_auc_ovr": null,
+      "per_class": {
+        "Benign": {
+          "sensitivity": 0.7443181818181818,
+          "specificity": 0.488,
+          "precision": 0.6717948717948717,
+          "support": 176
+        },
+        "Malignant": {
+          "sensitivity": 0.3333333333333333,
+          "specificity": 0.8926174496644296,
+          "precision": 0.030303030303030304,
+          "support": 3
+        },
+        "Normal": {
+          "sensitivity": 0.3442622950819672,
+          "specificity": 0.8268156424581006,
+          "precision": 0.5753424657534246,
+          "support": 122
+        },
+        "PCOS": {
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "precision": 0.0,
+          "support": 0
+        }
+      }
+    },
+    "Recovered_PCOSGen": {
+      "accuracy": 0.8409090909090909,
+      "balanced_accuracy": 0.8444116858751005,
+      "macro_f1": 0.43827160493827155,
+      "nll": 0.42030009627342224,
+      "brier": 0.2098511787694393,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          10,
+          0,
+          76,
+          5
+        ],
+        [
+          2,
+          0,
+          4,
+          35
+        ]
+      ],
+      "ece_10_bins": 0.06789424405856564,
+      "macro_roc_auc_ovr": null,
+      "per_class": {
+        "Benign": {
+          "sensitivity": 0.0,
+          "specificity": 0.9090909090909091,
+          "precision": 0.0,
+          "support": 0
+        },
+        "Malignant": {
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "precision": 0.0,
+          "support": 0
+        },
+        "Normal": {
+          "sensitivity": 0.8351648351648352,
+          "specificity": 0.9024390243902439,
+          "precision": 0.95,
+          "support": 91
+        },
+        "PCOS": {
+          "sensitivity": 0.8536585365853658,
+          "specificity": 0.945054945054945,
+          "precision": 0.875,
+          "support": 41
+        }
+      }
+    },
+    "data": {
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 0.5,
+      "nll": 0.027157684788107872,
+      "brier": 0.003849246997329971,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          198,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          93
+        ]
+      ],
+      "ece_10_bins": 0.025672705517601722,
+      "macro_roc_auc_ovr": null,
+      "per_class": {
+        "Benign": {
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "precision": 0.0,
+          "support": 0
+        },
+        "Malignant": {
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "precision": 0.0,
+          "support": 0
+        },
+        "Normal": {
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "precision": 1.0,
+          "support": 198
+        },
+        "PCOS": {
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "precision": 1.0,
+          "support": 93
+        }
+      }
+    }
+  }
+}

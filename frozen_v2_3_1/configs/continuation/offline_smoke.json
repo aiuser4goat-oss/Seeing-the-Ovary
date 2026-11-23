@@ -1,0 +1,10 @@
+{
+  "mode": "image",
+  "weights": null,
+  "image_size": 64,
+  "batch_size": 2,
+  "head_epochs": 1,
+  "fine_epochs": 1,
+  "full_epochs": 0,
+  "data_threads": 1
+}

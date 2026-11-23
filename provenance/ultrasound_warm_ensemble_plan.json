@@ -1,0 +1,37 @@
+{
+  "declared_utc": "2026-11-23T11:06:38.222973+00:00",
+  "scope": "Selection validation only; exploratory development after prior historical test review",
+  "reference_sources": {
+    "image_only": {
+      "path": "<LOCAL>/2627 Science Fair Data/Model_Datasets/Accuracy_Development_2026_11_22/results_v1/warm_b0/Ovarian Continuation Results/accuracy_development/references/image_only/selection_probabilities.npz",
+      "sha256": "1a90926c37eebb496e85889bbd4a45ba4cfa1e994493d4dcb5eb088648877e72"
+    },
+    "original_baseline": {
+      "path": "<LOCAL>/2627 Science Fair Data/Model_Datasets/Accuracy_Development_2026_11_22/results_v1/warm_b0/Ovarian Continuation Results/accuracy_development/references/original_baseline/selection_probabilities.npz",
+      "sha256": "94fd551d50512598b313f27e3f2d6c9b76e0058223b0abdc312931efcbb7ece8"
+    },
+    "fusion_refined": {
+      "path": "<LOCAL>/2627 Science Fair Data/Model_Datasets/Accuracy_Development_2026_11_22/results_v1/warm_b0/Ovarian Continuation Results/accuracy_development/references/fusion_refined/selection_probabilities.npz",
+      "sha256": "15fa5e1eda48f69dbb0f55b062f1a5138a3e74160e88533320db5eb206656bbd"
+    }
+  },
+  "new_member": "Selected checkpoint from locked warm continuation of TinyUSFM pilot; 40 epoch maximum, 90minute cap",
+  "candidates": {
+    "tiny_plus_old_image": [
+      "tinyusfm",
+      "image_only"
+    ],
+    "tiny_plus_old_anatomy_three": [
+      "tinyusfm",
+      "image_only",
+      "original_baseline",
+      "fusion_refined"
+    ]
+  },
+  "weighting": "Fixed equal weights; raw probabilities; no learned offsets/weights",
+  "requirement": "Match complete selection record IDs and class order exactly, verify all source/cache hashes, no calibration or test access",
+  "interpretation": "Neither validation gain nor ensemble selection establishes >93% test balanced accuracy. No new test evaluation authorized for model tuning.",
+  "before_warm_fitting": true,
+  "pilot_validation_reviewed": true,
+  "source_freeze_sha256": "9dc3ba8e64436545ec34a47bd3e7f409c38254b07c44dcf95c9243b80ff52068"
+}

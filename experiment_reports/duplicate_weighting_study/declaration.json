@@ -1,0 +1,17 @@
+{
+  "created_before_fitting": "2026-11-23T10:18:13.846634+00:00",
+  "fit_records": 12763,
+  "selection_records": 2112,
+  "features_sha256": "4c516c2831268648104d4f065ad0f6374b6dd8b7b537e34182136c8123825e9a",
+  "features": "Fixed previously selected encoder_pool_plus_head readout; unique FIT StandardScaler/PCA128, then L2 normalization",
+  "classifier": "LogisticRegression C=.1 max_iter=2000 lbfgs; no hyperparameter search",
+  "duplicate_exponents": [
+    0.5,
+    1.0
+  ],
+  "class_balance": "Recalculate existing capped inverse-effective-class weights on FIT only; apply once",
+  "labels_or_records_removed_or_changed": false,
+  "test_and_calibration_used": false,
+  "sklearn_version": "1.7.2",
+  "scope": "Exploratory selection study. A new class-weight distribution changes with duplicate exponent; any effect belongs to the combined weighting rule, not exclusively to duplicate scaling."
+}

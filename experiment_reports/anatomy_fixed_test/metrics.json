@@ -1,0 +1,53 @@
+{
+  "locked_policy_sha256": "3e58315acd4cb0479b22e3237b9694da66b28fd195ab5f5eb4ec95137695ac2b",
+  "summary": {
+    "original": {
+      "slices": 108,
+      "volumes": [
+        "Vol1",
+        "Vol106"
+      ],
+      "fallbacks": 6,
+      "mean_crop_fraction": 0.4763268364800347,
+      "diagnostic_count_mae_all_slices": 0.8796296296296297,
+      "diagnostic_instance_f1_iou50_all_slices": 0.6433566433566433,
+      "ovary_crop_coverage": {
+        "mean": 0.9371931679302907,
+        "minimum": 0.0,
+        "positive_slices": 81,
+        "below_90pct": 7
+      },
+      "follicle_crop_coverage": {
+        "mean": 0.9845578999465824,
+        "minimum": 0.0,
+        "positive_slices": 73,
+        "below_90pct": 1
+      }
+    },
+    "fixed_guard": {
+      "slices": 108,
+      "volumes": [
+        "Vol1",
+        "Vol106"
+      ],
+      "fallbacks": 18,
+      "mean_crop_fraction": 0.7498301753291378,
+      "diagnostic_count_mae_all_slices": 0.8796296296296297,
+      "diagnostic_instance_f1_iou50_all_slices": 0.6433566433566433,
+      "ovary_crop_coverage": {
+        "mean": 0.9739370176804805,
+        "minimum": 0.0,
+        "positive_slices": 81,
+        "below_90pct": 3
+      },
+      "follicle_crop_coverage": {
+        "mean": 0.9863013698630136,
+        "minimum": 0.0,
+        "positive_slices": 73,
+        "below_90pct": 1
+      }
+    }
+  },
+  "classification_protected_overlap_skipped": [],
+  "interpretation": "Crop coverage is not segmentation/classification accuracy. Larger crops trade localization for retention. Count metrics summarize the identical diagnostic predictions under both policies, including fallback cases; fallback measurements are unavailable in the guarded pipeline, not zero. Slices are correlated; no statistical independence or clinical generalization claim."
+}

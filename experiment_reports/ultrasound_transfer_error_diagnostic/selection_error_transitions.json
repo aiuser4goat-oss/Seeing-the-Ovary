@@ -1,0 +1,115 @@
+{
+  "scope": "Descriptive selection-only diagnostic after model selection. No independent confirmation, no clinical label adjudication, no image or target edits. Source fields identify collection folders, not verified scanner or patient origin.",
+  "classes": [
+    "Benign",
+    "Malignant",
+    "Normal",
+    "PCOS"
+  ],
+  "old_cache_sha256": "1a90926c37eebb496e85889bbd4a45ba4cfa1e994493d4dcb5eb088648877e72",
+  "pilot_cache_sha256": "1703549dd731169db86d6297daef844e3d95b81c53a9e997cddd0ca635cb784c",
+  "overall": {
+    "records": 2112,
+    "unique_image_groups": 869,
+    "old_correct": 1835,
+    "pilot_correct": 1734,
+    "both_correct": 1682,
+    "old_only_correct": 153,
+    "pilot_only_correct": 52,
+    "both_wrong": 225
+  },
+  "by_class": {
+    "Benign": {
+      "records": 319,
+      "unique_image_groups": 272,
+      "old_correct": 261,
+      "pilot_correct": 241,
+      "both_correct": 214,
+      "old_only_correct": 47,
+      "pilot_only_correct": 27,
+      "both_wrong": 31
+    },
+    "Malignant": {
+      "records": 84,
+      "unique_image_groups": 84,
+      "old_correct": 78,
+      "pilot_correct": 76,
+      "both_correct": 75,
+      "old_only_correct": 3,
+      "pilot_only_correct": 1,
+      "both_wrong": 5
+    },
+    "Normal": {
+      "records": 849,
+      "unique_image_groups": 341,
+      "old_correct": 751,
+      "pilot_correct": 713,
+      "both_correct": 702,
+      "old_only_correct": 49,
+      "pilot_only_correct": 11,
+      "both_wrong": 87
+    },
+    "PCOS": {
+      "records": 860,
+      "unique_image_groups": 287,
+      "old_correct": 745,
+      "pilot_correct": 704,
+      "both_correct": 691,
+      "old_only_correct": 54,
+      "pilot_only_correct": 13,
+      "both_wrong": 102
+    }
+  },
+  "by_collection": {
+    "2526_Data_ALL": {
+      "records": 1737,
+      "unique_image_groups": 594,
+      "old_correct": 1517,
+      "pilot_correct": 1427,
+      "both_correct": 1395,
+      "old_only_correct": 122,
+      "pilot_only_correct": 32,
+      "both_wrong": 188
+    },
+    "Additional_Five_Class": {
+      "records": 89,
+      "unique_image_groups": 76,
+      "old_correct": 86,
+      "pilot_correct": 88,
+      "both_correct": 85,
+      "old_only_correct": 1,
+      "pilot_only_correct": 3,
+      "both_wrong": 0
+    },
+    "Recovered_MMOTU_2D": {
+      "records": 121,
+      "unique_image_groups": 117,
+      "old_correct": 71,
+      "pilot_correct": 61,
+      "both_correct": 45,
+      "old_only_correct": 26,
+      "pilot_only_correct": 16,
+      "both_wrong": 34
+    },
+    "Recovered_PCOSGen": {
+      "records": 42,
+      "unique_image_groups": 34,
+      "old_correct": 39,
+      "pilot_correct": 35,
+      "both_correct": 35,
+      "old_only_correct": 4,
+      "pilot_only_correct": 0,
+      "both_wrong": 3
+    },
+    "data": {
+      "records": 123,
+      "unique_image_groups": 112,
+      "old_correct": 122,
+      "pilot_correct": 123,
+      "both_correct": 122,
+      "old_only_correct": 0,
+      "pilot_only_correct": 1,
+      "both_wrong": 0
+    }
+  }
+}

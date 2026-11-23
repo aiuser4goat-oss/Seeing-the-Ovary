@@ -1,0 +1,127 @@
+{
+  "old_anatomy_ensemble_same_validation": {
+    "accuracy": 0.8693181818181818,
+    "balanced_accuracy": 0.8757481618252061,
+    "macro_f1": 0.8503204161981028,
+    "nll": 0.29484525322914124,
+    "brier": 0.17131747735885128,
+    "confusion_matrix": [
+      [
+        274,
+        6,
+        20,
+        19
+      ],
+      [
+        7,
+        76,
+        1,
+        0
+      ],
+      [
+        86,
+        4,
+        756,
+        3
+      ],
+      [
+        113,
+        1,
+        16,
+        730
+      ]
+    ],
+    "ece_10_bins": 0.017191003584726257,
+    "macro_roc_auc_ovr": 0.9801375954466159,
+    "per_class": {
+      "Benign": {
+        "sensitivity": 0.8589341692789969,
+        "specificity": 0.8851087562744004,
+        "precision": 0.5708333333333333,
+        "support": 319
+      },
+      "Malignant": {
+        "sensitivity": 0.9047619047619048,
+        "specificity": 0.9945759368836292,
+        "precision": 0.8735632183908046,
+        "support": 84
+      },
+      "Normal": {
+        "sensitivity": 0.8904593639575972,
+        "specificity": 0.9707046714172605,
+        "precision": 0.9533417402269861,
+        "support": 849
+      },
+      "PCOS": {
+        "sensitivity": 0.8488372093023255,
+        "specificity": 0.9824281150159745,
+        "precision": 0.9707446808510638,
+        "support": 860
+      }
+    }
+  },
+  "new_ensemble_same_validation": {
+    "accuracy": 0.8716856060606061,
+    "balanced_accuracy": 0.8805817982554518,
+    "macro_f1": 0.8509602578063603,
+    "nll": 0.29408466815948486,
+    "brier": 0.16843735535875096,
+    "confusion_matrix": [
+      [
+        270,
+        8,
+        17,
+        24
+      ],
+      [
+        5,
+        78,
+        1,
+        0
+      ],
+      [
+        90,
+        6,
+        751,
+        2
+      ],
+      [
+        103,
+        0,
+        15,
+        742
+      ]
+    ],
+    "ece_10_bins": 0.02321516050759591,
+    "macro_roc_auc_ovr": 0.9801680687434138,
+    "per_class": {
+      "Benign": {
+        "sensitivity": 0.8463949843260188,
+        "specificity": 0.8895705521472392,
+        "precision": 0.5769230769230769,
+        "support": 319
+      },
+      "Malignant": {
+        "sensitivity": 0.9285714285714286,
+        "specificity": 0.9930966469428008,
+        "precision": 0.8478260869565217,
+        "support": 84
+      },
+      "Normal": {
+        "sensitivity": 0.8845700824499411,
+        "specificity": 0.9738717339667459,
+        "precision": 0.9579081632653061,
+        "support": 849
+      },
+      "PCOS": {
+        "sensitivity": 0.8627906976744186,
+        "specificity": 0.9792332268370607,
+        "precision": 0.9661458333333334,
+        "support": 860
+      }
+    }
+  },
+  "balanced_accuracy_change_percentage_points": 0.48336364302457024,
+  "records": 2112,
+  "scope": "Same deterministic cached selection records. This compares the old anatomy ensemble recipe, not the best historical control ensemble; its zero-morphology validation cache is not present. Historical test scores are unchanged."
+}

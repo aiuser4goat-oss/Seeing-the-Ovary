@@ -1,0 +1,40 @@
+{
+  "stage": "complete",
+  "termination": "epoch_limit",
+  "completed_epochs": 1,
+  "epochs_started": 1,
+  "partial_epoch_logged": false,
+  "selected_validation": {
+    "balanced_accuracy": 1.0,
+    "macro_f1": 1.0,
+    "confusion_matrix": [
+      [
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2
+      ]
+    ]
+  },
+  "test_evaluated": false,
+  "weights_sha256": "5a2d6588c898cac4b05837ed204700c8b469ecfe39a4e0bea1f8c476ff45751c",
+  "elapsed_seconds": 14.096577604000004
+}

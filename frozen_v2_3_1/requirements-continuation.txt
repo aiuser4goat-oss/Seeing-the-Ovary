@@ -1,0 +1,9 @@
+# Python 3.10-3.13; TensorFlow 2.20 tested locally (CPU).
+tensorflow>=2.16,<2.21
+numpy>=1.26,<2.6
+scipy>=1.11,<1.18
+scikit-learn>=1.4,<1.10
+scikit-image>=0.24,<0.27
+Pillow>=10,<13
+h5py>=3.10,<4
+pydicom>=3,<4

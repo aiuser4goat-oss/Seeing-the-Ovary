@@ -1,0 +1,6 @@
+{
+  "mode": "fusion",
+  "backbone": "efficientnetv2b0",
+  "mixed_precision": true,
+  "augmentation": false
+}

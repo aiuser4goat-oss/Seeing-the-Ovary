@@ -1,0 +1,5 @@
+{
+  "mode": "localized",
+  "backbone": "efficientnetv2b0",
+  "mixed_precision": true
+}

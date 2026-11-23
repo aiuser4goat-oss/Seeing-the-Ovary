@@ -1,0 +1,22 @@
+ADDITIONAL OVARIAN-ULTRASOUND RESEARCH REVIEW
+
+1. Bhuiyan, S. T., Rahman, R., Wasi, S., Khatun, H., Islam, A., Rahman, A. M., Alam, S. B., & Amin, M. A. (2026). PelviNeXt: A modality-agnostic hybrid network for pelvic imaging in women's health. arXiv. https://arxiv.org/abs/2608.20144
+Full-text methods/results: https://arxiv.org/html/2608.20144v1
+
+This task-specific study combines dense convolutional features, channel/spatial attention, multi-scale fusion and self-attention. Its PCOS experiment reports 92% mean accuracy on a deduplicated two-class PCOSGen protocol. It motivates attention and multi-scale features as possible later validation experiments; the study's different classes, data and evaluation do not provide an expected score for this four-class project. Its ovarian-trained weights are not being imported into this project because training-image overlap would need exclusion first. The current runs implement neither PelviNeXt nor its audit pipeline.
+
+2. Garcia-Atutxa, I., Martinez-Mas, J., Bueno-Crespo, A., & Villanueva-Flores, F. (2025). Early-fusion hybrid CNN-transformer models for multiclass ovarian tumor ultrasound classification. Frontiers in Artificial Intelligence, 8, 1679310. https://doi.org/10.3389/frai.2025.1679310
+Full text: https://pmc.ncbi.nlm.nih.gov/articles/PMC12568491/
+
+This study tests learned CNN/Transformer feature fusion for eight ovarian categories using OTU-2D. It reports 92.13% accuracy for its EfficientNet-B7/Swin hybrid and 93.3% for a soft ensemble. This supports complementary representations as a research direction. It is not a matched benchmark for this project's four supplied classes, and its results cannot establish that our target will be reached. The currently implemented experiments are ConvNeXt, higher-resolution fine-tuning, EMA, Mixup, rebalancing and optional anatomy correction; they do not claim to reproduce the paper's hybrid or validation design.
+
+3. International multicenter validation of AI-driven ultrasound detection of ovarian cancer. Nature Medicine. https://www.nature.com/articles/s41591-024-03329-4
+Only the indexed abstract was accessible in this session; full-text access was blocked. The abstract describes a multicenter ultrasound evaluation. No detailed architecture or implementation claim in this development package is based on an unread full text.
+
+INPUT AUDIT
+
+A local inventory read 6,863 unique fitting/selection images and no calibration or test pixels. Nearly all Normal and Benign fitting/selection records have a native longest side above 224 pixels, supporting a measured test of increased input resolution. Many Malignant images are already 224 by 224, so increasing input size cannot create additional native detail for those images. Appearance ranges overlap across classes. Full numeric results are in input_audit/fit_selection_image_inventory.json.
+
+REPORTING RULE
+
+The 93% target applies to the full evaluated image collection under the selected metric. Accuracy among automatically retained confident cases is a separate referral result and does not replace that metric. All original records and labels remain in the existing split. New model choices use selection validation; the previously inspected test set cannot become an untouched confirmation set merely by rerunning a new model.

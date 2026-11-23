@@ -1,0 +1,63 @@
+ULTRASOUND TRANSFER AND ANATOMY AUDIT — 2026-11-23
+
+Objective: improve full-set balanced accuracy toward >93%, without a guaranteed outcome. Preserve original models, records, labels and split. Development uses fitting and selection roles only. Historical test already reviewed; any later use is exploratory.
+
+ANATOMY AUDIT
+Reverified cached follicle instance truth for all 100 anatomy-validation slices against original USOVA r1 files. This is 100 correlated slices from only two volumes (90 contain annotated ovary, 87 contain annotated follicles), not 100 independent cases. Cached probabilities are float16. These observations already selected postprocessing earlier, so all new crop checks are descriptive development results, not independent confirmation.
+
+The original crop had mean ovarian annotation coverage 96.7703%, with minimum 2.0169%. Five positive slices retained less than 90% of the annotated ovary. Expanded context plus a fallback based on the ORIGINAL crop proposal raised mean coverage to 99.9798%, minimum 98.1785%, and follicle annotation coverage to 100% on this sample. The mean selected image area increased from 57.4379% to 79.7274%; fallbacks increased from 11 to 16 of 100. Larger crops/full-image fallback naturally improve coverage, and these statistics do not establish improved segmentation, classification or generalization.
+
+Experimental guard: use original 10%-margin crop for the size check. If predicted mask fraction is <1% or that crop occupies <15% of padded image area, retain the full image and mark ALL morphology missing. Otherwise expand context to a 25% margin. Expanding context cannot bypass the original size check. These thresholds are exploratory choices informed by the validation audit, not verified anatomical-quality thresholds. No ovary/follicle diagnosis is inferred by the guard.
+
+Re-ran the frozen segmenter on a deterministic stratified sample of 16 fitting/selection classification images. No independent anatomy annotations exist for that sample. Overlays are predictions, not verified anatomy. The sample exposed regions requiring caution; it does not permit numerical anatomical-accuracy claims on the classification distribution. No classification targets were edited. The guard returned the full image for 2/16 sampled images. The primary pipeline and frozen feature caches are untouched; guard code is isolated under accuracy_development.
+
+ULTRASOUND PRETRAINING / FINE-TUNING
+Official TinyUSFM code: https://github.com/MacDunno/TinyUSFM
+Pinned repository commit: f3096e97da3814011c5f59176b5cc19b5477ac64
+Released checkpoint: https://drive.google.com/file/d/1P_wDuU-StALLJEBaymioaYu52CScW-l-/view
+Checkpoint SHA256: 776a50eeff402802c8cd06e00fe9de73df4161504fa733284bc240904b48252c
+Paper: Ma et al. (2026), TinyUSFM: Towards Compact and Efficient Ultrasound Foundation Models. IEEE Journal of Biomedical and Health Informatics. https://doi.org/10.1109/JBHI.2026.3678309
+
+Use the official lightweight 192-dimensional transformer, 12 blocks, 12 attention heads, global-average pooling variant. Load all available backbone tensors, explicitly map model.norm weight/bias to the official GAP variant's model.fc_norm, and allow only the new four-class head to initialize randomly. The tensor mapping/pooling adaptation is recorded, not silently ignored. PyTorch weights_only=True avoids unrestricted checkpoint object loading.
+
+External teacher/pretraining images cannot be exhaustively audited for overlap. This experiment must be labeled exploratory with unknown external-pretraining overlap. It does not establish a clean pretrained-model generalization claim. It compares a different architecture and pretraining source with the older CNN; differences cannot be attributed to pretraining alone. This is transfer of a released ultrasound-pretrained model, not newly pretraining a foundation model from scratch.
+
+Fitting uses all 12,763 original records with exactly the existing duplicate/class weights applied once. Selection uses the same 2,112 records, with the original hash-based calibration reservation reproduced exactly. The adapter was checked against the frozen core and returned identical rows and weights. Test/calibration image access is forbidden in this worker. All fitting/selection files are SHA256 verified before training.
+
+224-pixel RGB bilinear letterbox and official ImageNet mean/std. Fitting augmentation uses horizontal reflection and moderate gain/contrast/gamma/speckle only. Final model inputs explicitly float32. No augmented selection/test data. Head-only adaptation: 4 epochs at 3e-4. Last six blocks plus final normalization/head: 8 epochs at 1e-5. Full model: 4 epochs at 3e-6. AdamW weight decay 1e-4, label smoothing .03, gradient clipping 1, cosine learning rates, early stopping patience 3, deterministic float32 execution. Select by balanced accuracy, macro F1 as tie-break, with initial checkpoint as fallback. Fixed 100-minute worker budget. Save probabilities/record IDs/class order and source hashes. No final-test inference.
+
+Preflight: 8 fitting and 8 selection records exercise checkpoint loading, every fine-tuning stage, prediction caching and serialization before full fitting. CPU preflight is additionally run while the GPU candidate waits. Preflight metrics are not project performance estimates.
+
+v1 was stopped during setup after read-only audit identified possible NumPy 2 dtype promotion and the checkpoint normalization-key mismatch. Both corrected and declared in v2 before full fitting. Old model weights and scores unchanged.
+
+Additional research: Ahmad et al. (2026), Less Contouring, More Accuracy: Lesion-Guided ROI Deep Learning for Ovarian Ultrasound Classification. https://arxiv.org/abs/2608.25965 . Supports investigating lesion-focused crops; its lesion annotations/tasks/metrics differ from our predicted ovary regions and four-class balanced-accuracy target. It does not predict our performance.
+
+Outputs: anatomy_audit/audit.json, crop_guard_comparison.json, classification_crop_audit.png, classification_sample/audit.json; ultrasound_transfer_payload_v2.json; private Kaggle ovarian-ultrasound-transfer-validation and ovarian-ultrasound-transfer-preflight.
+
+V3 RUNTIME UPDATE
+The focused CPU v3 preflight passed all three fitting phases and saving. Executed source, ZIP CRC, saved checkpoint hash and finite 8x4 prediction cache were verified locally. The probe score is not a performance estimate. Full GPU v3 retains all FIT/SELECT file verification, with progress logging and parent-directory checks cached. V2 CLI mismatch corrected by a shared parser accepting both hyphen/underscore model-source spellings. No model fitting occurred in stopped GPU v2.
+
+Paper details: https://arxiv.org/abs/2510.19239 . The authors report substantially longer downstream training (400 epochs with warmup/poly scheduling). This resource-limited 16-epoch/100-minute AdamW-cosine pilot is an adaptation, not a replication or a test of the foundation model's best possible performance.
+
+Reviewed for a possible later controlled experiment, NOT implemented in the current run: Hinton, G., Vinyals, O., & Dean, J. (2015). Distilling the knowledge in a neural network. https://arxiv.org/abs/1503.02531 . Teacher-guided fitting is a potential way to transfer the existing classifier's task knowledge into a new encoder; any trial would retain supplied fitting labels and must be separately declared. The current TinyUSFM run uses ordinary weighted supervised cross-entropy, not task-specific teacher distillation.
+
+PARALLEL WEIGHTING STUDY
+One fixed previously selected frozen-feature logistic readout (pool+head, C=.1) compared inverse-square-root duplicate weights with inverse-count weights, recalculating the existing capped class weights on FIT only. Every FIT record kept a positive weight. Control reproduced 87.0271% selection BA; treatment reached 86.6818%. Macro F1 increased .79451 to .80736, but BA is the target. Reject the treatment. This changed the combined duplicate/class weighting rule, not source labels or training roles, and did not modify the main GPU recipe. See duplicate_weighting_study/declaration.json and results.json.
+
+UNCOMPRESSED READOUT CHECK
+Six fixed logistic readouts on full encoder-pool1280 or actual post-LayerNorm head256 features (no PCA; C=.1,1,10) did not improve the original image-only selection performance. Best BA was 86.9326%. Rejected. CPU float32 head reconstruction from cached CPU embeddings yielded 87.4202%, with 3 top-class differences and maximum probability difference .0083501 from the earlier GPU reference; this is a separate hardware/precision reconstruction, not a change to frozen scores or a relaxed original consistency guard. See uncompressed_feature_study.
+
+ADDITIONAL ANNOTATION SOURCE CHECK
+The official MMOTU source (https://github.com/cv516Buaa/MMOTU_DS2Net; paper https://arxiv.org/abs/2207.06799) links a currently accessible public Drive folder. Its OTU_2d subfolder visibly contains annotations/, images/, and train/validation classification lists. These files have not been downloaded or aligned to the current classification collection and are NOT used by this training run. Their tumor/lesion masks must not be presented as whole-ovary or follicle ground truth. A future image-matching/protected-split audit could determine whether they support a lesion-crop quality check.
+
+LOCKED ANATOMY TEST
+After freezing the guard source, original segmenter checkpoint and two policies, one evaluation used 108 supplied USOVA test slices (Vol1/Vol106, r1, every fourth slice). No parameters were changed from these results. Mean ovarian crop retention on 81 positive slices increased 93.7193% to 97.3937%; failures below 90% decreased 7 to 3, but minimum retention remained zero. Mean selected image area increased 47.6327% to 74.9830%, with full-image fallbacks 6 to 18. This is a retention/localization tradeoff, not a segmentation or classification-accuracy gain. Identical underlying refined follicle predictions had count MAE .87963 and instance F1@IoU.5 .64336 across all 108 slices. Counts are not reported as available when guard rejects anatomy. See anatomy_fixed_test/locked_policy.json, metrics.json and per-volume count baseline. This anatomy-test evaluation does not use the classification test/calibration split for prediction or tuning.
+
+LONGER WARM CONTINUATION — NEW LOCKED RECIPE
+The pilot completed at 82.9666% selection BA and neither predeclared ensemble improved the reference. Its checkpoint is not promoted. One longer continuation uses its locked selected weights, the exact same data/roles/weights and appearance preprocessing, seed2628, full-encoder AdamW, 3epoch linear warmup to3e-5 then cosine to1e-6, max40epochs/max90minutes, patience6. It must reproduce the frozen pilot selection probabilities within1e-5 with identical argmax on GPU before any full fitting. Initial weights remain a fallback. Partial timeout epochs are reported separately. Warm CPU preflight passed; small smoke scores are not project performance. Full run is private on the same pinned container/T4 and uses only the new private cached copy of unchanged data. All 19,942 records including16,729 old records verified; cache CPU staging+FIT/SELECT checksum verification took22.77s in one test. No classification test/calibration inference or fitting. New warm recipe is not a replication of the authors400epoch schedule.
+
+MATCHED PILOT ERROR DIAGNOSTIC
+Among the same2,112 selection records, the pilot corrected52 records missed by the old image-only model, but lost153 that the old model classified correctly. Both missed225. Benign recall fell261/319 to241/319; Malignant78/84 to76/84; Normal751/849 to713/849; PCOS745/860 to704/860. These are descriptive selected-data counts, not independent significance tests. Collection-level counts identify folder provenance, not verified scanners or patients. This supports rejecting the pilot replacement and its unsuccessful fixed ensembles; it does not identify clinical causes or change labels. See ultrasound_transfer_error_diagnostic/selection_error_transitions.json.
+
+CODE AND CACHE VERIFICATION UPDATE
+All17 local tests passed, including5 new cache tests covering verified staging, byte tampering, existing destination preservation, archive traversal and symlink rejection. Version0.4 packages the exact six submitted warm worker/model files and verifies their text and SHA256 against the frozen payload. The GPU run remains queued at this update; CPU smoke success is not full-run or GPU-reproduction success.

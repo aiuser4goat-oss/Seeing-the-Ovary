@@ -1,0 +1,6 @@
+{
+  "mode": "fusion",
+  "backbone": "efficientnetv2b0",
+  "domain_weight": 0.05,
+  "mixed_precision": true
+}

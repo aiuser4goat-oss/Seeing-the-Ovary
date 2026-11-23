@@ -1,0 +1,25 @@
+{
+  "format": "reporting-only-amendment-v1",
+  "reporting_code_version": "2.3.1",
+  "created_utc": "2026-11-22T03:46:53.163612+00:00",
+  "reason": "scikit-learn 1.6.1 returns NaN for a four-class source-subset macro ROC AUC when some classes are absent; strict JSON serialization fails. The correction reports that undefined statistic as null.",
+  "test_access_disclosure": "The original run attempted first baseline test inference before report serialization failed. This history is preserved; the correction is based on a synthetic missing-class reproduction, not test performance. No model or threshold is selected or changed using test results.",
+  "original_plan_sha256": "7d5bbe48355e755579926f9161806f4c71f81569bb463628a578c17f95e8a203",
+  "original_freeze_sha256": "2d99893c4b6e4a45a46ca3ebc9918891a36a7bbf12dfceaaf768e99fb447b135",
+  "original_controller_sha256": "0008eb34c81a1fa181bcf44ac9b4d55c529045af8f4de8bd7ad56f26eb45e7f6",
+  "new_controller_sha256": "12467477da482cdb24414e52ff402a9ce28a6a406765f723533cdcab7a3c2cfa",
+  "source_change": {
+    "path": "continuation/evaluation.py",
+    "old_sha256": "85c336d01e63ea2df48549babd6cf1cd623729578a985bbffadd6f73ed54be9a",
+    "new_sha256": "0c9c3d8f1405acdb540c5d4ea0b783528318b48c0ca601ba18bfa7ddbd56999a"
+  },
+  "preserved": [
+    "Original plan and six-model freeze bytes",
+    "All six checkpoint, configuration, data, normalizer, selection and calibration hashes",
+    "All classification records, labels and split roles",
+    "All classifier inference/training source except the narrow reporting guard",
+    "Primary comparison and fixed ensemble recipes",
+    "All supported AUCs and all other metric calculations"
+  ],
+  "validation": "Three regression tests passed under the exact scikit-learn 1.6.1 version, including full JSON/prediction/risk-coverage output and unchanged full-class statistics."
+}

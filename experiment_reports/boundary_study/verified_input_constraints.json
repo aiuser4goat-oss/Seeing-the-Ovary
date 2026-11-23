@@ -1,0 +1,34 @@
+{
+  "verified_utc": "2026-11-23T05:19:41.151309+00:00",
+  "verified_files": 14875,
+  "test_and_calibration_files_read": false,
+  "manifest_sha256": "d0112fb807fe61accdd0fac1a2a606ff74f51558a650e5767e35d22bde62c190",
+  "roles": {
+    "fit": {
+      "records": 12763,
+      "class_support": {
+        "Normal": 5070,
+        "PCOS": 5237,
+        "Benign": 1984,
+        "Malignant": 472
+      },
+      "byte_identical_groups_with_multiple_supplied_classes": 1652,
+      "deterministic_image_only_balanced_accuracy_upper_bound": 0.9087957497888863,
+      "ordinary_accuracy_upper_bound": 0.8652354462117057
+    },
+    "select": {
+      "records": 2112,
+      "class_support": {
+        "PCOS": 860,
+        "Normal": 849,
+        "Benign": 319,
+        "Malignant": 84
+      },
+      "byte_identical_groups_with_multiple_supplied_classes": 119,
+      "deterministic_image_only_balanced_accuracy_upper_bound": 0.9619110718492343,
+      "ordinary_accuracy_upper_bound": 0.9422348484848485
+    }
+  },
+  "proof": "For each byte-identical image group g, a deterministic classifier must choose one class. Its maximum contribution to balanced accuracy is max_c n(g,c)/(4*N(c)). Summing over groups gives an upper bound; visually different groups may introduce additional difficulty.",
+  "interpretation": "This is a constraint of the current combined four-class record protocol, not an assertion that any particular supplied label or prior-year study is incorrect. It does not establish a test-set ceiling. Labels, files, roles and primary scores are unchanged."
+}

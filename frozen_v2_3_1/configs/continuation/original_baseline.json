@@ -1,0 +1,6 @@
+{
+  "mode": "legacy",
+  "backbone": "efficientnetb0",
+  "label_smoothing": 0.0,
+  "domain_weight": 0.0
+}

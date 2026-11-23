@@ -1,0 +1,12 @@
+REPORTING COMPATIBILITY UPDATE 2.3.1
+
+This update corrects a report-writing failure when a source subset lacks one or more of the four classes. Its four-class macro ROC AUC is undefined and is recorded as JSON null. Full-class AUC and all other metric calculations are unchanged. Three regression tests passed under scikit-learn 1.6.1.
+
+All six original selected checkpoints, model configurations, data metadata, normalizers, calibration rules, dataset records, labels and split roles are preserved. The first baseline test-inference attempt failed during report serialization; that history remains documented. No model or threshold was selected or changed using test performance.
+
+For the existing frozen six-model experiment, use finish_experiments_reporting_recovery.py with the original experiment_plan.json, original experiment_freeze.json and reporting_amendment.json in the results folder. The amended controller accepts only the declared reporting-source/controller hash substitutions and prohibits training, recalibration and anatomy extraction. The original controller remains available for the original protocol and fresh experiments.
+
+Reporting-recovery notebook: https://www.kaggle.com/code/ishaankhera/ovarian-reporting-recovery
+Private frozen checkpoint snapshot: https://www.kaggle.com/datasets/ishaankhera/ovarian-frozen-six-models-private
+
+The four anatomy/attribution illustrations use reserved model-selection images and CPU inference. They are illustrative predictions, separate from the fixed held-out test metrics. Classification confidence does not establish segmentation or follicle-count accuracy.

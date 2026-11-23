@@ -1,0 +1,72 @@
+{
+  "soft_ce": {
+    "selection_balanced_accuracy": 0.8188051734117062,
+    "selection_macro_f1": 0.7222894757330109,
+    "selection_confusion_matrix": [
+      [
+        206,
+        71,
+        10,
+        32
+      ],
+      [
+        3,
+        81,
+        0,
+        0
+      ],
+      [
+        87,
+        52,
+        698,
+        12
+      ],
+      [
+        103,
+        12,
+        20,
+        725
+      ]
+    ],
+    "fit_balanced_accuracy": 0.821851976253437,
+    "optimizer_converged": true,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "iterations": 55,
+    "elapsed_seconds": 0.11005529202520847
+  },
+  "candidate_marginal": {
+    "selection_balanced_accuracy": 0.7835069611517185,
+    "selection_macro_f1": 0.7032148892400123,
+    "selection_confusion_matrix": [
+      [
+        129,
+        70,
+        12,
+        108
+      ],
+      [
+        0,
+        82,
+        0,
+        2
+      ],
+      [
+        49,
+        51,
+        692,
+        57
+      ],
+      [
+        1,
+        14,
+        38,
+        807
+      ]
+    ],
+    "fit_balanced_accuracy": 0.7299603743273753,
+    "optimizer_converged": true,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "iterations": 55,
+    "elapsed_seconds": 0.16636208293493837
+  }
+}

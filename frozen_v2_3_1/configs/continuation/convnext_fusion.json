@@ -1,0 +1,8 @@
+{
+  "mode": "fusion",
+  "backbone": "convnexttiny",
+  "batch_size": 8,
+  "head_lr": 0.0003,
+  "fine_lr": 1e-05,
+  "mixed_precision": true
+}

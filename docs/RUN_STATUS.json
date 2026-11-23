@@ -1,0 +1,13 @@
+{
+  "snapshot_utc": "2026-11-23T17:26:50.611543+00:00",
+  "warm_kernel": "ishaankhera/ovarian-ultrasound-warm-validation",
+  "warm_version": 1,
+  "warm_status": "QUEUED",
+  "private": true,
+  "cpu_preflight": "PASSED; smoke only",
+  "target_balanced_accuracy": 0.93,
+  "target_achieved": false,
+  "preserved_best_test_balanced_accuracy": 0.8954576875376714,
+  "no_new_classification_test_predictions": true,
+  "notice": "Static snapshot; do not infer current job state from this file."
+}

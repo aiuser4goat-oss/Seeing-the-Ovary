@@ -1,0 +1,47 @@
+ACCURACY DEVELOPMENT, ROUND 2
+
+This is exploratory development following review of the previous test results. The original six models, two fixed ensembles, original split, labels and historical reported scores are preserved. The new recipes fit only on fitting records and select checkpoints only on selection validation. The separate calibration set and old test images are not used by the development runner. A new untouched confirmation dataset is needed for a new unbiased generalization claim. A later evaluation on the already examined test set must be described as exploratory.
+
+The target defaults to balanced accuracy above 93 percent. Overall accuracy and macro F1 are also reported. The target is not a promised outcome. The numerical reproducibility investigation measured an original-runtime balanced-accuracy difference of only 0.0158 percentage points, so deterministic operations address reproducibility rather than the several-point performance gap.
+
+Concrete experiments:
+1. Transfer the full trained image-only EfficientNetV2-B0 encoder and classification head, then fine-tune with progressively higher training resolution (288 to 320 pixels). Validation remains at the fixed final resolution throughout. A synthetic same-resolution equivalence check verifies the transfer before training.
+2. Train an ImageNet-pretrained ConvNeXt-Tiny classifier as a different representation, progressing through 224, 256 and 288 training pixels. Validation stays at 288 pixels throughout.
+3. Fit a small optional anatomy correction to each selected image model. The image model is frozen; the correction starts at zero, is bounded, and is disabled when the ovary measurement is missing. It is retained as a separately measured candidate only if selection validation supports it. A valid measurement flag does not establish anatomical correctness.
+
+Shared changes: horizontal reflections only, moderate ultrasound appearance changes, training-only weighted Mixup, moderate class reweighting during representation fine-tuning, a final balanced-head fine-tuning stage, exponential moving averages of trainable weights, AdamW with a cosine schedule, and early stopping. All fitting records remain available, with duplicate weighting retained. No image or label is removed, relabeled, or moved between roles. No augmented image is counted as an independent test observation.
+
+Checkpoint selection uses EMA weights evaluated and saved by Keras SwapEMAWeights before ModelCheckpoint. Early stopping does not restore or modify those weights; the saved best checkpoint is reloaded explicitly. Validation probabilities are generated once from the selected checkpoint and cached with record IDs, class order and integrity receipts. Training accuracy during Mixup is a proxy; unmixed validation metrics determine selection.
+
+Compute: initial two candidates, each capped at 100 minutes of fitting/validation including an optional correction if sufficient time remains. A time-limited result is marked as such. Old reference validation inference and setup add a small amount of runtime. These are private free-quota Kaggle jobs. No paid resources or new account are required.
+
+Research sources and their specific use:
+
+Tan, M., & Le, Q. V. (2021). EfficientNetV2: Smaller models and faster training. Proceedings of the 38th International Conference on Machine Learning. https://arxiv.org/abs/2104.00298
+The paper studies progressive resolution and regularization. It motivates the resolution schedule; this project is not a replication of its ImageNet training schedule, and its reported accuracies do not predict ovarian-ultrasound performance.
+
+Liu, Z., Mao, H., Wu, C.-Y., Feichtenhofer, C., Darrell, T., & Xie, S. (2022). A ConvNet for the 2020s. Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. https://arxiv.org/abs/2201.03545
+Motivates ConvNeXt as a complementary pretrained encoder. The project uses the official Keras ConvNeXt-Tiny implementation and included preprocessing, receiving image values in [0,255]. It does not normalize ImageNet values a second time.
+
+Zhang, H., Cisse, M., Dauphin, Y. N., & Lopez-Paz, D. (2018). mixup: Beyond empirical risk minimization. International Conference on Learning Representations. https://arxiv.org/abs/1710.09412
+Motivates training-only convex combinations with soft targets. The implementation preserves sample-weighted cross-entropy contributions. These blended images are regularization inputs, not newly annotated anatomy or independent observations. Mixup is disabled for the measured-anatomy correction stage.
+
+Kang, B., Xie, S., Rohrbach, M., Yan, Z., Gordo, A., Feng, J., & Kalantidis, Y. (2020). Decoupling representation and classifier for long-tailed recognition. International Conference on Learning Representations. https://arxiv.org/abs/1910.09217
+Motivates separately testing lighter class reweighting during representation learning and a balanced classifier stage. The current implementation fine-tunes the existing head rather than claiming an exact reproduction of the paper's classifier-retraining procedure.
+
+Keras. (n.d.). SwapEMAWeights. https://keras.io/api/callbacks/swap_ema_weights/
+The documented callback order evaluates EMA weights and saves those same weights. The code uses exponential moving averages, not stochastic weight averaging (SWA).
+
+Keras. (n.d.). AdamW. https://keras.io/api/optimizers/adamw/
+Official implementation for weight decay, clipping, cosine scheduling and optimizer EMA.
+
+TensorFlow. (n.d.). tf.config.experimental.enable_op_determinism. https://www.tensorflow.org/api_docs/python/tf/config/experimental/enable_op_determinism
+Deterministic execution is enabled before model construction. Finite checks established repeatability for the earlier frozen checkpoint in the pinned T4 environment, not universal reproducibility across hardware or software.
+
+Reviewed but not implemented in the initial candidates:
+Foret, P., Kleiner, A., Mobahi, H., & Neyshabur, B. (2021). Sharpness-aware minimization for efficiently improving generalization. International Conference on Learning Representations. https://arxiv.org/abs/2010.01412
+SAM is a possible later validation experiment; its extra gradient pass costs compute. This package does not claim to implement SAM.
+Ren, J., et al. (2020). Balanced meta-softmax for long-tailed visual recognition. https://arxiv.org/abs/2007.10740
+Balanced Softmax is an alternative objective, not the class-weight interpolation used here. It has not been silently added on top of existing class weighting.
+Izmailov, P., Podoprikhin, D., Garipov, T., Vetrov, D., & Wilson, A. G. (2018). Averaging weights leads to wider optima and better generalization. https://arxiv.org/abs/1803.05407
+SWA was reviewed as an alternative. The implemented EMA method is explicitly distinguished from that procedure.

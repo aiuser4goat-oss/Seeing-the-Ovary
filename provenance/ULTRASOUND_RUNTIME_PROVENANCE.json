@@ -1,0 +1,19 @@
+{
+  "gpu_kernel": "ishaankhera/ovarian-ultrasound-transfer-validation",
+  "gpu_version": 3,
+  "gpu_container_image_digest": "gcr.io/kaggle-private-byod/python@sha256:fc720c15545eb096a510e1f085b17fc118387a007599424d953a4f327b71cacf",
+  "gpu_machine_shape": "NvidiaTeslaT4",
+  "gpu_private": true,
+  "cpu_preflight_kernel": "ishaankhera/ovarian-ultrasound-transfer-preflight",
+  "cpu_preflight_version": 3,
+  "cpu_preflight_container_image_digest": "gcr.io/kaggle-images/python@sha256:7de5e1496c568335455c8bb1f86f5c36f0591e87e92e9aa9f0eefcd07f227c66",
+  "installed_after_base_image": {
+    "timm": "0.5.4; --no-deps"
+  },
+  "pretrained_official_source_commit": "f3096e97da3814011c5f59176b5cc19b5477ac64",
+  "pretrained_weights_sha256": "776a50eeff402802c8cd06e00fe9de73df4161504fa733284bc240904b48252c",
+  "worker_source_sha256": "3830be2cefde7f73d9015ff2433552e7223035bafff02a5292f36381a3ae6686",
+  "precision": "float32",
+  "determinism": "torch.use_deterministic_algorithms(True); CUBLAS_WORKSPACE_CONFIG=:4096:8; seed2627",
+  "framework_version_note": "The worker does not print an explicit torch/numpy version. The immutable Kaggle base-container digest plus pinned no-dependency timm install records the software environment; do not invent package versions."
+}

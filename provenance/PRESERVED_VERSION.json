@@ -1,0 +1,26 @@
+{
+  "saved_utc": "2026-11-23T04:34:32.865638+00:00",
+  "target_metric": "balanced_accuracy",
+  "status": "Preserved completed results; newer exploratory development is separate",
+  "results_sha256": "2d3e52b871c842b28151dc0368dcce1036289d5d2b963f9dfdcd1a190bae62ae",
+  "private_completed_kernel": "ishaankhera/ovarian-fixed-ensembles-final",
+  "kernel_version": 2,
+  "frozen_models_private_dataset": "ishaankhera/ovarian-frozen-six-models-private",
+  "original_freeze_sha256": "2d99893c4b6e4a45a46ca3ebc9918891a36a7bbf12dfceaaf768e99fb447b135",
+  "best_completed_ensemble": "ensemble_control",
+  "best_balanced_accuracy": 0.8954576875376714,
+  "anatomy_ensemble_balanced_accuracy": 0.8942253510556741,
+  "scope": "Local verified checkpoints and metadata for both completed ensembles, plus calibration/recipe/evaluation reports. Raw datasets and anatomy feature caches remain at their existing locations and in private Kaggle datasets.",
+  "local_checkpoints_verified": {
+    "results/fusion_refined/best.weights.h5": "145b2291e57d4226764f293b0253cf590c29e2a331816b7168a9e11688fbb52c",
+    "results/fusion_zero_morphology/best.weights.h5": "37dfef9f4367019ba3b4f5248fbf28a89cf4744f067aeaa74533e9cacfa7743e",
+    "results/image_only/best.weights.h5": "aa809ac1c0eadca3e7b7e0591607df9c0ed5630a355c9650915b69ec811a3364",
+    "results/original_baseline/best.weights.h5": "58eec1ec015f4a93d940e681916a88ab03e1de59611b32c8f3c13f976666dcab"
+  },
+  "locally_saved_ensemble_members": [
+    "original_baseline",
+    "image_only",
+    "fusion_zero_morphology",
+    "fusion_refined"
+  ]
+}

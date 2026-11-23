@@ -1,0 +1,9 @@
+CLASSIFIER FOLLOW-UP COMPLETED
+
+Best frozen-feature readout selection balanced accuracy: 87.0271% across 12 candidates. No improvement over old image-only selection result (87.4401%).
+
+Matched objective comparison on frozen encoder features, fixed PCA128 and fixed regularization: soft cross-entropy selection BA 81.8805%; candidate marginal selection BA 78.3507%. Both optimizers converged numerically. Reject candidate marginal configuration. This is one nonconvex initialization and not a verdict on all partial-label algorithms.
+
+No new test evaluation. Historical best test BA remains 89.5458%; weights and recipes preserved. The target above 93% has not been achieved.
+
+All original records, labels and splits remain unchanged. No classifier from this round is promoted. Prepared helper code remains experimental and is not called by the primary pipeline.

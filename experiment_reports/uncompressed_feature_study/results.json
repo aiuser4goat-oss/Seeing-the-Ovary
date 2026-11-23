@@ -1,0 +1,193 @@
+{
+  "full_encoder_pool1280_C0.1": {
+    "selection_balanced_accuracy": 0.8330258654147649,
+    "selection_macro_f1": 0.7377300453271706,
+    "confusion_matrix": [
+      [
+        217,
+        62,
+        9,
+        31
+      ],
+      [
+        2,
+        82,
+        0,
+        0
+      ],
+      [
+        93,
+        47,
+        700,
+        9
+      ],
+      [
+        103,
+        12,
+        13,
+        732
+      ]
+    ],
+    "fit_balanced_accuracy": 0.8256588563501109
+  },
+  "full_encoder_pool1280_C1.0": {
+    "selection_balanced_accuracy": 0.8600141896239102,
+    "selection_macro_f1": 0.8038715950268221,
+    "confusion_matrix": [
+      [
+        241,
+        28,
+        22,
+        28
+      ],
+      [
+        3,
+        81,
+        0,
+        0
+      ],
+      [
+        95,
+        16,
+        729,
+        9
+      ],
+      [
+        103,
+        0,
+        16,
+        741
+      ]
+    ],
+    "fit_balanced_accuracy": 0.8482733771658744
+  },
+  "full_encoder_pool1280_C10.0": {
+    "selection_balanced_accuracy": 0.8573130617270475,
+    "selection_macro_f1": 0.8197825319513288,
+    "confusion_matrix": [
+      [
+        238,
+        18,
+        29,
+        34
+      ],
+      [
+        4,
+        79,
+        1,
+        0
+      ],
+      [
+        83,
+        10,
+        750,
+        6
+      ],
+      [
+        96,
+        0,
+        25,
+        739
+      ]
+    ],
+    "fit_balanced_accuracy": 0.8607649399499391
+  },
+  "actual_original_normalized_head256_C0.1": {
+    "selection_balanced_accuracy": 0.869325997525691,
+    "selection_macro_f1": 0.8206897744578957,
+    "confusion_matrix": [
+      [
+        259,
+        19,
+        20,
+        21
+      ],
+      [
+        5,
+        78,
+        1,
+        0
+      ],
+      [
+        84,
+        16,
+        746,
+        3
+      ],
+      [
+        106,
+        1,
+        15,
+        738
+      ]
+    ],
+    "fit_balanced_accuracy": 0.8513265144961586
+  },
+  "actual_original_normalized_head256_C1.0": {
+    "selection_balanced_accuracy": 0.8647431773631473,
+    "selection_macro_f1": 0.8240468715733817,
+    "confusion_matrix": [
+      [
+        249,
+        19,
+        30,
+        21
+      ],
+      [
+        5,
+        78,
+        1,
+        0
+      ],
+      [
+        75,
+        11,
+        761,
+        2
+      ],
+      [
+        109,
+        0,
+        17,
+        734
+      ]
+    ],
+    "fit_balanced_accuracy": 0.8540963238906657
+  },
+  "actual_original_normalized_head256_C10.0": {
+    "selection_balanced_accuracy": 0.8590813450422448,
+    "selection_macro_f1": 0.824083049902504,
+    "confusion_matrix": [
+      [
+        241,
+        17,
+        39,
+        22
+      ],
+      [
+        5,
+        78,
+        1,
+        0
+      ],
+      [
+        67,
+        9,
+        768,
+        5
+      ],
+      [
+        112,
+        0,
+        19,
+        729
+      ]
+    ],
+    "fit_balanced_accuracy": 0.8571937953010353
+  },
+  "_decision": {
+    "promoted": false,
+    "best_selection_balanced_accuracy": 0.869325997525691,
+    "reason": "None of six full-feature readouts exceeded the original image-only selection reference. PCA compression did not explain the earlier failure in this limited comparison. CPU head reconstruction is a separate runtime variant and its score is not substituted for the frozen reference."
+  }
+}

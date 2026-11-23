@@ -1,0 +1,10 @@
+{
+  "source_payload_hashes_match": true,
+  "archive_crc_and_selected_checkpoint_hash_verified": true,
+  "validation_metrics_recomputed": true,
+  "test_evaluated": false,
+  "archive_sha256": "cd584520bc4a88ea9c1beb934cc39a42d95adb57d2f17c8dff5238c9b70fc236",
+  "selected_checkpoint_sha256": "9fcf116544efed994e1918266c79f1cb3c2d101f517d9683d54bff9b0fac8b58",
+  "selection_balanced_accuracy": 0.8296659980833445,
+  "source_workers_have_not_changed_since_execution": true
+}

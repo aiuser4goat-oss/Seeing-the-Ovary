@@ -1,0 +1,47 @@
+PRIMARY RESEARCH / DOCUMENTATION REGISTER
+Accessed November 20, 2026. These sources inform the implementation; published results do not predict performance on this collection.
+
+1. Tan, M., & Le, Q. (2021). EfficientNetV2: Smaller models and faster training. Proceedings of ICML, 139, 10096-10106. https://proceedings.mlr.press/v139/tan21a.html
+Decision: EfficientNetV2-B0 is the default practical transfer-learning encoder. This code uses staged fine-tuning; it does not reproduce the paper's full progressive-learning recipe.
+
+2. Liu, Z., Mao, H., Wu, C.-Y., Feichtenhofer, C., Darrell, T., & Xie, S. (2022). A ConvNet for the 2020s. CVPR. https://openaccess.thecvf.com/content/CVPR2022/papers/Liu_A_ConvNet_for_the_2020s_CVPR_2022_paper.pdf
+Decision: ConvNeXtTiny is an optional comparison rather than a promise of superiority.
+
+3. Ronneberger, O., Fischer, P., & Brox, T. (2015). U-Net: Convolutional networks for biomedical image segmentation. MICCAI. https://arxiv.org/abs/1505.04597
+Decision: Efficient 2D encoder-decoder with skip connections; separate ovarian, follicular and distance heads.
+
+4. Franz, L., et al. (2026). FollicleFinder enables automated three-dimensional segmentation of human ovarian follicles. Scientific Reports. https://doi.org/10.1038/s41598-026-69790-y
+Dataset record: https://doi.org/10.3929/ethz-c-000802233
+Author preprocessing source inspected: https://git.bsse.ethz.ch/iber/follicle-finder/-/raw/main/src/follicle_finder/segmentation_model/lsd3dunet/preprocess_validated.py
+Decision: Use supplied semantic volumes and separately supplied genuine instance labels with correct supervision. The present 2D network is a different method from the authors' 3D local-shape-descriptor model. Private centroid annotations are not silently promoted to verified instance contours.
+
+5. Guo, C., Pleiss, G., Sun, Y., & Weinberger, K. Q. (2017). On calibration of modern neural networks. Proceedings of ICML, 70, 1321-1330. https://proceedings.mlr.press/v70/guo17a.html
+Decision: Temperature scaling on a reserved calibration subset. It changes confidence, not argmax classification for one prediction vector.
+
+6. Loshchilov, I., & Hutter, F. (2019). Decoupled weight decay regularization. ICLR. https://arxiv.org/abs/1711.05101
+Decision: AdamW, small weight decay and separate lower fine-tuning learning rates. The schedule and hyperparameters still require validation on this task.
+
+7. Ganin, Y., & Lempitsky, V. (2015). Unsupervised domain adaptation by backpropagation. ICML. https://arxiv.org/abs/1409.7495
+Decision: Optional gradient-reversal source-adversarial head. Default disabled because collection/source labels and target classes can be confounded.
+
+8. Keras. Transfer learning & fine-tuning. https://keras.io/guides/transfer_learning/
+Decision: Recompile with a fresh optimizer after changing trainability; freeze BatchNorm statistics during fine-tuning; begin with a frozen pretrained encoder.
+
+9. Keras. EfficientNetV2 models. https://keras.io/api/applications/efficientnet_v2/efficientnet_v2_models/
+Decision: Feed [0,255] RGB to applications with included preprocessing; avoid double normalization.
+
+10. Keras. ConvNeXt models. https://keras.io/api/applications/convnext/
+Decision: Use the application model's own preprocessing and documented input conventions.
+
+11. scikit-image. Watershed segmentation. https://scikit-image.org/docs/stable/auto_examples/segmentation/plot_watershed.html
+Decision: Use marker-controlled watershed to separate touching foreground follicles, informed by a learned per-instance normalized distance head. A postprocessed region is a predicted instance, not proof of correct follicle identification.
+
+12. Source data and classification-label provenance remain documented in the Model_Datasets manifests. The supplied old labels and duplicate files are preserved as requested; weighted training is an optimization choice, not a clinical reannotation.
+
+EXPERIMENTAL PRIORITY
+Run original baseline -> image-only V2 -> localized shared-encoder model -> morphology fusion. Compare localized vs fusion to isolate measured morphology. Consider ConvNeXt, a small validation search, seed ensembles and optional TTA only after one complete run works. Check segmentation/count accuracy and image-classification performance separately. More branches, stronger augmentation or more search are not automatically better.
+
+APPEARANCE AUGMENTATION IMPLEMENTATION REFERENCES
+Keras. RandomBrightness layer. https://keras.io/api/layers/preprocessing_layers/image_augmentation/random_brightness/
+TensorFlow. tf.image.adjust_gamma. https://www.tensorflow.org/api_docs/python/tf/image/adjust_gamma
+The implementation uses multiplicative brightness/gain rather than an additive white/black offset, with conservative gamma/contrast and low shared-channel multiplicative noise. The default engineering ranges are not clinically validated acquisition distributions. Their value must be evaluated on reserved validation data.

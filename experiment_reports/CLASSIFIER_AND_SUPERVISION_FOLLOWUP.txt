@@ -1,0 +1,35 @@
+CLASSIFIER AND SUPERVISION FOLLOW-UP — 2026-11-22
+
+Objective: exceed 93% full-set balanced accuracy, without promising that outcome. The preserved best historical test result remains 89.5458%. All new selection work is exploratory because the historical test was reviewed previously. Validation and historical test scores must not be compared as if they used the same observations.
+
+Completed checks:
+- All 14,875 fitting/selection files verified by SHA256 against the existing manifest. All labels, files, records and roles remain unchanged.
+- A bounded class-offset correction failed the grouped cross-validation check (88.0582% to 87.8070% balanced accuracy). It was rejected.
+- Identical fitting inputs can have multiple supplied target classes in this combined task. This is an input/target constraint, not evidence identifying which label is clinically correct. It does not invalidate the previous study or authorize changing source labels. The fitting-set deterministic image-only balanced-accuracy ceiling is 90.8796%; the separately computed selection ceiling is 96.1911%. Neither is a measured model score or a test-set guarantee.
+- Local development runner now uses eager validation consistently for both checkpoint selection and final cached inference. Eight existing development tests pass. This is a future-run correction; frozen v1 payloads and checkpoints are untouched.
+
+Completed experiment:
+Private Kaggle ovarian-frozen-feature-readout-cpu version 3. A frozen EfficientNetV2-B0 image encoder extracts fitting and selection features only. Unique-image fitting features determine StandardScaler and PCA128; every fitting record contributes its original supplied target and established weight to the new classifier. Two feature sets and six fixed logistic/RBF-SVM classifiers per set are compared using selection balanced accuracy. Decision scores are not calibrated confidence. CPU/float32 execution is a distinct runtime variant. No calibration/test predictions or fitting occur.
+
+Infrastructure note: the queued GPU variant was canceled before execution. CPU v1/v2 setup failures were corrected by removing the GPU assertion and importing TensorFlow only in a fresh subprocess after package installation. v3 visibly reached frozen-feature extraction. Source payloads remain auditable.
+
+Completed paired objective experiment (rejected):
+A matched frozen-feature comparison between record-equivalent weighted soft cross-entropy and candidate-set marginal loss. Candidate sets come from identical FIT inputs only. Every source record is represented. Soft-target aggregation is mathematically equivalent to the original record-weighted cross-entropy for identical predictions. Unlike soft CE, marginal loss discards within-set target proportions while retaining candidate membership and total group mass. The marginal objective changes the training assumption: a supplied candidate is treated as an alternative, not a newly verified clinical label. The method is inspired by partial-label research, not an implementation of PRODEN or PiCO. A group containing all classes contributes no marginal supervision. Its benefit must be measured against the matched control; no improvement is assumed.
+
+Implementation: accuracy_development/group_targets.py; tools/compare_group_objectives.py. Five tests verify record-objective equivalence, analytic gradients using finite differences, singleton reduction, fitting-only guard and invalid-weight rejection. Source/evaluation labels remain unchanged.
+
+Research:
+Kang, B., Xie, S., Rohrbach, M., Yan, Z., Gordo, A., Feng, J., & Kalantidis, Y. (2020). Decoupling representation and classifier for long-tailed recognition. ICLR. https://arxiv.org/abs/1910.09217
+Use: separate feature learning from classifier fitting. Our frozen features plus logistic/SVM readouts are an adaptation, not the paper's exact classifier recipe or evidence of ovarian-ultrasound effectiveness.
+
+Lv, J., Xu, M., Feng, L., Niu, G., Geng, X., & Sugiyama, M. (2020). Progressive identification of true labels for partial-label learning. ICML, PMLR 119, 6500–6510. https://proceedings.mlr.press/v119/lv20a.html
+Use: investigate candidate-label objectives under explicit assumptions. No clinical truth is inferred from duplicated targets.
+
+Wang, H., Xiao, R., Li, Y., Feng, L., Niu, G., Chen, G., & Zhao, J. (2022). PiCO: Contrastive label disambiguation for partial label learning. ICLR. https://hbzju.github.io/pico/
+Reviewed as a potential later representation-learning method; contrastive/prototype machinery has not been implemented or claimed here.
+
+Menon, A. K., et al. (2021). Long-tail learning via logit adjustment. ICLR. https://arxiv.org/abs/2007.07314
+Motivation for investigating class-boundary changes. The rejected empirical offset experiment is not a reproduction of the paper's prior-based adjustment.
+
+COMPLETED RESULTS
+See FOLLOWUP_RESULTS.txt and FOLLOWUP_RESULTS.json. Neither candidate family improved the existing validation results. The candidate marginal configuration was rejected, and source/evaluation labels remain unchanged.

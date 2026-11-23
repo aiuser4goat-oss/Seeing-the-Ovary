@@ -1,0 +1,37 @@
+{
+  "stage": "complete",
+  "time_budget_reached": false,
+  "selected_validation": {
+    "balanced_accuracy": 0.8296659980833445,
+    "macro_f1": 0.7869649363915086,
+    "confusion_matrix": [
+      [
+        241,
+        23,
+        23,
+        32
+      ],
+      [
+        7,
+        76,
+        1,
+        0
+      ],
+      [
+        104,
+        10,
+        713,
+        22
+      ],
+      [
+        100,
+        1,
+        55,
+        704
+      ]
+    ]
+  },
+  "test_evaluated": false,
+  "weights_sha256": "9fcf116544efed994e1918266c79f1cb3c2d101f517d9683d54bff9b0fac8b58",
+  "elapsed_seconds": 3450.5363718549997
+}
