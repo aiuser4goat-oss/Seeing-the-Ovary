@@ -21,3 +21,15 @@ Snapshot November23,2026: longer TinyUSFM warm continuation submitted privately 
 **Data and trained weights are not bundled.** The repository does not grant access to private Kaggle inputs. It includes no source ultrasound images, credentials or case-level test predictions. Author-provided pretrained TinyUSFM weights and source are obtained separately and hash-checked. Early README_CONTINUATION.txt statements such as “no training has run” describe the original delivery; this README, the handoff and saved metrics supersede those historical status statements.
 
 This is research software, not a validated clinical diagnostic system. Source labels, visible2D morphology and predicted masks have the limitations described in the data protocol. Original dataset and third-party source terms remain applicable; this upload does not relicense them.
+
+## Preserved best ensemble: per-class recall
+
+- Benign: 86.61%
+- Malignant: 92.52%
+- Normal: 84.92%
+- PCOS: 94.13%
+
+Full-set test balanced accuracy: **89.5458%** across 3,988 records. These are frozen historical test results, not new evaluations.
+
+- [Full test metrics](test_metrics.json)
+- [Next experiments](NEXT_EXPERIMENTS.md)
