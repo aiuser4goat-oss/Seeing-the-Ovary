@@ -19,5 +19,9 @@
   "specialist_study_complete": true,
   "verification_figures": 16,
   "whole_network_kfold_validation": false,
-  "no_new_classification_test_inference": true
+  "no_new_classification_test_inference": true,
+  "active_dataset_version": 3,
+  "active_dataset_membership_revised": true,
+  "original_V2_results_preserved": true,
+  "new_filtered_accuracy_computed": false
 }

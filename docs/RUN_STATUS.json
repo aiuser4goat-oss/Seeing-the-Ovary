@@ -24,5 +24,18 @@
     "whole_network_cv": false,
     "graphs": 16,
     "test_inference": false
+  },
+  "active_dataset": {
+    "version": 3,
+    "records": 19732,
+    "test_records": 3778,
+    "exclusions": 210,
+    "reason": "User-reported uncertain/inaccurate class identity, not independently verified",
+    "post_error_review": true,
+    "model_retrained": false,
+    "new_accuracy_computed": false,
+    "historical_V2_test_balanced_accuracy": 0.8954576875376714,
+    "cloud_datasets": "HistoricalV2unchanged",
+    "manifest_sha256": "d68249a926657367ca8a584d645f8838109ba772fbac401703fc4354df4bab08"
   }
 }

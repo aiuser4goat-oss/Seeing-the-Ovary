@@ -18,8 +18,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3372,
-      "sha256": "d4107622be045115b91b5f501b9854a42d133d83182f70178c71619459850b12"
+      "bytes": 3630,
+      "sha256": "05065315499701255322a1be1f03e87448f93723cca38acad1529ae5a753c773"
     },
     {
       "path": "README_CONTINUATION.txt",
@@ -298,8 +298,8 @@
     },
     {
       "path": "docs/CLAUDE_HANDOFF.md",
-      "bytes": 12490,
-      "sha256": "b4d57782e1942bfcc8dbf533a7315b8906a195200641e19adcf800a05c9040f2"
+      "bytes": 12743,
+      "sha256": "470a14ebef1b01ad9ce717098a01193678262b7d811aa3c8fc0975d96d77e3cf"
     },
     {
       "path": "docs/CLAUDE_PROMPT.txt",
@@ -307,9 +307,14 @@
       "sha256": "0839274a1175fa11809e9eda54fedced7f796346760fdd24a3ff71f994c4fd4e"
     },
     {
+      "path": "docs/DATASET_REVISION_V3.md",
+      "bytes": 3156,
+      "sha256": "70f9a7bd602de4e2fd82de5ec585aeae64367150f394c1918671c37037fc0a6a"
+    },
+    {
       "path": "docs/DATA_PROTOCOL.md",
-      "bytes": 6023,
-      "sha256": "4ee5ba3368b9d5262a9afca0a9a7615915ba452ae635e9a5a38460f11c3c1f56"
+      "bytes": 6276,
+      "sha256": "36bd7b6eac68fb67d065308bb4275070219475fce3ecb1e4a3d9daf4e1ae48af"
     },
     {
       "path": "docs/LATEST_IMPROVEMENT_ROUND.md",
@@ -338,8 +343,8 @@
     },
     {
       "path": "docs/RUN_STATUS.json",
-      "bytes": 985,
-      "sha256": "a76324a3621dd32f4b6f649791c3b13118a0a3f3a511a531ac5b89aa409790e4"
+      "bytes": 1494,
+      "sha256": "1a0cefb87e677dfaebb629c05d76a469d5707bf3d2c79a7888302ff568166bfb"
     },
     {
       "path": "docs/SOURCES.md",

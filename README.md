@@ -1,3 +1,5 @@
+> Active dataset update: the user explicitly excluded210test IDs after error review. V3has19732records/3778test; originalV2results remain unchanged. Read [dataset revision](docs/DATASET_REVISION_V3.md). Earlier retention/count statements below describe V2.
+
 # Seeing the Ovary
 
 Anatomy-guided ovarian ultrasound classification: a science-fair continuation project by Ishaan Khera.

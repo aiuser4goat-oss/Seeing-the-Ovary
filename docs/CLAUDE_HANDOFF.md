@@ -1,3 +1,5 @@
+> Active dataset update: the user explicitly excluded210test IDs after error review. V3has19732records/3778test; originalV2results remain unchanged. Read [dataset revision](DATASET_REVISION_V3.md). Earlier retention/count statements below describe V2.
+
 > Update: the warm run has completed and five new checks were rejected. Read [latest improvement round](LATEST_IMPROVEMENT_ROUND.md) before the earlier snapshot below.
 
 # Seeing the Ovary: technical handoff for Claude

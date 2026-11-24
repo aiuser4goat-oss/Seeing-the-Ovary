@@ -1,3 +1,5 @@
+> Active dataset update: the user explicitly excluded210test IDs after error review. V3has19732records/3778test; originalV2results remain unchanged. Read [dataset revision](DATASET_REVISION_V3.md). Earlier retention/count statements below describe V2.
+
 # Data and evaluation protocol
 
 The downloaded data remain private inputs. No image archive or individual medical image is part of this repository. Counts refer to the actual organized project export, not a claim that every source image is unique or clinically verified.
